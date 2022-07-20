@@ -1,0 +1,19 @@
+@media only screen and (max-width: 700px) {
+  html,
+  body {
+    /* 14/(375/100) */
+    font-size: 3.73333333333vw;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  html,
+  body {
+    font-size: 20px;
+  }
+}
+
+@font-face {
+  font-family: 'DIN-Medium';
+  src: url('https://assets.imedao.com/ugc/snowflake/font/DIN_Medium.ttf') format('truetype');
+}

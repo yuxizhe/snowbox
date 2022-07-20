@@ -1,0 +1,278 @@
+{
+  "T010": {
+    "day": "#101423",
+    "night": "#CCCCCC"
+  },
+  "T020": {
+    "day": "#797C86",
+    "night": "#898A8E"
+  },
+  "T030": {
+    "day": "#AEB0BB",
+    "night": "#5A5C61"
+  },
+  "T040": {
+    "day": "#CCD0D9",
+    "night": "#42454B"
+  },
+  "T060": {
+    "day": "#FFFFFF",
+    "night": "#EEEEEE"
+  },
+  "T070": {
+    "day": "#282C39",
+    "night": "#B8B9BB"
+  },
+  "T080": {
+    "day": "#447BD7",
+    "night": "#4C79C3"
+  },
+  "TBlu016": {
+    "day": "#EAF2FF",
+    "night": "#627DA8"
+  },
+  "TBlu017": {
+    "day": "#287Dff",
+    "night": "#287DFF"
+  },
+  "TBlu018": {
+    "day": "#8AB8FE",
+    "night": "#295CAF"
+  },
+  "TBlu024": {
+    "day": "#CCF2FF",
+    "night": "#CCF2FF"
+  },
+  "TPur3": {
+    "day": "#8983BE",
+    "night": "#8983BE"
+  },
+  "TYlw5": {
+    "day": "#FFE091",
+    "night": "#FFE091"
+  },
+  "TOrg014": {
+    "day": "#FFB580",
+    "night": "#FFA666"
+  },
+  "TOrg017": {
+    "day": "#FF6B00",
+    "night": "#E05E00"
+  },
+  "TOrg018": {
+    "day": "#FFB580",
+    "night": "#863800"
+  },
+  "TGld5": {
+    "day": "#EBC6AF",
+    "night": "#EBC6AF"
+  },
+  "B010": {
+    "day": "#F4F5F8",
+    "night": "#0F1117"
+  },
+  "B020": {
+    "day": "#FFFFFF",
+    "night": "#13161E"
+  },
+  "B030": {
+    "day": "#F7F8FA",
+    "night": "#191D27"
+  },
+  "B040": {
+    "day": "#F7F8FA",
+    "night": "#191D27"
+  },
+  "B050": {
+    "day": "#AEB0BB",
+    "night": "#5A5C61"
+  },
+  "B060": {
+    "day": "#F2F2F2",
+    "night": "#0D1014"
+  },
+  "Blu010": {
+    "day": "#287DFF",
+    "night": "#287DFF"
+  },
+  "Blu011": {
+    "day": "#EAF2FF",
+    "night": "#0C1A31"
+  },
+  "Blu014": {
+    "day": "#A9CBFF",
+    "night": "#1F4583"
+  },
+  "Blu015": {
+    "day": "#F4F5F9",
+    "night": "#212633"
+  },
+  "Blu016": {
+    "day": "#F4F5F9",
+    "night": "#212633"
+  },
+  "Blu020": {
+    "day": "#00C0FF",
+    "night": "#00C0FF"
+  },
+  "Blu021": {
+    "day": "#E6F9FF",
+    "night": "#133343"
+  },
+  "Blu024": {
+    "day": "#99E6FF",
+    "night": "#0D5C7A"
+  },
+  "Blu030": {
+    "day": "#0D8BF6",
+    "night": "#0D8BF6"
+  },
+  "Blu031": {
+    "day": "#E7F3FE",
+    "night": "#152B42"
+  },
+  "Blu032": {
+    "day": "#CFE8FD",
+    "night": "#143657"
+  },
+  "Blu034": {
+    "day": "#9ED1FB",
+    "night": "#124777"
+  },
+  "Gld010": {
+    "day": "#AF845D",
+    "night": "#D9B288"
+  },
+  "Gld020": {
+    "day": "#CCA47E",
+    "night": "#CCA47E"
+  },
+  "Gld030": {
+    "day": "#FFF6EF",
+    "night": "#1C222E"
+  },
+  "Gld040": {
+    "day": "#D6B785",
+    "night": "#D6B785"
+  },
+  "Grn010": {
+    "day": "#28A83D",
+    "night": "#239E37"
+  },
+  "Grn011": {
+    "day": "#EAF6EC",
+    "night": "#07200B"
+  },
+  "Grn020": {
+    "day": "#0FA578",
+    "night": "#0FA578"
+  },
+  "L010": {
+    "day": "#E5E8EE",
+    "night": "#21242B"
+  },
+  "Org010": {
+    "day": "#FFA100",
+    "night": "#E89609"
+  },
+  "Org011": {
+    "day": "#FFF6E6",
+    "night": "#2E1E02"
+  },
+  "Org012": {
+    "day": "#FFECCC",
+    "night": "#5D3C04"
+  },
+  "Org014": {
+    "day": "#FF6B00",
+    "night": "#E05E00"
+  },
+  "Org015": {
+    "day": "#FFE1CC",
+    "night": "#5A2600"
+  },
+  "Org016": {
+    "day": "#FFE1CC",
+    "night": "#5A2600"
+  },
+  "Org020": {
+    "day": "#FF6B00",
+    "night": "#E05E00"
+  },
+  "Org021": {
+    "day": "#FFF0E6",
+    "night": "#2D1300"
+  },
+  "Pur010": {
+    "day": "#021C5E",
+    "night": "#BFC7DD"
+  },
+  "Pur020": {
+    "day": "#072872",
+    "night": "#072872"
+  },
+  "Pur030": {
+    "day": "#EAF2FF",
+    "night": "#0C1A31"
+  },
+  "Pur040": {
+    "day": "#CF5BF2",
+    "night": "#CF5BF2"
+  },
+  "Pur041": {
+    "day": "#FAEFFE",
+    "night": "#322441"
+  },
+  "Red010": {
+    "day": "#F04848",
+    "night": "#D13636"
+  },
+  "Red011": {
+    "day": "#FDEDED",
+    "night": "#2A0B0B"
+  },
+  "Ylw010": {
+    "day": "#FFA100",
+    "night": "#E89609"
+  },
+  "Ylw011": {
+    "day": "#FFF6E6",
+    "night": "#2E1E02"
+  },
+  "Chart001": {
+    "day": "#287DFF",
+    "night": "#3373DB"
+  },
+  "Chart002": {
+    "day": "#FFA100",
+    "night": "#E89609"
+  },
+  "Chart003": {
+    "day": "#C539C8",
+    "night": "#AB34AD"
+  },
+  "Chart004": {
+    "day": "#8676FF",
+    "night": "#7362F5"
+  },
+  "Chart005": {
+    "day": "#A6E000",
+    "night": "#A0D115"
+  },
+  "Chart006": {
+    "day": "#FFCA03",
+    "night": "#F2C003"
+  },
+  "Chart007": {
+    "day": "#28A83D",
+    "night": "#239E37"
+  },
+  "Chart008": {
+    "day": "#AEB0BB",
+    "night": "#5A5C61"
+  },
+  "Chart009": {
+    "day": "#F04848",
+    "night": "#D13636"
+  }
+}

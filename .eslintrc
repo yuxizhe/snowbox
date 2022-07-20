@@ -1,0 +1,12 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": ["plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "no-use-before-define": "off", // tsx引入react不使用报错兼容
+    "react/require-default-props": 0, // propTypes报错
+    "@typescript-eslint/no-inferrable-types": 0, // 设置了默认值的type，不需要设置类型
+    "@typescript-eslint/ban-ts-comment": 0, // 允许手动关闭
+    "@typescript-eslint/ban-types": 0 // type 允许设置 colorStrings | (string & {});
+  }
+}

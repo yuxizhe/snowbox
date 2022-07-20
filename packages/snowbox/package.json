@@ -1,0 +1,25 @@
+{
+  "name": "snowbox",
+  "version": "0.1.0",
+  "description": "universal UI system",
+  "main": "src/index.tsx",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-web"
+  ],
+  "author": "yuxz",
+  "license": "MIT",
+  "dependencies": {
+    "compare-versions": "^4.1.3",
+    "file-loader": "^6.2.0",
+    "lottie-web": "^5.9.6",
+    "numeral": "^2.0.6",
+    "react": "16.9.0",
+    "react-dom": "16.9",
+    "react-native": "0.61.4",
+    "url-loader": "^4.1.1"
+  }
+}

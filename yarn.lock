@@ -1000,6 +1000,11 @@
     wcwidth "^1.0.1"
     ws "^1.1.0"
 
+"@react-native-community/viewpager@^2.0.1":
+  version "2.0.2"
+  resolved "https://registry.npmmirror.com/@react-native-community/viewpager/-/viewpager-2.0.2.tgz#622b190294b1310c4825c98daeaee1c8443f7124"
+  integrity sha512-CKVhIZdX/Cmb80muog8sKpi5vM8npwFp4tx4Dj1IvTBidZweuO22+VH2rDOj7E0LzdV9IYRJ4FGBwcPBD2qUrQ==
+
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0":
   version "2.0.4"
   resolved "https://registry.npmmirror.com/@types/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.4.tgz#8467d4b3c087805d63580480890791277ce35c44"
@@ -2078,7 +2083,7 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-create-react-class@^15.6.3, create-react-class@^15.7.0:
+create-react-class@^15.6.2, create-react-class@^15.6.3, create-react-class@^15.7.0:
   version "15.7.0"
   resolved "https://registry.npmmirror.com/create-react-class/-/create-react-class-15.7.0.tgz#7499d7ca2e69bb51d13faf59bd04f0c65a1d6c1e"
   integrity sha512-QZv4sFWG9S5RUvkTYWbflxeZX+JG7Cz0Tn33rQBJ+WFQTqTfUTjMjiv9tnfXazjsO5r0KhPs+AqCjyrQX6h2ng==
@@ -5006,6 +5011,16 @@ react-is@16.13.1, react-is@^16.12.0, react-is@^16.13.1, react-is@^16.8.1, react-
   resolved "https://registry.npmmirror.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
+react-native-scrollable-tab-view@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmmirror.com/react-native-scrollable-tab-view/-/react-native-scrollable-tab-view-1.0.0.tgz#87319896067f7bb643ecd7fba2cba4d6d8f9e18b"
+  integrity sha512-lpZ9xz+PBdgSzpk93VjCIfxV0zvJDX9iEUP8ImDg3p1QJGHOWbWyfDx+lcx5VCDVrrdZdtuVAAdc0tkYXZyQDw==
+  dependencies:
+    "@react-native-community/viewpager" "^2.0.1"
+    create-react-class "^15.6.2"
+    prop-types "^15.6.0"
+    react-timer-mixin "^0.13.3"
+
 react-native-web@0.16:
   version "0.16.5"
   resolved "https://registry.npmmirror.com/react-native-web/-/react-native-web-0.16.5.tgz#859e95cae21e63330a1dabbce8cd0d953b2239f2"
@@ -5063,6 +5078,11 @@ react-refresh@^0.4.0:
   version "0.4.3"
   resolved "https://registry.npmmirror.com/react-refresh/-/react-refresh-0.4.3.tgz#966f1750c191672e76e16c2efa569150cc73ab53"
   integrity sha512-Hwln1VNuGl/6bVwnd0Xdn1e84gT/8T9aYNL+HAKDArLCS7LWjwr7StE30IEYbIkx0Vi3vs+coQxe+SQDbGbbpA==
+
+react-timer-mixin@^0.13.3:
+  version "0.13.4"
+  resolved "https://registry.npmmirror.com/react-timer-mixin/-/react-timer-mixin-0.13.4.tgz#75a00c3c94c13abe29b43d63b4c65a88fc8264d3"
+  integrity sha512-4+ow23tp/Tv7hBM5Az5/Be/eKKF7DIvJ09voz5LyHGQaqqz9WV8YMs31eFvcYQs7d451LSg7kDJV70XYN/Ug/Q==
 
 react@16.9.0:
   version "16.9.0"

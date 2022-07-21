@@ -20,6 +20,7 @@
     "react": "16.9.0",
     "react-dom": "16.9",
     "react-native": "0.61.4",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "react-native-scrollable-tab-view": "^1.0.0"
   }
 }

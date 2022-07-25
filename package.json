@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "cd packages/examples && yarn dev",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "echo \"build\"",
     "build:es5": "cd packages/snowbox && rm -rf dist && yarn tsc && cp -rf ./src/Icon/images ./dist/Icon/images"
   },
   "workspaces": [

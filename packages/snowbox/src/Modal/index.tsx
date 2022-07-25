@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { Modal, StyleSheet, View } from 'react-native';
 import { Box, XqText, THEME, ThemeColor } from '..';

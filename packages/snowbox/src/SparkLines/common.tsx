@@ -45,6 +45,7 @@ export class DataToPoints {
 
   init() {
     // 时间排序
+    // @ts-ignore
     const x_sort_data = [...new Set(this.all_data.map((e: AxisProps) => e.date))].sort(
       (a, b) => new Date(a).getTime() - new Date(b).getTime(),
     );

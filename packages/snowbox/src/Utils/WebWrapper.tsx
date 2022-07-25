@@ -1,6 +1,9 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { setGlobalVar, THEME, ThemeColor } from '.';
+// import Mpaas from '@/common/js/Mpaas';
+// import ToastWrapper from '@/components/Toast/ToastWrapper';
+// import { ThemeContext, VersionContext } from '@/common/js/Context';
+import { setGlobalVar, ThemeColor } from '.';
 
 /**
  * Wrapper SSR 服务端渲染
@@ -20,12 +23,19 @@ function Wrapper(WrappedComponent) {
       version,
     });
 
+    // Mpaas.uid = uid;
+
     return (
+      // <VersionContext.Provider value={version}>
+      //   <ThemeContext.Provider value={theme}>
       <View style={styles.web}>
         <View style={styles.webOuter}>
           <WrappedComponent {...props} theme={theme} url={url} />
         </View>
+        {/* <ToastWrapper /> */}
       </View>
+      //   </ThemeContext.Provider>
+      // </VersionContext.Provider>
     );
   };
 }

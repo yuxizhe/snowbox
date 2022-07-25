@@ -1,6 +1,7 @@
 import React, { ReactNode, useState } from 'react';
 import { boxTypes } from '../Utils/props';
 import { Box, Press, Icon, ActionSheet } from '../index';
+import { onPressGoToUrl } from '../Utils';
 
 interface CardPropsType extends boxTypes {
   children?: ReactNode;

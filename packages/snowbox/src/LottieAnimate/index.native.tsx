@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import LottieView from 'lottie-react-native';
 import { Box, THEME } from '../index';
 

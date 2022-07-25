@@ -1,7 +1,7 @@
 import React, { cloneElement } from 'react';
 import PropTypes from 'prop-types';
 import { Animated, I18nManager, PanResponder, StyleSheet, View } from 'react-native';
-// import RNBridge from '@/common/js/RNBridge';
+import RNBridge from '../../common/RNBridge';
 
 import DefaultControls from './Controls';
 import LayoutView from '../Utils/LayoutView';

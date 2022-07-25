@@ -241,14 +241,14 @@ class FloatView extends Component<FloatViewProps, any> {
       </Box>
     );
   }
-}
 
-FloatView.defaultProps = {
-  panEndMinTop: 200,
-  panEndMinBottom: 80,
-  recoveryLeft: 13,
-  recoveryRight: 13,
-  adsorption: AdsorptionType.right,
-};
+  static defaultProps = {
+    panEndMinTop: 200,
+    panEndMinBottom: 80,
+    recoveryLeft: 13,
+    recoveryRight: 13,
+    adsorption: AdsorptionType.right,
+  };
+}
 
 export default FloatView;

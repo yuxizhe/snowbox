@@ -3,7 +3,7 @@ import { Animated, Easing, StyleSheet } from 'react-native';
 import Box from '../Box';
 
 const ScrollElement = (props) => {
-  const { data, speed, conWidth, width, endX } = props;
+  const { data, speed, conWidth, width, endX, textColor } = props;
   const { translateX } = data;
   const scrollAnim = useRef(new Animated.Value(translateX)).current;
 
@@ -33,7 +33,7 @@ const ScrollElement = (props) => {
 
   return (
     <Animated.View style={[styles.animation, { transform: [{ translateX: scrollAnim }], width }]}>
-      <Box h={40} lh={40} cl="T020">
+      <Box h={40} lh={40} cl={textColor}>
         {props.children}
       </Box>
     </Animated.View>

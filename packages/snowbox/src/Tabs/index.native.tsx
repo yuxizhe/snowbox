@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React, { cloneElement, useState } from 'react';
 import ScrollableTabView, { DefaultTabBar } from 'react-native-scrollable-tab-view';
 import { Text } from 'react-native';

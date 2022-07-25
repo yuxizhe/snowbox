@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { Text, StyleSheet, TextProps } from 'react-native';
 import { getSize, THEME, ThemeColor } from '../Utils';

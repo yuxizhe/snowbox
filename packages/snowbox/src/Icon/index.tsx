@@ -5,8 +5,8 @@ import { getSize, THEME } from '../Utils';
 
 type Props = {
   type: keyof typeof icon;
-  w?: number | string;
-  h?: number | string;
+  w?: number;
+  h?: number;
 };
 
 /**

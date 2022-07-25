@@ -26,9 +26,9 @@ import {
   ThemeColor,
   SVG,
 } from 'snowbox';
-import ActionSheets from './ActionSheets';
-import SparkLineDemo from './SparkLineDemo';
-import ContrastBarDemo from './ContrastDemo';
+import ActionSheets from '../components/ActionSheets';
+import SparkLineDemo from '../components/SparkLineDemo';
+import ContrastBarDemo from '../components/ContrastDemo';
 
 const { IOScrollView, InView } = Observer;
 const { Text: SVGText } = SVG;

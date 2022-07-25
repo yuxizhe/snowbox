@@ -44,7 +44,9 @@ export default function Toast({ msg = '', type = 0, timestamp = 0 }) {
       //   });
       // } else {
       setShow(true);
+
       setId(
+        // @ts-ignore
         setTimeout(() => {
           setShow(false);
         }, 2500),

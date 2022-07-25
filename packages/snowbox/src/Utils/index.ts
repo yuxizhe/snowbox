@@ -1,5 +1,6 @@
 import { Dimensions, Platform } from 'react-native';
 import numeral from 'numeral';
+import RNBridge from '../../common/RNBridge';
 import compareVersions from 'compare-versions';
 import colorJson from '../theme/color.json';
 
@@ -32,7 +33,7 @@ export const setGlobalVar = (obj) => {
   THEME = theme;
 };
 
-export const Window =
+export const Window: any =
   // @ts-ignore
   typeof window !== 'undefined' ? window : { location: { href: gVar.URL }, navigator: { userAgent: gVar.UA } };
 
@@ -191,6 +192,58 @@ export function isGreaterOrEqualVersion(version: string) {
     return false;
   }
 }
+
+/**
+ * 获取url params
+ */
+export const parseParams = (url = ''): any => {
+  let href = url;
+
+  if (OS === 'web') {
+    href = Window.location.href;
+  }
+
+  const array = href.split('?');
+
+  if (array.length === 1) {
+    return {};
+  }
+
+  let query = '';
+  query = array.pop();
+
+  /* parseParams */
+  const re = /([^&=]+)=?([^&]*)/g;
+  const decodeRE = /\+/g;
+  /* Regex for replacing addition symbol with a space */
+  const decode = (str) => decodeURIComponent(str.replace(decodeRE, ' '));
+
+  query = decodeURIComponent(query);
+  const params = {};
+  let e;
+  while ((e = re.exec(query))) {
+    let k = decode(e[1]);
+    const v = decode(e[2]);
+    if (k.substring(k.length - 2) === '[]') {
+      k = k.substring(0, k.length - 2);
+      (params[k] || (params[k] = [])).push(v);
+    } else {
+      params[k] = v;
+    }
+  }
+  return params;
+};
+
+export const onPressGoToUrl = (url) => {
+  if (!url) {
+    return;
+  }
+
+  RNBridge.redirect({
+    url,
+    type: 'PUSH',
+  });
+};
 
 export default {
   ThemeColor,

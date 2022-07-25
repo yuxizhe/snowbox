@@ -35,6 +35,7 @@ export type InViewWrapper = ComponentType<{
 }>;
 
 class InView<T = ViewProps> extends PureComponent<InViewProps<T>> {
+  // eslint-disable-next-line react/sort-comp
   static contextType = IOContext;
 
   static defaultProps: Partial<InViewProps> = {
@@ -42,6 +43,7 @@ class InView<T = ViewProps> extends PureComponent<InViewProps<T>> {
     as: View,
   };
 
+  // eslint-disable-next-line react/sort-comp
   context: undefined | IOCOntextValue;
 
   mounted = false;

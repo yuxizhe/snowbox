@@ -220,7 +220,7 @@ const DatePicker = ({
   };
 
   // 是否闰年
-  const isRunYear = (y) => (y % 4 == 0 && y % 100 != 0) || y % 400 == 0;
+  const isRunYear = (y) => (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0;
 
   // 计算当前月天数，改动的月的天数
   const computedMonthDay = (currentMonth, changeMonth, y) => {
@@ -316,15 +316,15 @@ const DatePicker = ({
     onChange(new Date(temp.join('-')));
   };
 
-  const onChange = (date: Date) => {
+  const onChange = (d: Date) => {
     if (startTimeFocus) {
-      setInputStartTime(formatDate(date));
+      setInputStartTime(formatDate(d));
     }
     if (endTimeFocus) {
-      setInputEndTime(formatDate(date));
+      setInputEndTime(formatDate(d));
     }
-    setDate(date);
-    isWeb && scrollTimePicker(formatDate(date), false);
+    setDate(d);
+    isWeb && scrollTimePicker(formatDate(d), false);
   };
 
   // 边界滚动无数值处理
@@ -454,7 +454,7 @@ const DatePicker = ({
     const temp: Array<number> = [];
     const minYear = minDate.year;
     const maxYear = maxDate.year;
-    for (let a = 0; a <= maxYear - minYear; a++) {
+    for (let a = 0; a <= maxYear - minYear; a += 1) {
       temp.push(minYear + a);
     }
     return (
@@ -504,7 +504,7 @@ const DatePicker = ({
     if (year === maxDate.year) {
       maxMonth = maxDate.month;
     }
-    for (let a = 0; a <= maxMonth - minMonth; a++) {
+    for (let a = 0; a <= maxMonth - minMonth; a += 1) {
       temp.push(minMonth + a);
     }
     return (
@@ -544,7 +544,6 @@ const DatePicker = ({
   // 日选择
   const daySvRender = () => {
     const temp: Array<number> = [];
-    const isRunYear = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
     let minDay = 1;
     let maxDay = 0;
     if (MonthDay.d31.includes(month)) {
@@ -554,7 +553,7 @@ const DatePicker = ({
       maxDay = 30;
     }
     if (MonthDay.d28.includes(month)) {
-      if (isRunYear) {
+      if (isRunYear(year)) {
         maxDay = 29;
       } else {
         maxDay = 28;
@@ -566,7 +565,7 @@ const DatePicker = ({
     if (year === maxDate.year && month === maxDate.month) {
       maxDay = maxDate.day;
     }
-    for (let a = 0; a <= maxDay - minDay; a++) {
+    for (let a = 0; a <= maxDay - minDay; a += 1) {
       temp.push(minDay + a);
     }
     return (
@@ -696,6 +695,7 @@ const DatePicker = ({
       footer={footer}
       onFooterClick={handleConfirm}
       bounces={false}
+      // @ts-ignore
       msgData={msgData}
       content={
         <Box col flex={1}>

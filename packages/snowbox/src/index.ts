@@ -33,7 +33,11 @@ import Popup from './Popup';
 import ContrastBar from './ContrastBar';
 import * as Observer from './IntersectionObserver';
 import FloatView from './FloatView';
-import PieChart from './PieChart';
+// import PieChart from './PieChart';
+
+export { default as PieChart } from './PieChart';
+
+export * from './CustomHooks';
 
 const {
   getSize,
@@ -98,5 +102,5 @@ export {
   Observer,
   isGreaterOrEqualVersion,
   FloatView,
-  PieChart,
+  // PieChart: PieChart,
 };

@@ -4,12 +4,11 @@ import { Box, LottieAnimate } from '../index';
 type Props = { h: number };
 
 const LOADING_ANIMATION = {
-  day: require('./loading_gray_day.json'),
-  night: require('./loading_gray_night.json'),
-}
+  day: require('../../assets/json/loading_gray_day.json'),
+  night: require('../../assets/json/loading_gray_night.json'),
+};
 
 export default function Loading({ ...props }: Props) {
-
   return (
     <Box flex={1}>
       <Box c flex={1} {...props}>

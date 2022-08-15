@@ -9,3 +9,5 @@ yarn-error.log
 _next/
 
 dist
+*.tgz
+.DS_Store

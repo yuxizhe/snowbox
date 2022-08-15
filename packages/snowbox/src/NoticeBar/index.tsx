@@ -163,7 +163,7 @@ class NoticeBar extends React.Component {
           )}
           {!this.props.hideCloseBtn && (
             <Press onPress={this.closeBar}>
-              <Icon type="icon_s_close" />
+              <Icon type="icon_s_feeds_close" />
             </Press>
           )}
         </Box>

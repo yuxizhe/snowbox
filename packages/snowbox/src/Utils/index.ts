@@ -158,31 +158,6 @@ export const formatDate = (date: Date): string => {
   return yourDate.toISOString().split('T')[0];
 };
 
-// 跳转至企业微信落地页面，13.17及之后支持
-export function JumpToAddWeChat(isAddWechat: boolean, source: number, symbol?: string) {
-  const add = isAddWechat ? 1 : 0;
-  const symbolParams = symbol ? `&symbol=${symbol}` : '';
-  const { UID: uid } = gVar;
-  const getClientPath = () =>
-    Platform.OS === 'android'
-      ? `https://xueqiu.com/weapp?app_name=gh_7a080f2e543d&path=/pages/consultByWechatWebView/index&source=${source}&client=${Platform.OS}&add=${add}${symbolParams}`
-      : `/pages/consultByWechatWebView/index?source=${source}&client=${Platform.OS}&add=${add}${symbolParams}`;
-  const webUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd057d58484e30d9d&redirect_uri=${encodeURIComponent(
-    `https://xueqiu.com/f/new/consultByWechat?source=${source}&uid=${uid}&add=${add}&client=h5${symbolParams}`,
-  )}&response_type=code&scope=snsapi_base#wechat_redirect`;
-  if (isGreaterOrEqualVersion('13.17')) {
-    Platform.OS === 'web'
-      ? RNBridge.redirect({
-          type: 'PUSH',
-          url: webUrl,
-        })
-      : RNBridge.jumpToMiniProgram({
-          path: getClientPath(),
-          miniProgramType: '0',
-        });
-  }
-}
-
 // 校验当前版本是否大于等于version
 export function isGreaterOrEqualVersion(version: string) {
   try {
@@ -259,6 +234,5 @@ export default {
   gVar,
   formatDate,
   formatCurrencyNormal,
-  JumpToAddWeChat,
   isGreaterOrEqualVersion,
 };

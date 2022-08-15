@@ -1,5 +1,4 @@
 /* eslint-disable max-classes-per-file */
-//@ts-nocheck
 import React, { PureComponent, RefObject, createRef } from 'react';
 import {
   LayoutChangeEvent,

@@ -26,9 +26,10 @@ import {
   ThemeColor,
   SVG,
 } from 'snowbox';
-import ActionSheets from '../components/ActionSheets';
-import SparkLineDemo from '../components/SparkLineDemo';
-import ContrastBarDemo from '../components/ContrastDemo';
+// import Toast from '@/components/Toast';
+import ActionSheets from './ActionSheets';
+import SparkLineDemo from './SparkLineDemo';
+import ContrastBarDemo from './ContrastDemo';
 
 const { IOScrollView, InView } = Observer;
 const { Text: SVGText } = SVG;
@@ -310,6 +311,20 @@ const Product = () => {
               </Box>
             </Box>
           </Box>
+        </Box>
+        <Box col m={10} p={10} br={10} bg="B020">
+          <Box f={20} cl="T010" DIN>
+            元素曝光示例
+          </Box>
+          <InView
+            onChange={(val) => {
+              // Toast.show(val ? '在视线' : '不在视线', val ? 1 : 0);
+            }}
+          >
+            <Box col mt={10}>
+              <Box>这里是内容</Box>
+            </Box>
+          </InView>
         </Box>
         <Box col m={10} p={10} br={10} bg="B020">
           <Box f={20} cl="T010" DIN>

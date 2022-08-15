@@ -13,6 +13,7 @@ module.exports = {
           options: {
             esModule: false,
             limit: 1000,
+            name: 'static/images/[hash].[ext]',
           },
         },
       ],

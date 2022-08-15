@@ -44,7 +44,10 @@ const style = (theme) =>
   StyleSheet.create({
     web: {
       margin: 0,
-      minHeight: '100vh',
+      // 使H5跟RN客户端 表现一致。不超过屏幕高度
+      // https://xueqiu.feishu.cn/wiki/wikcnH5Sk45RbNhKR5hsLvyWmIg#LC0KAw
+      height: '100vh',
+      overflow: 'hidden',
       flexDirection: 'row',
       backgroundColor: ThemeColor.B020[theme],
     },

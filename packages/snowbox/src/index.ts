@@ -33,9 +33,7 @@ import Popup from './Popup';
 import ContrastBar from './ContrastBar';
 import * as Observer from './IntersectionObserver';
 import FloatView from './FloatView';
-// import PieChart from './PieChart';
-
-export { default as PieChart } from './PieChart';
+import PieChart from './PieChart';
 
 export * from './CustomHooks';
 
@@ -49,7 +47,6 @@ const {
   formatCurrencyNormal,
   ThemeColor,
   OS,
-  JumpToAddWeChat,
   isGreaterOrEqualVersion,
 } = Utils;
 
@@ -98,9 +95,8 @@ export {
   Popup,
   formatCurrencyNormal,
   ContrastBar,
-  JumpToAddWeChat,
   Observer,
   isGreaterOrEqualVersion,
   FloatView,
-  // PieChart: PieChart,
+  PieChart,
 };

@@ -71,6 +71,10 @@ const icons = {
     day: require('./images/icon_s_plane.png'),
     night: require('./images/icon_s_plane.png'),
   },
+  icon_s_feeds_close: {
+    day: require('./images/icon_s_feeds_close_day.png'),
+    night: require('./images/icon_s_feeds_close_night.png'),
+  },
 };
 
 export default icons;

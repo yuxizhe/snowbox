@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable max-classes-per-file */
 import React, { PureComponent, RefObject, createRef } from 'react';
 import {

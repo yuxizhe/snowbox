@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity, AppState } from 'react-native';
 import debounce from 'lodash.debounce';
 import Element from './ScrollElement';
 import LayoutView from '../Utils/LayoutView';
-import { OS, Press, Icon, Box } from '../index';
+import { OS, Press, Icon, Box } from '../';
 
 /**
  * text: 滚动文字

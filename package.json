@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"build\"",
     "packs": "cd packages/snowbox && npm pack",
-    "build:es5": "cd packages/snowbox && rm -rf dist && yarn tsc && cp -rf ./src/Icon/images ./dist/Icon/images"
+    "build:es5": "cd packages/snowbox && rm -rf dist && yarn tsc && cp -rf ./static ./dist/static",
+    "snowlink": "cd packages/snowbox && npm link"
   },
   "workspaces": [
     "packages/*"

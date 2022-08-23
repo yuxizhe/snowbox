@@ -9,6 +9,7 @@ import Progress from './Progress';
 import XqText from './XqText';
 import Utils, { gVar, THEME } from './Utils';
 import Txt from './Txt';
+import TxtNum from './TxtNum';
 import errorBoundary from './Utils/ErrorBoundary';
 import Wrapper from './Utils/WebWrapper';
 import LayoutView from './Utils/LayoutView';
@@ -61,6 +62,7 @@ export {
   Progress,
   XqText,
   Txt,
+  TxtNum,
   Utils,
   errorBoundary,
   Wrapper,

@@ -1,6 +1,6 @@
 import { Dimensions, Platform } from 'react-native';
 import numeral from 'numeral';
-import RNBridge from '../../common/RNBridge';
+import RNBridge from '../Utils/RNBridge';
 import compareVersions from 'compare-versions';
 import colorJson from '../theme/color.json';
 

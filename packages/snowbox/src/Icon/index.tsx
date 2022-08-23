@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Image } from 'react-native';
 import icon from './icon';
 import { getSize, THEME } from '../Utils';

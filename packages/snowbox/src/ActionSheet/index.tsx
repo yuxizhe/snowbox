@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useContext } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Modal, StyleSheet, TouchableOpacity, SafeAreaView, ScrollView, Platform, Animated } from 'react-native';
 import colorJson from '../theme/color.json';
 import { Box, Press, Icon, Toast, getSize, THEME } from '..';

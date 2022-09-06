@@ -4,12 +4,29 @@
   "description": "universal UI system",
   "main": "src",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "dumi dev",
+    "docs:build": "dumi build"
   },
   "keywords": [
     "react-native",
     "react-native-web"
   ],
+  "files": [
+    "dist"
+  ],
+  "module": "dist/esm/index.js",
+  "typings": "dist/esm/index.d.ts",
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
   "author": "yuxz",
   "license": "MIT",
   "dependencies": {
@@ -20,9 +37,21 @@
     "numeral": "^2.0.6",
     "react": "16.9.0",
     "react-dom": "16.9",
-    "react-native": "0.61.4",
+    "react-native": "0.68",
     "react-native-scrollable-tab-view": "^1.0.0",
     "react-native-svg": "^12.4.0",
+    "react-native-web": "^0.18.9",
     "url-loader": "^4.1.1"
+  },
+  "devDependencies": {
+    "@umijs/test": "^3.0.5",
+    "babel-plugin-react-native-web": "0.16",
+    "dumi": "^1.1.0",
+    "dumi-theme-mobile": "^1.1.24",
+    "father-build": "^1.19.1",
+    "gh-pages": "^3.0.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "yorkie": "^2.0.0"
   }
 }

@@ -1,0 +1,16 @@
+before_script:
+  - export NVM_DIR="/home/app/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use 16
+stages:
+  - docs
+pages:
+  stage: docs
+  script:
+    - mkdir public
+    - cd packages/snowbox
+    - yarn
+    - yarn docs:build
+    - mkdir public
+    - cp -r docs-dist/. ../../public
+  artifacts:
+    paths:
+      - public

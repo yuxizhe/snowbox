@@ -34,6 +34,10 @@ workspace 实现
 
 项目封装
 
+使用 dumi 生成文档
+
+> https://f2e.snowballfinance.io/snowbox
+
 ### 2.Examples App
 
 雪球 demo
@@ -47,16 +51,6 @@ web 版
 
 Vite demo（低优先级）
 web 版
-
-### 3.website 介绍网站
-
-参考 dumi 进行文档编写
-dumi - 为组件开发场景而生的文档工具 - dumi
-移动端：进阶使用 - dumi
-
-组件介绍由 每个组件下的 md 文档实现，参考
-
-> https://github.com/ant-design/ant-design-mobile/tree/master/src/components/button
 
 ### 4.benchmarks 性能测试
 

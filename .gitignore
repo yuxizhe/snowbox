@@ -11,3 +11,5 @@ _next/
 dist
 *.tgz
 .DS_Store
+**/*.umi
+packages/snowbox/docs-dist

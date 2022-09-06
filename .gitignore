@@ -11,5 +11,10 @@ _next/
 dist
 *.tgz
 .DS_Store
+
+# umi
 **/*.umi
-packages/snowbox/docs-dist
+**/*.umi-production
+**/*.umi-test
+**/*.env.local
+**/*docs-dist

@@ -7,6 +7,10 @@ nav:
 
 # 同构组件库开发说明
 
+## git
+
+> http://git.snowballfinance.com/f2e/snowbox
+
 ## 启动命令
 
 `yarn dev` :

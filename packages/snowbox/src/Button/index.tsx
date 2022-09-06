@@ -4,7 +4,7 @@ import { getSize } from '../Utils';
 import Box from '../Box';
 import { buttonTypes } from '../Utils/props';
 
-type Props = buttonTypes & {
+type Props = {
   /**
    * 尺寸, 大: l(默认)、中: m、小: s
    */
@@ -21,7 +21,7 @@ type Props = buttonTypes & {
    * false: 禁用状态可点击，为了diabled态点击需要有提示
    */
   disabledClick?: boolean;
-};
+} & buttonTypes;
 
 const Button = (props: Props) => {
   const {

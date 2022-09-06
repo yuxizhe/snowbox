@@ -1,4 +1,11 @@
-## SnowBox 雪球 RN/H5 同构组件库
+---
+nav:
+  title: 组件开发说明
+  path: /dev
+# mobile: false
+---
+
+# 同构组件库开发说明
 
 ## 启动命令
 

@@ -5,6 +5,7 @@
   "description": "Universal UI system",
   "main": "index.js",
   "scripts": {
+    "doc": "cd packages/snowbox && yarn dev",
     "dev": "cd packages/examples && yarn dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"build\"",

@@ -2,10 +2,10 @@
 nav:
   title: Components
   path: /components
-mobile: false
+mobile: true
 group:
-  title: 基础组件
-  order: 1
+  title: Components
+  order: 4
 ---
 
 # Press

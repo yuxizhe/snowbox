@@ -101,10 +101,10 @@ const SparkLine = () => (
 );
 
 export default SparkLine;
-
 ```
 
 ## 传参示例
+
 ```
 width={70}
 fields={['this_product', 'benchmark_index', 'third']}

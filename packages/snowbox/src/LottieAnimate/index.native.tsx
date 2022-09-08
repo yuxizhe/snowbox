@@ -12,7 +12,7 @@ type Props = {
   dataSource: any;
 };
 
-export default function Loading({ w, h, dataSource }: Props) {
+export default function LottieAnimate({ w, h, dataSource }: Props) {
   return (
     <Box w={w} h={h}>
       <LottieView source={dataSource[THEME]} autoPlay loop />

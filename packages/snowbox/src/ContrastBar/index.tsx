@@ -21,7 +21,7 @@ type Props = {
    */
   data: any[];
   /**
-   * 每个对比条的正负颜色，先正，后负，与fields对应
+   * 二维数组，顺序与fields字段对应 每个element 0号元素为正向bar颜色，1号元素为反向bar颜色，如果只有两组数据对比可以不传使用默认值
    * eg：colors: [['Red010', 'Grn010']]
    *    fields: ['this_prod'] 代表this_pord字段的正负条分别用red010和grn010表示
    */

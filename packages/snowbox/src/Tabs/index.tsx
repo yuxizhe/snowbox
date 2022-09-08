@@ -19,6 +19,10 @@ type Props = {
    * 是否禁用tabs滑动手势
    */
   locked?: boolean;
+  /**
+   * 顶部导航栏是否滚动，不滚动采用缩小字号的方式
+   */
+  tabBarScroll?: boolean;
 };
 
 /**

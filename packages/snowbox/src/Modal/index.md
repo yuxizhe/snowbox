@@ -8,7 +8,7 @@ group:
   order: 2
 ---
 
-# Modal
+# Modal 对话框
 
 弹窗组件
 

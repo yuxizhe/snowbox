@@ -2,7 +2,6 @@
 nav:
   title: Components
   path: /components
-mobile: false
 group:
   title: Components
   order: 2
@@ -23,12 +22,13 @@ PieChart 饼图组件，可绘制基础饼图及圆环图(中间有可显示额�
 
 ```tsx
 import React from 'react';
-import { Box, PieChart, ThemeColor, SVGText } from 'snowbox';
+import { Box, PieChart, ThemeColor, SVG } from 'snowbox';
+const { Text: SVGText } = SVG;
 
 export default () => (
   <Box col m={10} p={10} br={10} bg="B020">
     <Box f={20} cl="T010" DIN>
-      PieChart
+      基础饼图
     </Box>
     <Box flex={1}>
       <Box pt={20} pb={20} flex={1} c>
@@ -42,6 +42,34 @@ export default () => (
           height={108}
         />
       </Box>
+    </Box>
+    <Box f={20} cl="T010" DIN>
+      同心圆饼图
+    </Box>
+    <Box pt={20} pb={20} flex={1} c>
+      <PieChart
+        data={[
+          { percent: 0.35, color: ThemeColor.Chart001.day },
+          { percent: 0.25, color: ThemeColor.Chart002.day },
+          { percent: 0.15, color: ThemeColor.Chart003.day },
+          { percent: 0.25, color: ThemeColor.Chart008.day },
+        ]}
+        width={108}
+        height={108}
+        innerCircleRadius={28}
+        renderCenterChildComponent={(centerX, centerY) => (
+          <SVGText
+            x={centerX}
+            y={centerY}
+            fill={ThemeColor.T010.day}
+            fontSize={12}
+            textAnchor="middle"
+            alignmentBaseline="central"
+          >
+            组合持仓
+          </SVGText>
+        )}
+      />
     </Box>
   </Box>
 );

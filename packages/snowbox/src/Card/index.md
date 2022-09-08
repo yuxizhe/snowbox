@@ -35,7 +35,7 @@ export default () => (
     </Box>
     <Box>
       <Card
-        title="货卡名称"
+        title="标题"
         assisText="辅助说明文字"
         jumpUrlText="详情"
         jumpUrl="/rn"
@@ -71,9 +71,54 @@ export default () => (
                 日收益（03-15）
               </Box>
             </Box>
+            <Box col>
+              <Box f={18} lh={25} cl="Red010" fw="500" DIN>
+                +127.49
+              </Box>
+              <Box f={12} lh={17} fw="400" cl="T020">
+                累计收益
+              </Box>
+            </Box>
           </Box>
         </Box>
       </Card>
+    </Box>
+    <Box mt={12}>
+      <Card title="不带辅助说明" jumpUrlText="暂无更多">
+        <Box col bg="B030" px={12} py={12}>
+          <Box style={{ justifyContent: 'space-between' }}>
+            <Box f={12} lh={17} fw="400" cl="T020">
+              累计收益率
+            </Box>
+            <Box f={12} lh={17} fw="500" cl="Red010" DIN>
+              +27.83%
+            </Box>
+            <Box f={12} lh={17} fw="400" cl="T020">
+              持有份额
+            </Box>
+            <Box f={12} lh={17} fw="500" cl="T010" DIN>
+              50,112.30
+            </Box>
+          </Box>
+          <Box style={{ justifyContent: 'space-between' }} mt={8}>
+            <Box f={12} lh={17} fw="400" cl="T020">
+              持有收益
+            </Box>
+            <Box f={12} lh={17} fw="500" cl="Red010" DIN>
+              +1888.90
+            </Box>
+            <Box f={12} lh={17} fw="400" cl="T020">
+              持有收益率
+            </Box>
+            <Box f={12} lh={17} fw="500" cl="Red010" DIN>
+              +22.90%
+            </Box>
+          </Box>
+        </Box>
+      </Card>
+    </Box>
+    <Box mt={12}>
+      <Card title="仅标题无跳转无补充icon" pb={0} />
     </Box>
   </Box>
 );

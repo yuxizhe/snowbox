@@ -24,11 +24,20 @@ group:
 
 ```tsx
 import React from 'react';
-import { Box, FloatView } from 'snowbox';
+import { Box, FloatView, Txt } from 'snowbox';
 
 export default () => (
-  <Box bg="Org021" h={680}>
-    <FloatView h={100} w={100} b={80} r={13} col panEndMinBottom={0} bg="Chart005" br={'50%'} />
+  <Box col flex={1}>
+    <Txt>右侧悬停</Txt>
+    <Box bg="Org021" h={150} mt={10}>
+      <FloatView h={50} w={50} r={13} col panEndMinBottom={0} bg="Chart005" br={'50%'} />
+    </Box>
+    <Box mt={50}>
+      <Txt>左侧悬停</Txt>
+    </Box>
+    <Box bg="Org021" h={150} mt={10}>
+      <FloatView h={50} w={50} l={13} panEndMinBottom={0} adsorption="left" bg="Chart005" br={'50%'} />
+    </Box>
   </Box>
 );
 ```

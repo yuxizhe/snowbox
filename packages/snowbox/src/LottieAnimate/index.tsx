@@ -7,12 +7,21 @@ import { THEME } from '../index';
  * daySource: { day: require(), night: require()}
  */
 type Props = {
+  /**
+   * 宽
+   */
   w: number;
+  /**
+   * 高
+   */
   h: number;
+  /**
+   * 动画数据 ，格式要求{ day: require('day.json'), night: require('night.json')}
+   */
   dataSource: any;
 };
 
-export default function Loading({ w, h, dataSource }: Props) {
+export default function LottieAnimate({ w, h, dataSource }: Props) {
   const loadingRef = useRef<any>();
 
   useEffect(() => {

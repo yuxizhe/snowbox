@@ -8,7 +8,7 @@ group:
   order: 2
 ---
 
-# NoticeBar
+# NoticeBar 滚动条
 
 滚动展示消息通知，适用于当前页面内信息的通知，是一种较醒目的页面内通知方式。
 

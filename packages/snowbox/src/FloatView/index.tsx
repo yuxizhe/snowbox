@@ -41,7 +41,7 @@ export enum AdsorptionType {
   both,
 }
 
-type FloatViewProps = boxTypes & {
+type FloatViewProps = {
   /**
    * 拖动结束 吸附左边相对父组件的间距 默认13
    */
@@ -78,7 +78,7 @@ type FloatViewProps = boxTypes & {
    * 拖动结束事件
    */
   onPanEnd?: () => any;
-};
+} & boxTypes;
 
 /**
  * 浮窗组件, 可拖动

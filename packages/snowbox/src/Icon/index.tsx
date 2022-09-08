@@ -4,8 +4,17 @@ import icon from './icon';
 import { getSize, THEME } from '../Utils';
 
 type Props = {
+  /**
+   * 类型
+   */
   type: keyof typeof icon;
+  /**
+   * 宽度
+   */
   w?: number;
+  /**
+   * 高度
+   */
   h?: number;
 };
 

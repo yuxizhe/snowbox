@@ -7,7 +7,7 @@ group:
   title: Components
 ---
 
-# Contrastbar
+# Contrastbar 对比条
 
 对比条组件
 
@@ -101,10 +101,10 @@ const SparkLine = () => (
 );
 
 export default SparkLine;
-
 ```
 
 ## 传参示例
+
 ```
 width={70}
 fields={['this_product', 'benchmark_index', 'third']}

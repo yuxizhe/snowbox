@@ -7,7 +7,7 @@ group:
   title: Components
 ---
 
-# Contrastbar
+# Contrastbar 对比条
 
 对比条组件
 

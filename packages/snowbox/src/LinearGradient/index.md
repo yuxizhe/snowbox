@@ -7,13 +7,13 @@ group:
   order: 2
 ---
 
-# LinearGradient
+# LinearGradient 渐变
 
 > ## Readme：
 >
 > https://github.com/react-native-linear-gradient/react-native-linear-gradient#readme
 
-### Demo
+## Demo
 
 ```tsx
 import React from 'react';

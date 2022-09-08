@@ -8,7 +8,7 @@ group:
   order: 4
 ---
 
-# Badge
+# Badge 徽标数
 
 徽标组件
 

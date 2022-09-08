@@ -8,7 +8,7 @@ group:
   order: 2
 ---
 
-# LottieAnimate
+# LottieAnimate Json 动画
 
 用于加载 json 格式的动画
 

@@ -7,10 +7,22 @@ interface Props {
   visible: boolean;
   modalTitle?: string;
   modalDesc?: string;
-  cancelText?: string; // 取消按钮文字
-  okText?: string; // 确认按钮文字
-  onCancel?: () => void; // 取消按钮的回调
-  onOk: () => void; // 点击确定回调
+  /**
+   * 取消按钮文字
+   */
+  cancelText?: string;
+  /**
+   * 确认按钮文字
+   */
+  okText?: string;
+  /**
+   * 取消按钮的回调
+   */
+  onCancel?: () => void;
+  /**
+   * 点击确定回调
+   */
+  onOk: () => void;
 }
 
 const XqModal: React.FC<Props> = ({

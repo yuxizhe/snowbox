@@ -7,7 +7,7 @@ group:
   order: 2
 ---
 
-## PieChart
+## PieChart 饼图
 
 PieChart 饼图组件，可绘制基础饼图及圆环图(中间有可显示额外文字等信息空余部分的饼图)。
 

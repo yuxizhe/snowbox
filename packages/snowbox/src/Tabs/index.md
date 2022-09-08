@@ -8,7 +8,7 @@ group:
   order: 2
 ---
 
-# Tabs
+# Tabs 标签页
 
 盒子组件
 

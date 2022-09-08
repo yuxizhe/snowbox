@@ -54,7 +54,7 @@ const isWeb = Platform.OS === 'web';
 
 type Props = {
   /**
-   * 展示
+   * 是否展示弹框
    */
   visible: boolean;
   /**
@@ -66,15 +66,15 @@ type Props = {
    */
   headerRightText?: string;
   /**
-   * header 左侧关闭按钮
+   * header 左侧关闭按钮是否展示
    */
   showHeaderCloseIcon?: boolean;
   /**
-   * footer 文字
+   * 底部按钮文字
    */
   footer?: string;
   /**
-   * 顶部提示
+   * 顶部提示文字
    */
   tip?: string;
   /**
@@ -94,15 +94,15 @@ type Props = {
    */
   startTime?: string;
   /**
-   * 结束时间  默认为当天
+   * 结束时间
    */
   endTime?: string;
   /**
-   * 最小值, 默认2000-01-01
+   * 最小值日期
    */
   min?: Date;
   /**
-   * 最大值，默认当前日
+   * 最大值日期
    */
   max?: Date;
 };

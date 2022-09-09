@@ -5,7 +5,13 @@ import { Box, XqText, THEME, ThemeColor } from '..';
 
 interface Props {
   visible: boolean;
+  /**
+   * 确认弹窗标题
+   */
   modalTitle?: string;
+  /**
+   * 确认弹窗文字
+   */
   modalDesc?: string;
   /**
    * 取消按钮文字

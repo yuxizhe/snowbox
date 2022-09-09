@@ -8,25 +8,17 @@ group:
   order: 2
 ---
 
-# Modal 对话框
+# Modal 确认弹框
 
 弹窗组件
 
 支持提示窗、确认窗两种样式弹窗。
 
-> 支持配置
->
-> - 标题
-> - 内容
-> - 按钮文案
-> - 确认按钮回调
-> - 取消按钮回调
-
 Demo:
 
 ```tsx
 import React, { useState } from 'react';
-import { Box, PButton, Modal } from 'snowbox';
+import { Box, Button, Modal } from 'snowbox';
 
 const [modalVisible, setModalVisible] = useState(false);
 
@@ -36,9 +28,9 @@ export default () => (
       Modals
     </Box>
     <Box>
-      <PButton c m={10} bg="Blu014" onPress={() => setModalVisible(true)} DIN>
+      <Button c m={10} onPress={() => setModalVisible(true)} DIN>
         open
-      </PButton>
+      </Button>
     </Box>
 
     <Modal

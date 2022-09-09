@@ -9,11 +9,15 @@ group:
 
 # LinearGradient 渐变
 
-> ## Readme：
->
+native:
+
 > https://github.com/react-native-linear-gradient/react-native-linear-gradient#readme
 
-## Demo
+web:
+
+> https://github.com/react-native-web-community/react-native-web-linear-gradient
+
+Demo
 
 ```tsx
 import React from 'react';
@@ -43,3 +47,5 @@ export default () => (
   </Box>
 );
 ```
+
+<API src="./index.native.js"></API>

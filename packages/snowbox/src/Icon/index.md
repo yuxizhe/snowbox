@@ -12,13 +12,9 @@ group:
 
 图标组件
 
-支持配置
+<API></API>
 
-- 宽度
-- 高度
-- 图标样式
-
-Demo:
+Demo: 支持点击复制
 
 ```tsx
 import React, { useState } from 'react';
@@ -76,5 +72,3 @@ export default () => {
   );
 };
 ```
-
-<API></API>

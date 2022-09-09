@@ -7,18 +7,11 @@ group:
   order: 2
 ---
 
-## PieChart 饼图
+# PieChart 饼图
 
 PieChart 饼图组件，可绘制基础饼图及圆环图(中间有可显示额外文字等信息空余部分的饼图)。
 
-> 支持配置
->
-> - 设置数据及百分比
-> - 饼图半径/内圆半径
-> - 饼图/内圆颜色
-> - 图标大小
-
-### Demo
+Demo
 
 ```tsx
 import React from 'react';

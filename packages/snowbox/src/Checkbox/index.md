@@ -8,7 +8,7 @@ group:
   order: 2
 ---
 
-# Checkbox
+# Checkbox 多选框
 
 多选框组件
 

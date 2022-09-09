@@ -10,8 +10,6 @@ group:
 
 # Card 卡片
 
-## Card 容器组件
-
 卡片组件
 
 支持配置
@@ -22,7 +20,7 @@ group:
 - 说明文字跳转链接
 - 下方辅助文字
 
-### Demo
+Demo
 
 ```tsx
 import React from 'react';

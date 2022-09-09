@@ -5,6 +5,7 @@ nav:
 mobile: false
 group:
   title: 基础组件
+  order: 1
 ---
 
 # Txt
@@ -13,14 +14,7 @@ group:
 
 支持字号、字重、颜色、雪球常用 DIN 字体等，封装行内占位，三端差异抹平等等常用功能。
 
-## 支持属性
-
-- f: font size
-- fw: font weight
-- lh: line hight
-- cl: color
-- ls: letter spacing
-- DIN： din 字体
+<API></API>
 
 Demo:
 
@@ -74,5 +68,3 @@ export default () => (
   </Box>
 );
 ```
-
-<API></API>

@@ -4,6 +4,8 @@ stages:
   - docs
 pages:
   stage: docs
+  only:
+    - branches@f2e/snowbox
   script:
     - mkdir public
     - cd packages/snowbox
@@ -14,7 +16,3 @@ pages:
   artifacts:
     paths:
       - public
-cache:
-  key: modules
-  paths:
-    - node_modules/

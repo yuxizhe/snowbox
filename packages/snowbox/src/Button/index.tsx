@@ -1,12 +1,16 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, SafeAreaView } from 'react-native';
 import { getSize } from '../Utils';
-import Box from '../Box';
+import { Box, LottieAnimate } from '../index';
 import { buttonTypes } from '../Utils/props';
+import whiteDay from '../Loading/loading_white_day';
+import whiteNight from '../Loading/loading_white_night';
+import grayDay from '../Loading/loading_gray_day';
+import grayNight from '../Loading/loading_gray_night';
 
-type Props = {
+type Props = buttonTypes & {
   /**
-   * 尺寸, 大: l(默认)、中: m、小: s
+   * 尺寸, 大: l(默认)、中: m、小: s。大按钮默认撑满宽度。
    */
   size?: 'l' | 'm' | 's' | undefined;
   /**
@@ -21,7 +25,15 @@ type Props = {
    * false: 禁用状态可点击，为了diabled态点击需要有提示
    */
   disabledClick?: boolean;
-} & buttonTypes;
+  /**
+   * true: 显示loading图标。
+   */
+  loading?: boolean;
+  /**
+   * true: 为Button组件加一层 safeAreaView
+   */
+  safe?: boolean;
+};
 
 const Button = (props: Props) => {
   const {
@@ -29,7 +41,7 @@ const Button = (props: Props) => {
     onPress,
     size = 'l',
     type = 'primary',
-    disabled,
+    disabled = props.loading,
     ab,
     l,
     r,
@@ -43,9 +55,12 @@ const Button = (props: Props) => {
     mt,
     mb,
     disabledClick = true,
+    loading,
+    safe,
     ...otherProps
   } = props;
-  const colorType = disabled ? `${type}Dis` : type;
+  const btnDisabled = disabled || loading;
+  const colorType = btnDisabled ? `${type}Dis` : type;
   const gts = getSize;
 
   const marginList = {
@@ -65,18 +80,21 @@ const Button = (props: Props) => {
       px: 0,
       h: 44,
       f: 16,
+      loadingMr: 8,
     },
     m: {
       // 中
       px: 12,
       h: 28,
       f: 14,
+      loadingMr: 4,
     },
     s: {
       // 小
       px: 8,
       h: 24,
       f: 12,
+      loadingMr: 4,
     },
   };
 
@@ -107,7 +125,108 @@ const Button = (props: Props) => {
     },
   };
 
-  return ab ? (
+  const loadingWhite = {
+    day: whiteDay,
+    night: whiteNight,
+  };
+  const loadingGray = {
+    day: grayDay,
+    night: grayNight,
+  };
+
+  const loadingStyle = {
+    l: {
+      w: gts(20),
+      h: gts(20),
+    },
+    m: {
+      w: gts(16),
+      h: gts(16),
+    },
+    s: {
+      w: gts(14),
+      h: gts(14),
+    },
+    primary: loadingWhite,
+    primaryDis: loadingWhite,
+    secondary: loadingGray,
+    secondaryDis: loadingGray,
+    white: loadingGray,
+    whiteDis: loadingGray,
+  };
+
+  const safeButton = ab ? ( // 适配safeArea的样式
+    <Box ab l={l} r={r} t={t} b={b} w={size === 'l' ? '100%' : undefined}>
+      <TouchableOpacity
+        style={
+          size === 'l'
+            ? { flex: 1, flexDirection: 'row' }
+            : {
+                minWidth: size === 'm' ? gts(66) : gts(52),
+                height: gts(boxSize[size].h),
+              }
+        }
+        onPress={onPress}
+        disabled={btnDisabled && disabledClick}
+        activeOpacity={0.8}
+        hitSlop={{ left: 8, right: 8, top: 8, bottom: 8 }}
+      >
+        <Box flex={1} br={100} c {...boxSize[size]} {...boxColor[colorType]} {...otherProps}>
+          {loading && (
+            <Box mr={boxSize[size].loadingMr}>
+              <LottieAnimate {...loadingStyle[size]} dataSource={loadingStyle[colorType]} />
+            </Box>
+          )}
+          <Box c cl={boxColor[colorType].cl} f={boxSize[size].f} {...otherProps}>
+            {children}
+          </Box>
+        </Box>
+      </TouchableOpacity>
+    </Box>
+  ) : (
+    // 大按钮宽度默认撑满，中小按钮宽度由内容撑开
+    <TouchableOpacity
+      style={
+        size === 'l'
+          ? { flex: 1, flexDirection: 'row' }
+          : {
+              minWidth: size === 'm' ? gts(66) : gts(52),
+              height: gts(boxSize[size].h),
+            }
+      }
+      onPress={onPress}
+      disabled={btnDisabled && disabledClick}
+      activeOpacity={0.8}
+      hitSlop={{ left: 8, right: 8, top: 8, bottom: 8 }}
+    >
+      <Box flex={1} br={100} c {...boxSize[size]} {...boxColor[colorType]} {...otherProps}>
+        {loading && (
+          <Box mr={boxSize[size].loadingMr}>
+            <LottieAnimate {...loadingStyle[size]} dataSource={loadingStyle[colorType]} />
+          </Box>
+        )}
+        <Box c cl={boxColor[colorType].cl} f={boxSize[size].f} {...otherProps}>
+          {children}
+        </Box>
+      </Box>
+    </TouchableOpacity>
+  );
+
+  return safe ? (
+    <SafeAreaView
+      style={
+        size === 'l'
+          ? { flex: 1, flexDirection: 'row', ...marginList }
+          : {
+              minWidth: size === 'm' ? gts(66) : gts(52),
+              ...marginList,
+            }
+      }
+    >
+      {safeButton}
+    </SafeAreaView>
+  ) : // 无safeArea的样式
+  ab ? (
     <Box ab l={l} r={r} t={t} b={b} w={size === 'l' ? '100%' : undefined}>
       <TouchableOpacity
         style={
@@ -120,12 +239,19 @@ const Button = (props: Props) => {
               }
         }
         onPress={onPress}
-        disabled={disabled && disabledClick}
+        disabled={btnDisabled && disabledClick}
         activeOpacity={0.8}
         hitSlop={{ left: 8, right: 8, top: 8, bottom: 8 }}
       >
         <Box flex={1} br={100} c {...boxSize[size]} {...boxColor[colorType]} {...otherProps}>
-          {children}
+          {loading && (
+            <Box mr={boxSize[size].loadingMr}>
+              <LottieAnimate {...loadingStyle[size]} dataSource={loadingStyle[colorType]} />
+            </Box>
+          )}
+          <Box c cl={boxColor[colorType].cl} f={boxSize[size].f} {...otherProps}>
+            {children}
+          </Box>
         </Box>
       </TouchableOpacity>
     </Box>
@@ -142,12 +268,19 @@ const Button = (props: Props) => {
             }
       }
       onPress={onPress}
-      disabled={disabled && disabledClick}
+      disabled={btnDisabled && disabledClick}
       activeOpacity={0.8}
       hitSlop={{ left: 8, right: 8, top: 8, bottom: 8 }}
     >
       <Box flex={1} br={100} c {...boxSize[size]} {...boxColor[colorType]} {...otherProps}>
-        {children}
+        {loading && (
+          <Box mr={boxSize[size].loadingMr}>
+            <LottieAnimate {...loadingStyle[size]} dataSource={loadingStyle[colorType]} />
+          </Box>
+        )}
+        <Box c cl={boxColor[colorType].cl} f={boxSize[size].f} {...otherProps}>
+          {children}
+        </Box>
       </Box>
     </TouchableOpacity>
   );

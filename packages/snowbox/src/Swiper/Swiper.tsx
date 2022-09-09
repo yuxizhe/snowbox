@@ -9,7 +9,87 @@ import LayoutView from '../Utils/LayoutView';
 
 const useNativeDriver = false; // because of RN #13377
 
-class Swiper extends React.Component {
+export interface SwiperP {
+  /**
+   * Swiper Vertical Layout
+   */
+  vertical?: boolean;
+  /**
+   * initial slide index
+   */
+  from?: number;
+  /**
+   * Set to true to enable continuous loop mode
+   */
+  loop?: boolean;
+  /**
+   * Delay between auto play transitions (in second).
+   */
+  timeout?: number;
+  /**
+   * Function that returns boolean value.
+   * Must return false to disable swiping mechanism.
+   * Does not disable Prev / Next buttons
+   */
+  gesturesEnabled?: Function;
+  /**
+   * Tune spring animation on autoplay,
+   * touch release or slides changes via buttons
+   */
+  springConfig?: Object;
+  /**
+   * Initiate animation after swipe this distance
+   */
+  minDistanceToCapture?: number;
+  /**
+   * Minimal part of swiper width
+   * (or height for vertical)
+   */
+  minDistanceForAction?: number;
+  /**
+   * Any swiper animation start
+   */
+  onAnimationStart?: Function;
+  /**
+   * Any swiper animation end
+   */
+  onAnimationEnd?: Function;
+  /**
+   * 	Called when active index changed
+   */
+  onIndexChanged?: Function;
+  /**
+   * Swiper inner container position `fixed` instead `relative`
+   */
+  positionFixed?: boolean;
+  /**
+   * Outer (root) container style
+   */
+  containerStyle?: { style: Object };
+  /**
+   * Inner container style
+   */
+  innerContainerStyle?: { style: Object };
+  /**
+   * Swipe area style
+   */
+  swipeAreaStyle?: { style: Object };
+  /**
+   * Each slide wrapper style
+   */
+  slideWrapperStyle?: { style: Object };
+  /**
+   * Dots and control buttons visible and enabled
+   */
+  controlsEnabled?: boolean;
+  /**
+   * Custom controls component
+   */
+  Controls?: React.ReactNode;
+  controlsProps?: Object;
+}
+
+class Swiper extends React.Component<SwiperP> {
   children = (() => React.Children.toArray(this.props.children))();
 
   count = (() => this.children.length)();
@@ -234,7 +314,7 @@ class Swiper extends React.Component {
       controlsProps,
       Controls = DefaultControls,
       onAnimationEnd,
-    } = this.props;
+    }: swiperP = this.props;
 
     return (
       <LayoutView

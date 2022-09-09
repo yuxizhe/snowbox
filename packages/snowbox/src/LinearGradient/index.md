@@ -48,4 +48,4 @@ export default () => (
 );
 ```
 
-<API src="./index.native.js"></API>
+<API></API>

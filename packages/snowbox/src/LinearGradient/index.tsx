@@ -3,8 +3,8 @@
  */
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
-
-export default class LinearGradient extends PureComponent {
+import { LinearGradientProps } from 'react-native-linear-gradient';
+export default class LinearGradient extends PureComponent<LinearGradientProps> {
   static defaultProps = {
     start: {
       x: 0.5,

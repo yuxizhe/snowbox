@@ -12,15 +12,13 @@ group:
 
 文字组件
 
-可选三种尺寸，三种背景色，可以应用 Box 的全部属性。
+支持字号、字重、颜色、雪球常用 DIN 字体等，封装行内占位，三端差异抹平等等常用功能。
 
 Demo:
 
 ```tsx
-import React, { useState } from 'react';
+import React from 'react';
 import { Box, Button } from 'snowbox';
-
-const [loading, setLoading] = useState(false);
 
 export default () => (
   <Box col m={10} p={10} br={10} bg="B020">
@@ -28,31 +26,15 @@ export default () => (
       Button
     </Box>
     <Box>
-      <Button
-        onPress={() => {
-          setLoading(true);
-          setTimeout(() => setLoading(false), 3000);
-        }}
-        mr={17}
-        loading={loading}
-        safe
-      >
-        点击loading
+      <Button onPress={(e) => console.log(e)} mr={17}>
+        主要按钮
       </Button>
       <Button onPress={(e) => console.log(e)} disabled>
         主按钮禁用
       </Button>
     </Box>
     <Box mt={5}>
-      <Button
-        onPress={() => {
-          setLoading(true);
-          setTimeout(() => setLoading(false), 3000);
-        }}
-        type="secondary"
-        loading={loading}
-        mr={17}
-      >
+      <Button onPress={(e) => console.log(e)} type="secondary" mr={17}>
         次要按钮
       </Button>
       <Button onPress={(e) => console.log(e)} type="secondary" disabled>
@@ -70,7 +52,7 @@ export default () => (
     <Box mt={5} />
     <Box mt={5}>
       <Box flex={1} mr={17}>
-        <Button onPress={() => setLoading(true)} loading={loading} size="m" mr={10} safe>
+        <Button onPress={(e) => console.log(e)} size="m" mr={17}>
           发布
         </Button>
         <Button onPress={(e) => console.log(e)} size="m" disabled>
@@ -78,7 +60,7 @@ export default () => (
         </Button>
       </Box>
       <Box flex={1}>
-        <Button onPress={() => setLoading(true)} loading={loading} size="s" mr={10} safe>
+        <Button onPress={(e) => console.log(e)} size="s" mr={17}>
           发布
         </Button>
         <Button onPress={(e) => console.log(e)} size="s" disabled>

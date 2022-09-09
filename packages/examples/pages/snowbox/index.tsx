@@ -39,7 +39,6 @@ const Product = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [visible, setVisible] = useState(false);
   const [popupVisible, setPopupVisible] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   return (
     <IOScrollView>
@@ -495,31 +494,15 @@ const Product = () => {
             Button
           </Box>
           <Box>
-            <Button
-              onPress={() => {
-                setLoading(true);
-                setTimeout(() => setLoading(false), 3000);
-              }}
-              mr={17}
-              loading={loading}
-              safe
-            >
-              点击loading
+            <Button onPress={(e) => console.log(e)} mr={17}>
+              主要按钮
             </Button>
             <Button onPress={(e) => console.log(e)} disabled>
               主按钮禁用
             </Button>
           </Box>
           <Box mt={5}>
-            <Button
-              onPress={() => {
-                setLoading(true);
-                setTimeout(() => setLoading(false), 3000);
-              }}
-              type="secondary"
-              loading={loading}
-              mr={17}
-            >
+            <Button onPress={(e) => console.log(e)} type="secondary" mr={17}>
               次要按钮
             </Button>
             <Button onPress={(e) => console.log(e)} type="secondary" disabled>
@@ -537,7 +520,7 @@ const Product = () => {
           <Box mt={5} />
           <Box mt={5}>
             <Box flex={1} mr={17}>
-              <Button onPress={() => setLoading(true)} loading={loading} size="m" mr={10} safe>
+              <Button onPress={(e) => console.log(e)} size="m" mr={17}>
                 发布
               </Button>
               <Button onPress={(e) => console.log(e)} size="m" disabled>
@@ -545,7 +528,7 @@ const Product = () => {
               </Button>
             </Box>
             <Box flex={1}>
-              <Button onPress={() => setLoading(true)} loading={loading} size="s" mr={10} safe>
+              <Button onPress={(e) => console.log(e)} size="s" mr={17}>
                 发布
               </Button>
               <Button onPress={(e) => console.log(e)} size="s" disabled>

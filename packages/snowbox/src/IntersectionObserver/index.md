@@ -7,7 +7,7 @@ group:
   title: Components
 ---
 
-# IntersectionObserver
+# IntersectionObserver 滚动曝光
 
 滚动曝光组件，可以记录曝光时间
 

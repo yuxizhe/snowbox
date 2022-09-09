@@ -4,7 +4,7 @@ import lottie from 'lottie-web';
 import { THEME } from '../index';
 
 /**
- * daySource: { day: require(), night: require()}
+ * daySource: { day: xxx..., night: xxx... }
  */
 type Props = {
   /**
@@ -16,7 +16,7 @@ type Props = {
    */
   h: number;
   /**
-   * 动画数据 ，格式要求{ day: require('day.json'), night: require('night.json')}
+   * 动画数据 ，格式要求{ day: xxx..., night: xxx... }
    */
   dataSource: any;
 };

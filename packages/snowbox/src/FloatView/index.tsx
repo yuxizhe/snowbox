@@ -247,7 +247,7 @@ class FloatView extends Component<FloatViewProps, any> {
     panEndMinBottom: 80,
     recoveryLeft: 13,
     recoveryRight: 13,
-    adsorption: 'right',
+    adsorption: AdsorptionType.right,
   };
 }
 

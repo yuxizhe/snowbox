@@ -22,7 +22,7 @@ ActionSheet 弹窗组件，支持横屏模式，有多重灵活配置功能。
 - footer 配置
 - 多种交互（详见 API）
 
-### Demo
+Demo
 
 ```tsx
 import React, { useState } from 'react';

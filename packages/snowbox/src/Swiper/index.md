@@ -15,7 +15,7 @@ native + web
 
 > https://github.com/reactrondev/react-native-web-swiper
 
-### Demo
+Demo
 
 ```tsx
 import React from 'react';

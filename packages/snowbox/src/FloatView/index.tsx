@@ -26,7 +26,7 @@ onPanEnd
 /**
  * 拖动结束吸附类型
  */
-export enum AdsorptionType {
+enum AdsorptionType {
   /**
    * 左边
    */
@@ -61,7 +61,7 @@ type FloatViewProps = {
   /**
    * 拖动结束 吸附类型: 左边 右边 双边 默认右边
    */
-  adsorption?: AdsorptionType;
+  adsorption?: keyof typeof AdsorptionType;
   /**
    * 点击事件
    */
@@ -247,7 +247,7 @@ class FloatView extends Component<FloatViewProps, any> {
     panEndMinBottom: 80,
     recoveryLeft: 13,
     recoveryRight: 13,
-    adsorption: AdsorptionType.right,
+    adsorption: 'right',
   };
 }
 

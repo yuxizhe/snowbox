@@ -18,4 +18,54 @@ export default defineConfig({
       // 更多 rule 配置访问 https://github.com/umijs/dumi/blob/1.x/packages/theme-mobile/src/typings/config.d.ts#L7
     },
   },
+  menus: {
+    // 需要自定义侧边菜单的路径，没有配置的路径还是会使用自动生成的配置
+    '/components': [
+      {
+        title: '基础组件',
+        children: ['Box', 'Txt', 'color', 'position', 'autoScreen'],
+      },
+      {
+        title: '展示组件',
+        children: [
+          'Card',
+          'Icon',
+          'Image',
+          'TxtNum',
+          'Badge',
+          'ContrastBar',
+          'NoticeBar',
+          'PieChart',
+          'Progress',
+          'SparkLines',
+          'Empty',
+          'Loading',
+          'LinearGradient',
+          'LottieAnimate',
+          'Svg',
+        ],
+      },
+      {
+        title: '交互组件',
+        children: [
+          'ActionSheet',
+          'Button',
+          'DatePicker',
+          'Modal',
+          'Popup',
+          'Swiper',
+          'FloatView',
+          'Tabs',
+          'Press',
+          'Checkbox',
+          'Radio',
+          'IntersectionObserver',
+        ],
+      },
+      {
+        title: '功能',
+        children: ['CustomHooks'],
+      },
+    ],
+  },
 });

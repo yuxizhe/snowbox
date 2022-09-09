@@ -1,6 +1,6 @@
 ---
 nav:
-  title: 组件开发说明
+  title: 同构开发方式
   path: /dev
 # mobile: false
 ---

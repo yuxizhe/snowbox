@@ -28,6 +28,6 @@ export default () => (
 );
 ```
 
-## API
+API
 
 props 同 Box 的 props，作用于 loading 动画的容器上

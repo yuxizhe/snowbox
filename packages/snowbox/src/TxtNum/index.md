@@ -8,7 +8,7 @@ group:
   order: 2
 ---
 
-# TxtNum
+# TxtNum 数字文字组件
 
 数字文字组件
 

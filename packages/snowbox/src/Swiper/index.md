@@ -7,7 +7,7 @@ group:
   order: 2
 ---
 
-## Swiper 滑动组件
+# Swiper 滑动组件
 
 触摸滑动组件,适用于 native 及 web
 

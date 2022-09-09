@@ -1,15 +1,15 @@
 ---
 nav:
-  title: RN开发方式
-  path: /rn-dev
+  title: 同构开发方式
+  path: /dev
 # mobile: false
 ---
+
+# RN 同构开发方式
 
 详细文档：
 
 > https://xueqiu.feishu.cn/wiki/wikcnlOyt7kWFgKKaQ7mbXrheqe#
-
-## 概述
 
 优化 RN 开发流程，降低开发难度，提高开发体验。
 
@@ -25,7 +25,7 @@ nav:
 - RC 包：从个人 feature 往`release`分支合代码，`随后在mpaas点击发布RC包`，设置最低版本限制
 - 上线：从 RC 预发布页面，点击“创建生产版本”
 
-#### 同构 H5
+### 同构 H5
 
 和前端项目一致：
 

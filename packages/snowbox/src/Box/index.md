@@ -2,7 +2,7 @@
 nav:
   title: Components
   path: /components
-mobile: false
+# mobile: false
 group:
   title: 基础组件
   order: 1
@@ -10,13 +10,11 @@ group:
 
 # Box
 
-## Box 组件
-
 盒子组件，相当于 web 的 Div 和 RN 里的 View 。
 
 实现盒模型，定位，样式属性简写，颜色系统，主题切换，屏幕大小自适应，三端差异抹平等功能。
 
-### 支持属性
+支持属性
 
 - 盒模型相关：m: margin p:padding br: border flex: flex
 - 定位相关： l:left r: right t: top b: button ab: absolute c: center
@@ -45,13 +43,3 @@ export default () => (
 ```
 
 <API></API>
-
-## 屏幕适配
-
-屏幕适配系统
-
-样式组件系统，所有的尺寸样式自带屏幕适配，无需给每个样式写屏幕适配代码。
-
-比如设计稿中以 iPhone8 375 为基准。
-
-只需写 `<Box m={20} p={20} f={14} />`

@@ -7,7 +7,7 @@ group:
   order: 2
 ---
 
-## ActionSheet 弹窗
+# ActionSheet 弹窗
 
 ActionSheet 弹窗组件，支持横屏模式，有多重灵活配置功能。
 
@@ -42,7 +42,7 @@ export default () => {
       <Box>
         <Button
           m={10}
-          bg="Blu014"
+          // bg="Blu014"
           onPress={() => {
             setVisible(true);
             setShowCloseIcon(true);
@@ -57,7 +57,7 @@ export default () => {
       <Box f={20} cl="T010">
         <Button
           m={10}
-          bg="Blu014"
+          // bg="Blu014"
           onPress={() => {
             setVisible(true);
             setShowCloseIcon(false);
@@ -71,7 +71,7 @@ export default () => {
       <Box f={20} cl="T010">
         <Button
           m={10}
-          bg="Blu014"
+          // bg="Blu014"
           onPress={() => {
             setVisible(true);
             setShowCloseIcon(true);
@@ -86,7 +86,7 @@ export default () => {
       <Box>
         <Button
           m={10}
-          bg="Blu014"
+          // bg="Blu014"
           onPress={() => {
             setVisible(true);
             setIsLandscape(true);

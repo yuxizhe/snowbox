@@ -7,7 +7,7 @@ group:
   title: Components
 ---
 
-# Contrastbar 对比条
+# ContrastBar 对比条
 
 对比条组件
 
@@ -16,10 +16,13 @@ group:
 Demo
 
 ```jsx
+/**
+ * defaultShowCode: true
+ */
 import React from 'react';
 import { Box, ContrastBar } from 'snowbox';
 
-const SparkLine = () => (
+const demo = () => (
   <Box col m={10} p={10} br={10} bg="B020" flex={1} style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
     <ContrastBar
       width={70}
@@ -100,12 +103,12 @@ const SparkLine = () => (
   </Box>
 );
 
-export default SparkLine;
+export default demo;
 ```
 
 ## 传参示例
 
-```
+```js
 width={70}
 fields={['this_product', 'benchmark_index', 'third']}
 colors={[undefined, undefined, ['Blu010', 'Ylw010']]}

@@ -90,6 +90,8 @@ export default () => {
           onPress={() => {
             setVisible(true);
             setIsLandscape(true);
+            setShowCloseIcon(true);
+            setShowRightIcon(true);
           }}
           DIN
         >
@@ -99,15 +101,27 @@ export default () => {
 
       <ActionSheet
         visible={visible}
-        onRequestClose={() => setVisible(false)}
+        onRequestClose={() => {
+          setVisible(false);
+          setIsLandscape(false);
+        }}
         headerTitle="指标说明"
         headerRightText={showRightIcon ? '新建' : ''}
         showHeaderCloseIcon={showCloseIcon}
-        onCloseIconClick={() => setVisible(false)}
-        onHeaderRightClick={() => setVisible(false)}
+        onCloseIconClick={() => {
+          setVisible(false);
+          setIsLandscape(false);
+        }}
+        onHeaderRightClick={() => {
+          setVisible(false);
+          setIsLandscape(false);
+        }}
         footer="我知道了"
         isLandscape={isLandscape}
-        onFooterClick={() => setVisible(false)}
+        onFooterClick={() => {
+          setVisible(false);
+          setIsLandscape(false);
+        }}
         content={
           <Box col flex={1}>
             <Box f={16} cl="T010" fw="500">

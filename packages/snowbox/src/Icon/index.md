@@ -17,14 +17,19 @@ group:
 Demo: 支持点击复制
 
 ```tsx
-import React, { useState } from 'react';
+/**
+ * defaultShowCode: true
+ */
+import React, { useState, useEffect } from 'react';
 import { Clipboard, Alert } from 'react-native';
 import { Box, Icon, Press, Popup, Txt } from 'snowbox';
 import iconConfig from './icon';
+import { usePrefersColor } from 'dumi/theme';
 
 export default () => {
   const [visible, setVisible] = useState(false);
-  const [text, setText] = useState('');
+  const [text, setText] = useState('light');
+  const [color, setColor] = usePrefersColor('light');
   const setString = (item) => {
     const success = Clipboard.setString(`<Icon type="${item}"/>`);
     setText(`<Icon type="${item}"/>`);
@@ -38,6 +43,8 @@ export default () => {
       <Box f={20} mb={10} cl="T010" DIN>
         Icon
       </Box>
+      <Box>{color}</Box>
+
       <Box flex={1} style={{ flexWrap: 'wrap' }}>
         {Object.keys(iconConfig).map((item) => (
           <Box

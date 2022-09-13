@@ -1,5 +1,6 @@
 import { Dimensions, Platform } from 'react-native';
 import numeral from 'numeral';
+import { usePrefersColor } from 'dumi/theme';
 import RNBridge from '../Utils/RNBridge';
 import compareVersions from 'compare-versions';
 import colorJson from '../theme/color.json';
@@ -8,9 +9,11 @@ export const ThemeColor = colorJson;
 export const DeviceWidth = Dimensions.get('window').width || 375;
 const isNodeEnv = typeof process !== 'undefined' && process && process.versions && process.versions.node;
 export const OS: 'ios' | 'android' | 'windows' | 'macos' | 'web' | 'node' = isNodeEnv ? 'node' : Platform.OS;
+const [color, setColor] = usePrefersColor();
 
 // eslint-disable-next-line import/no-mutable-exports
-export let THEME = 'day';
+
+export let THEME = document.documentElement.getAttribute('data-prefers-color') === 'light' ? 'day' : 'night';
 
 // eslint-disable-next-line import/no-mutable-exports
 export let gVar = {

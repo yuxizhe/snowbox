@@ -26,6 +26,7 @@ import {
   PieChart,
   ThemeColor,
   SVG,
+  Countdown,
 } from 'snowbox';
 // import Toast from '@/components/Toast';
 import ActionSheets from './ActionSheets';
@@ -838,6 +839,14 @@ const Product = () => {
                 )}
               />
             </Box>
+          </Box>
+        </Box>
+        <Box col m={10} p={10} br={10} bg="B020">
+          <Box f={20} cl="T010" DIN>
+            Countdown
+          </Box>
+          <Box c>
+            <Countdown onEnd={() => console.log('end')} desc="查询中，请稍后..." initSeconds={15} />
           </Box>
         </Box>
       </Box>

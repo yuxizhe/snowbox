@@ -44,6 +44,7 @@ export default defineConfig({
           'LinearGradient',
           'LottieAnimate',
           'Svg',
+          'Countdown',
         ],
       },
       {

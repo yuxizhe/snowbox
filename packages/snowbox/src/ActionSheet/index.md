@@ -25,6 +25,9 @@ ActionSheet 弹窗组件，支持横屏模式，有多重灵活配置功能。
 Demo
 
 ```tsx
+import React, { useState, useEffect } from 'react';
+import { Box, ActionSheet, Button } from 'snowbox';
+import { setGlobalVar } from '../Utils';
 export default () => {
   const [visible, setVisible] = useState(false);
   const [showCloseIcon, setShowCloseIcon] = useState(true);

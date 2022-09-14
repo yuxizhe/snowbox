@@ -36,6 +36,8 @@ import * as Observer from './IntersectionObserver';
 import FloatView from './FloatView';
 import PieChart from './PieChart';
 import Countdown from './Countdown';
+import LineChart from './LineChart';
+import ExpandTxt from './ExpandTxt';
 
 export * from './CustomHooks';
 
@@ -103,4 +105,6 @@ export {
   FloatView,
   PieChart,
   Countdown,
+  LineChart,
+  ExpandTxt,
 };

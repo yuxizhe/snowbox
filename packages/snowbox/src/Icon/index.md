@@ -17,6 +17,9 @@ group:
 Demo: 支持点击复制
 
 ```tsx
+/**
+ * defaultShowCode: true
+ */
 import React, { useState } from 'react';
 import { Clipboard, Alert } from 'react-native';
 import { Box, Icon, Press, Popup, Txt } from 'snowbox';
@@ -24,7 +27,6 @@ import iconConfig from './icon';
 
 export default () => {
   const [visible, setVisible] = useState(false);
-  const [text, setText] = useState('');
   const setString = (item) => {
     const success = Clipboard.setString(`<Icon type="${item}"/>`);
     setText(`<Icon type="${item}"/>`);
@@ -33,6 +35,7 @@ export default () => {
       setVisible(false);
     }, 700);
   };
+
   return (
     <Box col m={10} p={10} br={10} bg="B020">
       <Box f={20} mb={10} cl="T010" DIN>

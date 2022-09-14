@@ -25,25 +25,35 @@ ActionSheet 弹窗组件，支持横屏模式，有多重灵活配置功能。
 Demo
 
 ```tsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Box, ActionSheet, Button } from 'snowbox';
+import { setGlobalVar } from '../Utils';
 export default () => {
   const [visible, setVisible] = useState(false);
   const [showCloseIcon, setShowCloseIcon] = useState(true);
   const [showRightIcon, setShowRightIcon] = useState(true);
-
   const [isLandscape, setIsLandscape] = useState(false);
+  const [theme, setTheme] = useState('day');
+  const ThemeMap = {
+    dark: 'night',
+    auto: 'day',
+  };
+  useEffect(() => {
+    setTheme(ThemeMap[window.localStorage.getItem('dumi:prefers-color')]);
+    setGlobalVar({ theme: ThemeMap[window.localStorage.getItem('dumi:prefers-color')] });
+  }, [window.localStorage.getItem('dumi:prefers-color')]);
 
   return (
     <Box col m={10} p={10} br={10} bg="B020">
       <Box f={20} cl="T010" DIN>
-        ActionSheets
+        ActionSheets {theme === 'day' ? '日间' : '夜晚'}版本
       </Box>
       <Box>
         <Button
           m={10}
           // bg="Blu014"
           onPress={() => {
+            setIsLandscape(false);
             setVisible(true);
             setShowCloseIcon(true);
             setShowRightIcon(true);
@@ -59,6 +69,7 @@ export default () => {
           m={10}
           // bg="Blu014"
           onPress={() => {
+            setIsLandscape(false);
             setVisible(true);
             setShowCloseIcon(false);
           }}
@@ -73,6 +84,7 @@ export default () => {
           m={10}
           // bg="Blu014"
           onPress={() => {
+            setIsLandscape(false);
             setVisible(true);
             setShowCloseIcon(true);
             setShowRightIcon(false);
@@ -103,24 +115,23 @@ export default () => {
         visible={visible}
         onRequestClose={() => {
           setVisible(false);
-          setIsLandscape(false);
         }}
         headerTitle="指标说明"
         headerRightText={showRightIcon ? '新建' : ''}
         showHeaderCloseIcon={showCloseIcon}
         onCloseIconClick={() => {
           setVisible(false);
-          setIsLandscape(false);
+          //setTimeout(() => setIsLandscape(false), 2);
         }}
         onHeaderRightClick={() => {
           setVisible(false);
-          setIsLandscape(false);
+          //setIsLandscape(false);
         }}
         footer="我知道了"
         isLandscape={isLandscape}
         onFooterClick={() => {
           setVisible(false);
-          setIsLandscape(false);
+          //setIsLandscape(false);
         }}
         content={
           <Box col flex={1}>

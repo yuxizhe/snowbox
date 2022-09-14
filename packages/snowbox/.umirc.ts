@@ -29,6 +29,7 @@ export default defineConfig({
         title: '展示组件',
         children: [
           'Card',
+          'LineChart',
           'Icon',
           'Image',
           'TxtNum',
@@ -51,6 +52,7 @@ export default defineConfig({
           'ActionSheet',
           'Button',
           'DatePicker',
+          'ExpandTxt',
           'Modal',
           'Popup',
           'Swiper',

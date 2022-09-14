@@ -7,7 +7,7 @@ group:
   title: Components
 ---
 
-# SparkLines 曲线图
+# SparkLines 简易曲线图
 
 简易曲线图组件，支持配置多条 line 曲线合 baseline 基准线
 

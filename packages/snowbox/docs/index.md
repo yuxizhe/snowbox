@@ -29,9 +29,9 @@ import { Box, Txt, Img, Badge, Icon } from 'snowbox';
 import { imageAddress } from './Constant';
 
 export default () => (
-  <Box flex={1} c>
+  <Box flex={1} p={20} mt={-15} style={{ flexWrap: 'wrap' }}>
     {imageAddress.map((item) => (
-      <Box col c mr={20} style={{ alignItems: 'center' }}>
+      <Box col c mr={20} mt={15}>
         <Badge count={item.name} bg="TOrg014">
           <Img
             source={{ uri: item.uri }}

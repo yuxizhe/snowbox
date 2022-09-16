@@ -128,23 +128,23 @@ const ExpandTxt: React.FC<ExpandTxtInterfaceProps> = ({
 
   const DefaultExpandElement = () => {
     return (
-      <>
+      <Box flex={1} c>
         <Box f={expandFontSize} fw={expandFontWeight} cl={expandTxtColor} mr={2}>
           {foldLabel}
         </Box>
         <Icon type={expandIconType} />
-      </>
+      </Box>
     );
   };
 
   const DefaultFoldElement = () => {
     return (
-      <>
+      <Box flex={1} c>
         <Box f={expandFontSize} fw={expandFontWeight} cl={expandTxtColor} mr={2}>
           {expandLabel}
         </Box>
         <Icon type={foldIconType} />
-      </>
+      </Box>
     );
   };
 
@@ -154,7 +154,7 @@ const ExpandTxt: React.FC<ExpandTxtInterfaceProps> = ({
     }
 
     return (
-      <Press onPress={onPress} c py={4}>
+      <Press onPress={onPress} c py={4} col>
         {!isExpand ? customFoldElement || <DefaultFoldElement /> : customExpandElement || <DefaultExpandElement />}
       </Press>
     );

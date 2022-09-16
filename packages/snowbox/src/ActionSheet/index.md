@@ -36,12 +36,12 @@ export default () => {
   const [theme, setTheme] = useState('day');
   const ThemeMap = {
     dark: 'night',
-    auto: 'day',
+    light: 'day',
   };
   useEffect(() => {
-    setTheme(ThemeMap[window.localStorage.getItem('dumi:prefers-color')]);
-    setGlobalVar({ theme: ThemeMap[window.localStorage.getItem('dumi:prefers-color')] });
-  }, [window.localStorage.getItem('dumi:prefers-color')]);
+    setTheme(ThemeMap[document.documentElement.getAttribute('data-prefers-color')]);
+    setGlobalVar({ theme: ThemeMap[document.documentElement.getAttribute('data-prefers-color')] });
+  }, [document.documentElement.getAttribute('data-prefers-color')]);
 
   return (
     <Box col m={10} p={10} br={10} bg="B020">

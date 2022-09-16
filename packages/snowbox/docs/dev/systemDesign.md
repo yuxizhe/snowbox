@@ -37,7 +37,7 @@ nav:
 <center><i><b>之前的业务代码</b></i></center>
 
 <div align='center'>
-<img src = "./img/tonggou1.png" width = "75%" /></div>
+<img src = "https://xqimg.imedao.com/1833f247a521eafe3fe6c04a.png" width = "75%" /></div>
 
 ## 样式组件系统 styled system
 
@@ -63,7 +63,7 @@ nav:
 - 适配三端，兼容三端差异
 
 <div align='center'>
-<img src = "./img/tonggou2.png" width = "75%" /></div>
+<img src = "https://xqimg.imedao.com/1833f2485661ef7d3fda3ce9.png" width = "75%" /></div>
 
 > - [NativeBase](https://docs.nativebase.io/utility-first)
 > - [Shopify/Restyle](https://github.com/Shopify/restyle)
@@ -80,19 +80,19 @@ nav:
 如下图，我们可以分别将 Box 的背景色、文字色、文字属性定义成 Token，用**代码化的语言**，将组件的每一部分**属性**进行描述，并对颜色进行**规律的代码化命名**。也就是最方便的声明式 UI。
 
 <div align='center'>
-<img src = "./img/tonggou3.png" width = "75%"/></div>
+<img src = "https://xqimg.imedao.com/1833f247f321eb003fc4689f.png" width = "75%"/></div>
 
 最后由样式组件系统编译为三端能用的代码。并渲染展示。
 
 <div align='center'>
-<img src = "./img/tonggou4.png" width = "75%"/></div>
+<img src = "https://xqimg.imedao.com/1833f247d831eaff3fdbf022.png" width = "75%"/></div>
 
 > [Design Tokens 在设计系统中的意义与应用](https://mp.weixin.qq.com/s/Sa2pvDM_h7C-OfR_QYCLaw)
 
 ## 样式组件系统 解析流程概述
 
 <div align='center'>
-<img src = "./img/tonggou5.png"/></div>
+<img src = "https://xqimg.imedao.com/1833f2488c61ef1b3fd4a795.png"/></div>
 
 ## 样式组件系统核心实现
 
@@ -125,16 +125,16 @@ T010: 一级文字颜色 B010 一级背景颜色，同时包含日夜间主题�
 
 types 定义(以文字属性为例)
 
-<img src = "./img/tonggou6.png" width = "75%"/>
+<img src = "https://xqimg.imedao.com/1833f2484301ef193fea71a3.png" width = "75%"/>
 
 代码提示:
 
-<img src = "./img/tonggou7.png" width = "75%"/>
+<img src = "https://xqimg.imedao.com/1833f2483f81f2f23fe037f9.png" width = "75%"/>
 
 错误使用属性时的提示：
 比如在文字组件使用了 被禁止的 padding 属性
 
-<img src = "./img/tonggou8.png" width = "75%"/>
+<img src = "https://xqimg.imedao.com/1833f248a401f2f33fe94da9.png" width = "75%"/>
 
 ## 抹平三端差异
 
@@ -145,20 +145,20 @@ types 定义(以文字属性为例)
 ## 样式系统解析流程
 
 <div align='center'>
-<img src = "./img/tonggou9.png" width = "75%"/></div>
+<img src = "https://xqimg.imedao.com/1833f24851a1f20c3fdaa475.png" width = "75%"/></div>
 
 <div align='center'>
-<img src = "./img/tonggou10.png" width = "75%"/></div>
+<img src = "https://xqimg.imedao.com/1833f248be41ed973fedb267.png" width = "75%"/></div>
 
 **外层 box**
 
 <div align='center'>
-<img src = "./img/tonggou11.png" width = "75%"/></div>
+<img src = "https://xqimg.imedao.com/1833f2490f21f2f53febbd2b.png" width = "75%"/></div>
 
 **内层文字**
 
 <div align='center'>
-<img src = "./img/tonggou12.png" width = "75%"/></div>
+<img src = "https://xqimg.imedao.com/1833f248c771f2f43fcec714.png" width = "75%"/></div>
 
 <div align='center'>
-<img src = "./img/tonggou13.png" width = "75%"/></div>
+<img src = "https://xqimg.imedao.com/1833f2491451ee483fd8292f.png" width = "75%"/></div>

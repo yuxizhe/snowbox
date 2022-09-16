@@ -82,7 +82,7 @@ snb-rn 项目，从 master 分支建立 feature-xxx 分支。如需跟客户端�
 访问 http://localhost:7878/rn 即可打开 web 版
 使用同构开发，web&浏览器调试模式为主。借助 react 开发工具调试逻辑
 
-<img src = "./img/kaifa1.png" width = "75%"/>
+<img src = "https://xqimg.imedao.com/1833f2477cc1ef183fc95a97.png" width = "75%"/>
 
 **_RN 访问_**
 
@@ -132,7 +132,7 @@ const Demo = () => {
 export default Wrapper(Demo);
 ```
 
-<img src = "./img/kaifa2.png"/>
+<img src = "https://xqimg.imedao.com/1833f2473721ef7b3fcf51e8.png"/>
 
 > [RN/H5 同构服务端渲染介绍](https://xueqiu.feishu.cn/wiki/wikcnAtxf8T2cV8Ynp45U8iLvCh)
 
@@ -235,19 +235,19 @@ _注意：由于 web&ios&安卓还是有些细微差异，比如元素撑满的�
 <center><i>页面内部 state、hooks、store 数据查看</i></center>
 
 <div align='center'>
-<img src = "./img/kaifa3.png" width = "75%" /></div>
+<img src = "https://xqimg.imedao.com/1833f24781c1ee473fd87a2e.png" width = "75%" /></div>
 
 <center><i>组件参数</i></center>
 
 <div align='center'>
-<img src = "./img/kaifa4.png" width = "75%" /></div>
+<img src = "https://xqimg.imedao.com/1833f247b961f20b3fe45b68.png" width = "75%" /></div>
 
 #### 接口调试
 
 可直接在 chrome 里进行接口联调开发，接口内容查看简单高效。
 
 <div align='center'>
-<img src = "./img/kaifa5.png" width = "75%" /></div>
+<img src = "https://xqimg.imedao.com/1833f2479ca1f2093fea3bfe.png" width = "75%" /></div>
 
 ## 客户端内调试
 

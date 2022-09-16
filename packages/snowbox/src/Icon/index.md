@@ -27,6 +27,7 @@ import iconConfig from './icon';
 
 export default () => {
   const [visible, setVisible] = useState(false);
+  const [text, setText] = useState('');
   const setString = (item) => {
     const success = Clipboard.setString(`<Icon type="${item}"/>`);
     setText(`<Icon type="${item}"/>`);

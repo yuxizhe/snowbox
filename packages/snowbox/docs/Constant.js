@@ -1,5 +1,6 @@
 export const imageAddress = [
   { uri: 'https://xqimg.imedao.com/1833f1daa0a1eef23fe287a2.png', name: '兆赫' },
+  { uri: 'https://xqimg.imedao.com/1834546abc62163e3fde7b8e.png', name: '小二' },
   { uri: 'https://xqimg.imedao.com/1833f1da9641edfc3fdd2fe3.png', name: '建壮' },
   { uri: 'https://xqimg.imedao.com/1833f1da9951f2be3fe7b3c4.png', name: '谢飞' },
   { uri: 'https://xqimg.imedao.com/1833f1da8481f1d43fefc4a8.png', name: '希哲' },

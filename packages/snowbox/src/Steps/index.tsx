@@ -12,9 +12,9 @@ interface IStep {
   status: StepTypes;
 }
 
-interface Props {
+interface Props extends boxTypes {
   /**
-   * 描述及时间节点
+   * 数据
    */
   data: Array<IStep>;
 }

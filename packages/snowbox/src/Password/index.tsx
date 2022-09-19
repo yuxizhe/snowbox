@@ -4,12 +4,33 @@ import { Box, Press } from '../';
 import { getSize } from '../Utils';
 
 interface PasswordProps {
+  /**
+   * 是否展示密码窗
+   */
   visible: boolean;
+  /**
+   * 标题
+   */
   title?: string;
+  /**
+   * 基金名称
+   */
   fundName?: string;
+  /**
+   * 金额或份额
+   */
   amount?: string;
+  /**
+   * 提示信息
+   */
   desc?: string | React.ReactElement;
+  /**
+   * 密码输入完成事件
+   */
   onInputFinish: (password: string) => void;
+  /**
+   * 取消事件
+   */
   onCancel: () => void;
 }
 

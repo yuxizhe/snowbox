@@ -4,7 +4,7 @@ import styles from './styles';
 
 import { boxTypes } from '../Utils/props';
 
-type Props = boxTypes & {
+type Props = {
   children?: any;
   /**
    * 尺寸 m: 大号 s: 小号(默认)
@@ -41,7 +41,7 @@ type Props = boxTypes & {
    * 勾选提示距左侧距离
    */
   top?: number;
-};
+} & boxTypes;
 
 /**
  * Radio组件

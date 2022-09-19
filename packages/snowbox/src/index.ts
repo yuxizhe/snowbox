@@ -35,6 +35,8 @@ import ContrastBar from './ContrastBar';
 import * as Observer from './IntersectionObserver';
 import FloatView from './FloatView';
 import PieChart from './PieChart';
+import Steps from './Steps';
+import Password from './Password';
 
 export * from './CustomHooks';
 
@@ -101,4 +103,6 @@ export {
   isGreaterOrEqualVersion,
   FloatView,
   PieChart,
+  Steps,
+  Password,
 };

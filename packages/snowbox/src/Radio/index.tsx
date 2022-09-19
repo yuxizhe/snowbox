@@ -26,12 +26,27 @@ type Props = boxTypes & {
    * 选中态
    */
   checked?: boolean;
+
+  /**
+   * 是否展示勾选提示
+   */
+  showTip?: boolean;
+
+  /**
+   * 勾选提示距左侧距离
+   */
+  left?: number;
+
+  /**
+   * 勾选提示距左侧距离
+   */
+  top?: number;
 };
 
 /**
  * Radio组件
  */
-function Radio({ children, size, width, onChange, disabled, checked, ...otherProps }: Props) {
+function Radio({ children, size, width, onChange, disabled, checked, showTip, left, top = -50, ...otherProps }: Props) {
   const style = styles();
   const [active, setActive] = useState(checked || false);
 
@@ -48,24 +63,35 @@ function Radio({ children, size, width, onChange, disabled, checked, ...otherPro
   const radioWidth = width || (size === 'm' ? 18 : 12);
   const iconWidth = width ? (width * 5) / 9 : size === 'm' ? 10 : 6.3;
   const iconHeight = width ? (width * 7) / 18 : size === 'm' ? 7 : 4.5;
+  const tipLeft = left || -(14.5 - radioWidth / 2);
 
   const radio = (
-    <Press
-      onPress={() => {
-        !disabled && change();
-      }}
-      {...otherProps}
-    >
-      <Box
-        style={active ? style.center : disabled ? style.disabled : style.border}
-        w={radioWidth}
-        h={radioWidth}
-        bg={active ? 'Blu010' : undefined}
-        br={50}
+    <Box w={radioWidth} h={radioWidth} {...otherProps}>
+      {showTip ? (
+        <Box p={8} w={68} bg="Blu010" br={4} ab t={top} l={tipLeft} col style={style.shadow}>
+          <Box cl="T060" f={12} c>
+            请勾选
+          </Box>
+          <Box w={10} h={10} bg="Blu010" ab b={-4} l={10} br={2} style={style.rotate} />
+        </Box>
+      ) : null}
+
+      <Press
+        onPress={() => {
+          !disabled && change();
+        }}
       >
-        {active ? <Icon w={iconWidth} h={iconHeight} type="icon_s_whiteHook" /> : null}
-      </Box>
-    </Press>
+        <Box
+          style={active ? style.center : disabled ? style.disabled : style.border}
+          w={radioWidth}
+          h={radioWidth}
+          bg={active ? 'Blu010' : undefined}
+          br={50}
+        >
+          {active ? <Icon w={iconWidth} h={iconHeight} type="icon_s_whiteHook" /> : null}
+        </Box>
+      </Press>
+    </Box>
   );
   return radio;
 }

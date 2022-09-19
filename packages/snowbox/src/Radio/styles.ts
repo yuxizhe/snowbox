@@ -18,6 +18,16 @@ const RadioStyle = () =>
       borderWidth: getSize(1),
       borderColor: Color.T040[THEME],
     },
+    shadow: {
+      shadowColor: Color.Blu010[THEME],
+      shadowOffset: { width: 0, height: getSize(2) },
+      shadowOpacity: 0.5,
+      shadowRadius: getSize(6),
+      elevation: 3,
+    },
+    rotate: {
+      transform: [{ rotate: '45deg' }],
+    },
   });
 
 export default RadioStyle;

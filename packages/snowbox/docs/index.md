@@ -17,3 +17,29 @@ features:
     desc: 将门槛从客户端开发降低为web前端开发，可在浏览器通过常规调试方式进行业务逻辑开发、状态管理和接口联调，无需启动模拟器或连接真机。通过组件库简写提升开发体验。
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
+
+### <center>Contributors</center>
+
+```tsx
+/**
+ * inline: true
+ */
+import React from 'react';
+import { Box, Txt, Img, Badge, Icon } from 'snowbox';
+import { imageAddress } from './Constant';
+
+export default () => (
+  <Box flex={1} p={20} mt={-15} style={{ flexWrap: 'wrap' }}>
+    {imageAddress.map((item) => (
+      <Box col c mr={20} mt={15}>
+        <Badge count={item.name} bg="TOrg014">
+          <Img
+            source={{ uri: item.uri }}
+            style={{ width: 50, height: 50, borderRadius: '50%', border: '1px solid #CCCCCC' }}
+          ></Img>
+        </Badge>
+      </Box>
+    ))}
+  </Box>
+);
+```

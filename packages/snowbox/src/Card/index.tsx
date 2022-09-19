@@ -29,6 +29,10 @@ interface CardPropsType extends boxTypes {
    * 跳转链接: 未配置时点击不跳转
    */
   jumpUrl?: string;
+   /**
+   * card jumpUrlText点击回调
+   */
+  jumpUrlTextClick?: () => void;
   /**
    * 可配置其他box属性，default：px12；pt12；mt8；mx12
    */
@@ -42,6 +46,7 @@ function Card({
   actionsheetContent,
   jumpUrl,
   jumpUrlText = '',
+  jumpUrlTextClick,
   ...boxProps
 }: CardPropsType) {
   const [visible, setVisible] = useState(false);
@@ -67,6 +72,7 @@ function Card({
           {jumpUrlText ? (
             <Press
               onPress={() => {
+                jumpUrlTextClick && jumpUrlTextClick();
                 jumpUrl && onPressGoToUrl(jumpUrl);
               }}
             >

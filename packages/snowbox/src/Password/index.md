@@ -19,7 +19,7 @@ Demo:
  * defaultShowCode: true
  */
 import React, { useState } from 'react';
-import { Password, Box, PButton, TxtNum } from 'snowbox';
+import { Password, Box, Button, TxtNum } from 'snowbox';
 
 const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -29,9 +29,9 @@ export default () => (
       Password
     </Box>
     <Box>
-      <PButton c m={10} bg="Blu014" onPress={() => setPasswordVisible(true)}>
+      <Button size="m" m={10} onPress={() => setPasswordVisible(true)}>
         open
-      </PButton>
+      </Button>
     </Box>
     <Password
       visible={passwordVisible}

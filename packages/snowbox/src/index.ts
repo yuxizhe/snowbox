@@ -37,6 +37,7 @@ import FloatView from './FloatView';
 import PieChart from './PieChart';
 import Steps from './Steps';
 import Password from './Password';
+import AnchorView from './AnchorView';
 
 export * from './CustomHooks';
 
@@ -105,4 +106,5 @@ export {
   PieChart,
   Steps,
   Password,
+  AnchorView,
 };

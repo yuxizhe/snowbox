@@ -62,6 +62,7 @@ export default defineConfig({
           'Radio',
           'IntersectionObserver',
           'Password',
+          'AnchorView',
         ],
       },
       {

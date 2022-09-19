@@ -44,6 +44,7 @@ export default defineConfig({
           'LinearGradient',
           'LottieAnimate',
           'Svg',
+          'Steps',
           'Countdown',
         ],
       },
@@ -63,6 +64,8 @@ export default defineConfig({
           'Checkbox',
           'Radio',
           'IntersectionObserver',
+          'Password',
+          'AnchorView',
         ],
       },
       {

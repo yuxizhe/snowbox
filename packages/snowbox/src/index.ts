@@ -35,6 +35,9 @@ import ContrastBar from './ContrastBar';
 import * as Observer from './IntersectionObserver';
 import FloatView from './FloatView';
 import PieChart from './PieChart';
+import Steps from './Steps';
+import Password from './Password';
+import AnchorView from './AnchorView';
 import Countdown from './Countdown';
 import LineChart from './LineChart';
 import ExpandTxt from './ExpandTxt';
@@ -104,6 +107,9 @@ export {
   isGreaterOrEqualVersion,
   FloatView,
   PieChart,
+  Steps,
+  Password,
+  AnchorView,
   Countdown,
   LineChart,
   ExpandTxt,

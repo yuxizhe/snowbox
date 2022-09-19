@@ -22,9 +22,9 @@ import { Box, Radio } from 'snowbox';
 
 export default () => (
   <Box col>
-    <Box mt={5}>
+    <Box mt={50}>
       <Box c flex={1}>
-        <Radio size="m" onChange={(checked) => console.log(checked)} mr={4} />
+        <Radio size="m" showTip onChange={(checked) => console.log(checked)} mr={4} />
         <Box>默认</Box>
       </Box>
       <Box c flex={1}>

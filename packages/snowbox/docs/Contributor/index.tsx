@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Img, Badge } from 'snowbox';
 import { ThemeColor } from 'snowbox';
 import { boxTypes } from 'snowbox/src/Utils/props';
+import { config } from './config';
 
 interface BageProps {
   /**
@@ -33,14 +34,9 @@ interface BageProps {
 
 interface Contribute extends boxTypes {
   /**
-   * 必填 贡献者配置
-   * uri: 图片路径
-   * name: 角标内容（不填写不显示）
+   * config 配置中的名称
    */
-  imageAddress: {
-    uri: string;
-    name?: string | number;
-  }[];
+  name: keyof typeof config;
   /**
    * 头像size,默认50
    */
@@ -54,42 +50,37 @@ interface Contribute extends boxTypes {
    */
   showBadge?: boolean;
   /**
-   * 容器内item布局, 不设置默认右边距20，上边距15
-   */
-  ItemStyle?: boxTypes;
-  /**
-   * 头像style设置
+   * 头像图片style设置
    */
   imgStyle?: boxTypes;
 }
 
 export default ({
-  imageAddress,
+  name,
   bageSet = {},
   size = 50,
   style,
   showBadge = true,
-  ItemStyle = {},
   imgStyle = {},
   ...otherProps
 }: Contribute) => (
-  <Box flex={1} {...otherProps} style={[{ flexWrap: 'wrap' }, style]}>
-    {imageAddress.map((item) => (
-      <Box col c mr={20} mt={15} {...ItemStyle}>
-        {item.name && showBadge ? (
-          <Badge count={item.name} {...bageSet}>
+  <>
+    {name && config[name] ? (
+      <Box {...otherProps}>
+        {name && showBadge ? (
+          <Badge count={config[name].name} {...bageSet}>
             <Img
-              source={{ uri: item.uri }}
+              source={{ uri: config[name].uri }}
               style={[{ width: size, height: size, borderRadius: '50%', border: '1px solid #CCCCCC' }, imgStyle]}
             ></Img>
           </Badge>
         ) : (
           <Img
-            source={{ uri: item.uri }}
+            source={{ uri: config[name].uri }}
             style={[{ width: size, height: size, borderRadius: '50%', border: '1px solid #CCCCCC' }, imgStyle]}
           ></Img>
         )}
       </Box>
-    ))}
-  </Box>
+    ) : null}
+  </>
 );

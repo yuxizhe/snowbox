@@ -9,10 +9,7 @@ export default {
   yuxz: { uri: 'https://xqimg.imedao.com/1833f1da8481f1d43fefc4a8.png', username: '希哲' },
   guyufang: { uri: 'https://xqimg.imedao.com/1833f1da6821ed1a3fb8a8ee.png', username: '玉芳' },
   loudan: { uri: 'https://xqimg.imedao.com/1833f1da7e21eef13fda8734.png', username: '娄丹' },
-  zhaiyuanhang: {
-    uri: 'https://xqimg.imedao.com/1833f1db0861edfd3fe00dea.png',
-    username: '远航',
-  },
+  zhaiyuanhang: { uri: 'https://xqimg.imedao.com/1833f1db0861edfd3fe00dea.png', username: '远航' },
   cuichen: { uri: 'https://xqimg.imedao.com/1833f1daf841f1c83fea9663.png', username: '崔晨', companyID: 'XQ1299' },
   hanweijing: { uri: 'https://xqimg.imedao.com/1833f1db0471f1c93fe23e81.png', username: '卫静' },
   gaoyiming: { uri: 'https://xqimg.imedao.com/1833f1db3781edfe3fe22c3b.png', username: '一鸣' },

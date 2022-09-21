@@ -134,5 +134,5 @@ export default () => (
 import Contributor from '../../docs/Contributor';
 import React, { useState } from 'react';
 
-export default () => <Contributor Key="cuichen" badgeCount="CC" />;
+export default () => <Contributor name="cuichen" badgeCount="CC" />;
 ```

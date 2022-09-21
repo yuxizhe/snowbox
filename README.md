@@ -12,7 +12,7 @@ web-example 调试
 
 访问 http://localhost:3000
 
-`yarn web` :
+`yarn doc` :
 
 文档网站调试
 

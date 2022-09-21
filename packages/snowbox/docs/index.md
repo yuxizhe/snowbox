@@ -26,19 +26,13 @@ footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](http
  */
 import React from 'react';
 import { Box, Txt, Img, Badge, Icon } from 'snowbox';
-import { imageAddress } from './Constant';
+import Contributor from './Contributor';
+import Config from './Contributor/config';
 
 export default () => (
   <Box flex={1} p={20} mt={-15} style={{ flexWrap: 'wrap' }}>
-    {imageAddress.map((item) => (
-      <Box col c mr={20} mt={15}>
-        <Badge count={item.name} bg="TOrg014">
-          <Img
-            source={{ uri: item.uri }}
-            style={{ width: 50, height: 50, borderRadius: '50%', border: '1px solid #CCCCCC' }}
-          ></Img>
-        </Badge>
-      </Box>
+    {Object.keys(Config).map((item) => (
+      <Contributor name={item} mr={20} mt={15} size={50} />
     ))}
   </Box>
 );

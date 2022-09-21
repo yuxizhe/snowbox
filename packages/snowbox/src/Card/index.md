@@ -124,3 +124,15 @@ export default () => (
 ```
 
 <API></API>
+
+### 贡献者
+
+```tsx
+/**
+ * inline: true
+ */
+import Contributor from '../../docs/Contributor';
+import React, { useState } from 'react';
+
+export default () => <Contributor Key="cuichen" badgeCount="CC" />;
+```

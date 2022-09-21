@@ -46,11 +46,11 @@ interface Contribute extends boxTypes {
    */
   companyID?: string;
   /**
-   * 角标内容,不写默认展示中文名，如果没有 不展示
+   * 角标内容,不写默认展示中文名，如果没有中文名则不展示
    */
   badgeCount?: string;
   /**
-   * 是否展示Badge,优先级高于BadgeCount
+   * 是否展示Badge,优先级高于badgeCount
    */
   showBadge?: boolean;
   /**

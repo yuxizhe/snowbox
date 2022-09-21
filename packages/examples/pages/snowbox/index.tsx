@@ -32,6 +32,7 @@ import {
 import ActionSheets from './ActionSheets';
 import SparkLineDemo from './SparkLineDemo';
 import ContrastBarDemo from './ContrastDemo';
+import StackedBarDemo from './StackedBarDemo';
 
 const { IOScrollView, InView } = Observer;
 const { Text: SVGText } = SVG;
@@ -770,6 +771,14 @@ const Product = () => {
           </Box>
           <Box pb={20}>
             <ContrastBarDemo />
+          </Box>
+        </Box>
+        <Box col m={10} p={10} br={10} bg="B020">
+          <Box f={20} cl="T010" DIN>
+            堆叠柱状条
+          </Box>
+          <Box pb={20}>
+            <StackedBarDemo />
           </Box>
         </Box>
         <Box col m={10} p={10} br={10} bg="B020">

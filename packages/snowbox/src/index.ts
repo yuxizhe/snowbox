@@ -32,6 +32,7 @@ import Img from './Image';
 import NoticeBar from './NoticeBar';
 import Popup from './Popup';
 import ContrastBar from './ContrastBar';
+import StackedBar from './StackedBar';
 import * as Observer from './IntersectionObserver';
 import FloatView from './FloatView';
 import PieChart from './PieChart';
@@ -103,6 +104,7 @@ export {
   Popup,
   formatCurrencyNormal,
   ContrastBar,
+  StackedBar,
   Observer,
   isGreaterOrEqualVersion,
   FloatView,

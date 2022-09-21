@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { getSize } from 'snowbox';
+import { colorStrings } from 'src/Utils/props';
 import Box from '../Box';
 
 type ItemProps = {
-  color: string;
+  color: colorStrings;
   percent: number;
 }
 

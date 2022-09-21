@@ -35,6 +35,7 @@ export default defineConfig({
           'TxtNum',
           'Badge',
           'ContrastBar',
+          'StackedBar',
           'NoticeBar',
           'PieChart',
           'Progress',

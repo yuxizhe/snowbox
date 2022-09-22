@@ -29,6 +29,7 @@ export default defineConfig({
         title: '展示组件',
         children: [
           'Card',
+          'LineChart',
           'Icon',
           'Image',
           'TxtNum',
@@ -42,7 +43,6 @@ export default defineConfig({
           'Empty',
           'Loading',
           'LinearGradient',
-          'LineChart',
           'LottieAnimate',
           'Svg',
           'Steps',
@@ -77,5 +77,8 @@ export default defineConfig({
       },
     ],
   },
-  styles: [`.__dumi-default-mobile-demo-layout > div { display: flex; height: 100vh }`],
+  styles: [
+    `.__dumi-default-mobile-demo-layout { display: flex; height: 100vh }`,
+    `.__dumi-default-mobile-demo-layout > div { display: flex; flex: 1; flex-direction: column; }`,
+  ],
 });

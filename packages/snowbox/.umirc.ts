@@ -29,7 +29,6 @@ export default defineConfig({
         title: '展示组件',
         children: [
           'Card',
-          'LineChart',
           'Icon',
           'Image',
           'TxtNum',
@@ -43,6 +42,7 @@ export default defineConfig({
           'Empty',
           'Loading',
           'LinearGradient',
+          'LineChart',
           'LottieAnimate',
           'Svg',
           'Steps',
@@ -62,6 +62,7 @@ export default defineConfig({
           'Swiper',
           'FloatView',
           'Tabs',
+          'TabScrollView',
           'Press',
           'Checkbox',
           'Radio',
@@ -76,4 +77,5 @@ export default defineConfig({
       },
     ],
   },
+  styles: [`.__dumi-default-mobile-demo-layout > div { display: flex; height: 100vh }`],
 });

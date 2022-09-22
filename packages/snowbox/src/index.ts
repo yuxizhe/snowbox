@@ -42,6 +42,7 @@ import AnchorView from './AnchorView';
 import Countdown from './Countdown';
 import LineChart from './LineChart';
 import ExpandTxt from './ExpandTxt';
+import TabScrollView from './TabScrollView';
 
 export * from './CustomHooks';
 
@@ -115,4 +116,5 @@ export {
   Countdown,
   LineChart,
   ExpandTxt,
+  TabScrollView,
 };

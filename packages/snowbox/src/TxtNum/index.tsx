@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleProp, Text } from 'react-native';
-import { Txt } from 'snowbox';
+import { Txt } from '../';
 import { fontTypes } from '../Utils/props';
 
 type Props = {

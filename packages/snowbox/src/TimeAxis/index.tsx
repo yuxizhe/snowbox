@@ -10,13 +10,37 @@ interface contentProps {
    * 底部容器 props，同 Box props
    */
   boxProps?: object;
+  /**
+   * 进度左侧描述
+   */
   leftText?: string;
+  /**
+   * 进度左侧时间点
+   */
   leftTime?: string;
+  /**
+   * 左侧描述 props，同`Box` props
+   */
   leftTextProps?: object;
+  /**
+   * 左侧时间点 props，同`Box` props
+   */
   leftTimeProps?: object;
+  /**
+   * 进度右侧描述
+   */
   rightText?: string;
+  /**
+   * 进度右侧时间点
+   */
   rightTime?: string;
+  /**
+   * 右侧描述 props，同`Box` props
+   */
   rightTextProps?: object;
+  /**
+   * 右侧时间点 props，同`Box` props
+   */
   rightTimeProps?: object;
 }
 

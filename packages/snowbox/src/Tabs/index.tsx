@@ -16,11 +16,15 @@ type Props = {
    */
   onChange?: (changeParams: any) => void;
   /**
-   * 是否禁用tabs滑动手势
+   * Tab指示器宽度（native属性）
+   */
+  tabUnderlineWidth?: number;
+  /**
+   * 是否禁用tabs滑动手势（native属性）
    */
   locked?: boolean;
   /**
-   * 顶部导航栏是否滚动，不滚动采用缩小字号的方式
+   * 顶部导航栏是否滚动（native属性）
    */
   tabBarScroll?: boolean;
 };

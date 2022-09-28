@@ -43,6 +43,8 @@ import Countdown from './Countdown';
 import LineChart from './LineChart';
 import ExpandTxt from './ExpandTxt';
 import TabScrollView from './TabScrollView';
+import TimeAxis from './TimeAxis';
+import Guide from './Guide';
 
 export * from './CustomHooks';
 
@@ -117,4 +119,6 @@ export {
   LineChart,
   ExpandTxt,
   TabScrollView,
+  TimeAxis,
+  Guide,
 };

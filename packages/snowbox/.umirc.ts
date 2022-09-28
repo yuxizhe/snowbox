@@ -46,6 +46,7 @@ export default defineConfig({
           'LottieAnimate',
           'Svg',
           'Steps',
+          'TimeAxis',
           'Countdown',
           'Contributor',
         ],
@@ -69,6 +70,7 @@ export default defineConfig({
           'IntersectionObserver',
           'Password',
           'AnchorView',
+          'Guide',
         ],
       },
       {

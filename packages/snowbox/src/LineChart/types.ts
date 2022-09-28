@@ -62,4 +62,8 @@ export type ChartProps = {
   landScapeWidth?: number;
   landScapeHeight?: number;
   landScapePadding?: number;
+  /*
+   * 用户是否正在触摸, 可用来禁止外层ScrollView滚动
+   */
+  isUserTouch?: (is: boolean) => void;
 };

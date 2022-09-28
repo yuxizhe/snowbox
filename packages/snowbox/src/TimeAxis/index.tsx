@@ -2,14 +2,20 @@ import React from 'react';
 import { Box, Txt, TxtNum } from '..';
 
 interface contentProps {
+  /**
+   * 底部进度文案
+   */
   baseText: string;
+  /**
+   * 底部容器 props，同 Box props
+   */
+  boxProps?: object;
   leftText?: string;
   leftTime?: string;
-  rightText?: string;
-  rightTime?: string;
-  boxProps?: object;
   leftTextProps?: object;
   leftTimeProps?: object;
+  rightText?: string;
+  rightTime?: string;
   rightTextProps?: object;
   rightTimeProps?: object;
 }
@@ -72,3 +78,6 @@ const TimeAxis: React.FC<TimeAxisPrps> = ({ contentList = [], contentHeight = 90
 );
 
 export default TimeAxis;
+
+// dumi api导出
+export const contentProps = (props: contentProps) => <></>;

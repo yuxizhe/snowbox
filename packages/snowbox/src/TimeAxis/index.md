@@ -69,7 +69,7 @@ export default () => (
 );
 ```
 
-<API></API>
+<API exports='["default", "contentProps"]'></API>
 
 ## contentProps
 

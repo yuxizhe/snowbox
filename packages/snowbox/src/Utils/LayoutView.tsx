@@ -12,8 +12,8 @@ const LayoutView = ({ onLayout, ...props }) => {
       onLayout({
         nativeEvent: {
           layout: {
-            x: current.clientLeft,
-            y: current.clientTop,
+            x: current.offsetLeft,
+            y: current.offsetTop,
             width: current.clientWidth,
             height: current.clientHeight,
           },

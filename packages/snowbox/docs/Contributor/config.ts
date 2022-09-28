@@ -13,5 +13,9 @@ export default {
   cuichen: { uri: 'https://xqimg.imedao.com/1833f1daf841f1c83fea9663.png', username: '崔晨', companyID: 'XQ1299' },
   hanweijing: { uri: 'https://xqimg.imedao.com/1833f1db0471f1c93fe23e81.png', username: '卫静' },
   gaoyiming: { uri: 'https://xqimg.imedao.com/1833f1db3781edfe3fe22c3b.png', username: '一鸣' },
-  zhoushaobo: { uri: 'https://xqimg.imedao.com/1833f1db4861edff3fe75bc3.png', username: '绍博' },
+  zhoushaobo: {
+    uri: 'https://xqimg.imedao.com/1833f1db4861edff3fe75bc3.png',
+    username: '绍博',
+    email: 'test@gmail.com',
+  },
 };

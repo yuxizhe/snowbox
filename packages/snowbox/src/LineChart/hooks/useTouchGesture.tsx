@@ -3,7 +3,7 @@ import { OS } from '../../index';
 // import RNBridge from '@/common/js/RNBridge';
 import { PanResponder } from 'react-native';
 
-const useTouchGesture = ({ updateTouchInfoCallback }) => {
+const useTouchGesture = ({ updateTouchInfoCallback, isUserTouch }) => {
   const isWeb = OS === 'web';
   const timeoutRef = useRef<any>(null);
   const onStartTouchInfo = useRef({ x: -1, y: -1 });
@@ -27,6 +27,7 @@ const useTouchGesture = ({ updateTouchInfoCallback }) => {
             //     panBackDisable: true,
             //   });
             // }
+            isUserTouch(true);
           }, 200);
           return true;
         },
@@ -55,6 +56,7 @@ const useTouchGesture = ({ updateTouchInfoCallback }) => {
           //     panBackDisable: false,
           //   });
           // }
+          isUserTouch(false);
           return true;
         },
       }),

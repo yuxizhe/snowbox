@@ -39,6 +39,7 @@ const Chart: FC<ChartProps> = ({
   landScapeWidth = 0,
   landScapeHeight = 0,
   landScapePadding = 36,
+  isUserTouch = () => {},
   // TODO
   // selectCurve,
   // // 是否隐藏业绩归因的tag
@@ -96,6 +97,7 @@ const Chart: FC<ChartProps> = ({
     updateTouchInfoCallback: (event) => {
       setTouchInfo(event);
     },
+    isUserTouch,
   });
   // 是否展示暂无数据
   const noData =

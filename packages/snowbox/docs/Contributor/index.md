@@ -33,6 +33,10 @@ export default () => (
     </Box>
     <Contributor companyID="XQ1299" size={40} bageSet={{ bg: 'TPur3' }} badgeCount="CC" />
     <Box f={20} m={10} cl="T010" DIN>
+      邮箱识别
+    </Box>
+    <Contributor email="test@gmail.com" />
+    <Box f={20} m={10} cl="T010" DIN>
       ALL
     </Box>
     <Box flex={1} style={{ flexWrap: 'wrap' }}>

@@ -5,7 +5,7 @@ import { colorStrings } from '../Utils/props';
 
 import { Styles } from './style';
 
-type Props = {
+export type Props = {
   /**
    * background 背景颜色 默认为'Org010'
    * 填写雪球统一设计规范的颜色代码

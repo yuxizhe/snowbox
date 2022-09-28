@@ -1,13 +1,19 @@
 import React, { useEffect, useRef, useState, FC, ReactNode } from 'react';
 import { LayoutChangeEvent, View, ScrollView } from 'react-native';
-import { Box, errorBoundary } from '..';
+import { Box, errorBoundary, AnchorView } from '..';
 
 import TabsAnchor from './tabsAnchor';
 
-interface Props {
+export interface Props {
+  /**
+   *  顶部tabs区域
+   */
   titles?: string[] | ReactNode[];
-  //  初始化滚动到第几个tab
+  /**
+   *  初始化滚动到第几个tab
+   */
   initTab?: number;
+  children?: any;
 }
 
 const ScrollViewWithTab: FC<Props> = ({ titles = [], children, initTab = 0 }) => {
@@ -144,13 +150,13 @@ const ScrollViewWithTab: FC<Props> = ({ titles = [], children, initTab = 0 }) =>
       >
         <Box col bg="B010" pb={60} pt={44}>
           {React.Children.map(children, (child, index) => (
-            <View
+            <AnchorView
               onLayout={(e) => {
                 setAnchorHeight(e, index);
               }}
             >
               {child}
-            </View>
+            </AnchorView>
           ))}
         </Box>
       </ScrollView>

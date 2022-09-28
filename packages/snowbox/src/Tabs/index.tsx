@@ -18,7 +18,11 @@ type Props = {
    */
   onChange?: (changeParams: any) => void;
   /**
-   * 是否禁用tabs滑动手势
+   * Tab指示器宽度（native属性）
+   */
+  tabUnderlineWidth?: number;
+  /**
+   * 是否禁用tabs滑动手势（native属性）
    */
   locked?: boolean;
   /**

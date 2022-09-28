@@ -70,18 +70,3 @@ export default () => (
 ```
 
 <API exports='["default", "contentProps"]'></API>
-
-## contentProps
-
-| Name           | Description                     | Type     | Default      |
-| -------------- | ------------------------------- | -------- | ------------ |
-| baseText       | 底部进度文案                    | `string` | `(required)` |
-| boxProps       | 底部容器 props，同`Box` props   | `object` |              |
-| leftText       | 进度左侧描述                    | `string` |              |
-| leftTime       | 进度左侧时间点                  | `string` |              |
-| leftTextProps  | 左侧描述 props，同`Box` props   | `object` |              |
-| leftTimeProps  | 左侧时间点 props，同`Box` props | `object` |              |
-| rightText      | 进度右侧描述                    | `string` |              |
-| rightTime      | 进度右侧时间点                  | `string` |              |
-| rightTextProps | 右侧描述 props，同`Box` props   | `object` |              |
-| rightTimeProps | 右侧时间点 props，同`Box` props | `object` |              |

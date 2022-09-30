@@ -1,8 +1,13 @@
 import React, { ReactNode, useState } from 'react';
-import { boxTypes } from '../Utils/props';
-import { Box, Press, Icon, ActionSheet } from '../index';
 import { onPressGoToUrl } from '../Utils';
+import { boxTypes } from '../Utils/props';
+import { Box, Press, Icon, ActionSheet, Txt } from '../index';
+import { ActionSheetProps } from '../ActionSheet';
 
+type ActionSheetProp = Omit<
+  ActionSheetProps,
+  'headerTitle' | 'content' | 'visible' | 'onCloseIconClick' | 'onRequestClose' | 'onFooterClick'
+>;
 interface CardPropsType extends boxTypes {
   children?: ReactNode;
   /**
@@ -16,7 +21,7 @@ interface CardPropsType extends boxTypes {
   /**
    * 模块标题
    */
-  title: string | React.ReactElement;
+  title?: string | React.ReactElement;
   /**
    * 辅助说明文字
    */
@@ -29,66 +34,87 @@ interface CardPropsType extends boxTypes {
    * 跳转链接: 未配置时点击不跳转
    */
   jumpUrl?: string;
-   /**
+  /**
    * card jumpUrlText点击回调
    */
   jumpUrlTextClick?: () => void;
   /**
-   * 可配置其他box属性，default：px12；pt12；mt8；mx12
+   * Actionsheet 除'headerTitle' | 'content' | 'visible' | 'onCloseIconClick' | 'onRequestClose' | 'onFooterClick' 外的其余属性
    */
+  actionsheetProp?: ActionSheetProp;
 }
 
 function Card({
   children,
-  title = '',
+  title,
   assisText = '',
   actionsheetTitle = '',
   actionsheetContent,
   jumpUrl,
   jumpUrlText = '',
   jumpUrlTextClick,
+  style,
+  actionsheetProp = {},
   ...boxProps
 }: CardPropsType) {
+  const isString = ['string', 'number', 'boolean'].includes(typeof title);
   const [visible, setVisible] = useState(false);
   return (
-    <Box w="100%" bg="B020" px={12} pt={12} pb={12} mt={8} mx={12} br={8} {...boxProps} col flex={1}>
-      <Box col pb={assisText ? 4 : 12}>
-        <Box style={{ justifyContent: 'space-between' }}>
-          <Box>
-            <Box cl="T010" fw="500" f={16} lh={22}>
-              {title}
+    <Box
+      bg="B020"
+      px={12}
+      pt={12}
+      pb={12}
+      mt={8}
+      mx={12}
+      br={8}
+      col
+      style={[{ flexGrow: 1, flexShrink: 0 }, style]}
+      {...boxProps}
+    >
+      {title ? (
+        <Box col pb={assisText ? 4 : 12}>
+          <Box style={{ justifyContent: 'space-between' }}>
+            <Box flex={1}>
+              {isString ? (
+                <Txt cl="T010" fw="500" f={16} lh={22}>
+                  {title}
+                </Txt>
+              ) : (
+                <>{title}</>
+              )}
+              {actionsheetContent && (
+                <Press
+                  ml={3}
+                  onPress={() => {
+                    setVisible(true);
+                  }}
+                >
+                  <Icon type="icon_s_explain_linear" />
+                </Press>
+              )}
             </Box>
-            {actionsheetContent && (
+            {jumpUrlText ? (
               <Press
-                ml={3}
                 onPress={() => {
-                  setVisible(true);
+                  jumpUrlTextClick && jumpUrlTextClick();
+                  jumpUrl && onPressGoToUrl(jumpUrl);
                 }}
               >
-                <Icon type="icon_s_explain_linear" />
+                <Box f={12} lh={16} cl="T020">
+                  {jumpUrlText}
+                </Box>
+                {jumpUrl ? <Icon type="icon_s_more" /> : null}
               </Press>
-            )}
+            ) : null}
           </Box>
-          {jumpUrlText ? (
-            <Press
-              onPress={() => {
-                jumpUrlTextClick && jumpUrlTextClick();
-                jumpUrl && onPressGoToUrl(jumpUrl);
-              }}
-            >
-              <Box f={12} lh={16} cl="T020">
-                {jumpUrlText}
-              </Box>
-              {jumpUrl ? <Icon type="icon_s_more" /> : null}
-            </Press>
+          {assisText ? (
+            <Box mt={2} f={12} cl="T030">
+              {assisText}
+            </Box>
           ) : null}
         </Box>
-        {assisText ? (
-          <Box mt={2} f={12} cl="T030">
-            {assisText}
-          </Box>
-        ) : null}
-      </Box>
+      ) : null}
       {children}
       {actionsheetContent ? (
         <ActionSheet
@@ -106,9 +132,12 @@ function Card({
           }}
           content={actionsheetContent}
           headerTitle={actionsheetTitle}
+          {...actionsheetProp}
         />
       ) : null}
     </Box>
   );
 }
 export default Card;
+
+export const ActionSheetProp = (props: ActionSheetProp) => <></>;

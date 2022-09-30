@@ -30,32 +30,35 @@ type Props = ImageProps & {
  */
 
 function Img({ w, h, style, source, autoContainImage = false, resizeMode, ...props }: Props) {
-  const { uri: url = '' } = source;
-  const [size, setSize] = useState<{ w?: number; h?: number }>({ w: 0, h: 0 });
+  const { uri: url = '' } = source || {};
+  const [size, setSize] = useState<{ w?: number; h?: number }>({ w: w || 0, h: h || 0 });
   const [_resizeMode, setResizeMode] = useState<ImageResizeMode>('cover');
   useEffect(() => {
     let tempSize = { w, h };
-    Image.getSize(url, (width, height) => {
-      if (w && h && autoContainImage && !resizeMode) {
-        (height / width > (1.5 * h) / w || width / height > (1.5 * w) / h) && setResizeMode('contain');
-      } else if (!h && w) {
-        tempSize = { h: (height / width) * w, w };
-      } else if (h && !w) {
-        tempSize = { w: (width / height) * h, h };
-      } else if (!h && !w) {
-        tempSize = { w: width, h: height };
-      }
-      setSize(tempSize);
-    });
+    // 已传入w和h，并且不自适应的情况下，或者url为空，不请求getSize
+    if (!(w && h && !autoContainImage) && url) {
+      Image.getSize(url, (width, height) => {
+        if (w && h && autoContainImage && !resizeMode) {
+          (height / width > (1.5 * h) / w || width / height > (1.5 * w) / h) && setResizeMode('contain');
+        } else if (!h && w) {
+          tempSize = { h: (height / width) * w, w };
+        } else if (h && !w) {
+          tempSize = { w: (width / height) * h, h };
+        } else if (!h && !w) {
+          tempSize = { w: width, h: height };
+        }
+        setSize(tempSize);
+      });
+    }
   }, [url, w, h]);
-  return (
+  return url ? (
     <Image
       {...props}
       resizeMode={resizeMode || _resizeMode}
       source={{ uri: url }}
       style={[{ width: getSize(size.w), height: getSize(size.h) }, style]}
     />
-  );
+  ) : null;
 }
 
 export default Img;

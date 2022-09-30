@@ -20,7 +20,7 @@ const transformComponents = (width, ChildrenComponent) => {
   );
 };
 
-interface ActionSheetProps {
+export interface ActionSheetProps {
   visible: boolean;
   /**
    * header 标题

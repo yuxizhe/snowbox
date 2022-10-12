@@ -10,6 +10,7 @@ pages:
     - mkdir public
     - cd packages/snowbox
     - yarn
+    - yarn tsc
     - yarn docs:build
     - mkdir public
     - cp -r docs-dist/. ../../public

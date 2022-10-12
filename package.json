@@ -7,10 +7,7 @@
   "scripts": {
     "doc": "cd packages/snowbox && yarn dev",
     "dev": "cd packages/examples && yarn dev",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo \"build\"",
-    "packs": "cd packages/snowbox && npm pack",
-    "build:es5": "cd packages/snowbox && rm -rf dist && yarn tsc && cp -rf ./static ./dist/static",
+    "build": "cd packages/snowbox && rm -rf dist && yarn tsc && cp -rf ./static ./dist/static",
     "snowlink": "cd packages/snowbox && npm link"
   },
   "workspaces": [

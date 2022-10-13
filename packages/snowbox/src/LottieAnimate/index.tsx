@@ -10,11 +10,11 @@ type Props = {
   /**
    * 宽
    */
-  w: number;
+  w: number | string;
   /**
    * 高
    */
-  h: number;
+  h: number | string;
   /**
    * 动画数据 ，格式要求{ day: xxx..., night: xxx... }
    */

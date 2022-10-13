@@ -153,6 +153,7 @@ const Chart: FC<ChartProps> = ({
   );
 
   const result = (
+    // @ts-ignore
     <Box bg={'B020'} w={'100%'} style={{ ...(OS === 'web' ? { userSelect: 'none' } : {}) }}>
       <View {...panResponder.panHandlers} style={{ marginLeft: getRnSize(-12), flex: 1 }}>
         {chartView}

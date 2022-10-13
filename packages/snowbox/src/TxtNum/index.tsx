@@ -7,7 +7,7 @@ type Props = {
   /**
    * 组件内的文本内容
    */
-  children?: String;
+  children?: string;
   /**
    * 汉字文本属性
    */

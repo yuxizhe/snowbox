@@ -40,6 +40,7 @@ interface PopupProps {
    * 是否展示关闭动画
    */
   showHideAnimation?: boolean;
+  children?: React.ReactNode;
 }
 
 const PopupBase: React.FC<PopupProps> = ({

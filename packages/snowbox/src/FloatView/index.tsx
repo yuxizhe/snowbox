@@ -30,15 +30,15 @@ enum AdsorptionType {
   /**
    * 左边
    */
-  left,
+  left = 'left',
   /**
    * 右边
    */
-  right,
+  right = 'right',
   /**
    * 根据组件中心点位于哪个区域来判断吸附在哪边
    */
-  both,
+  both = 'both',
 }
 
 type FloatViewProps = {
@@ -201,8 +201,8 @@ class FloatView extends Component<FloatViewProps, any> {
     if (Platform.OS === 'web') {
       const dom = ReactDOM.findDOMNode(this);
       const node = dom.parentNode;
-      this.parentWidth = node.clientWidth;
-      this.parentHeight = node.clientHeight;
+      this.parentWidth = (node as HTMLElement).clientWidth;
+      this.parentHeight = (node as HTMLElement).clientHeight;
       const { x, y, height, width } = e.nativeEvent.layout;
 
       this.frame.x = x - this.previousTranslateX;

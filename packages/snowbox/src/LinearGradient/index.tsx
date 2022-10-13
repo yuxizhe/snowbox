@@ -4,7 +4,13 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import { LinearGradientProps } from 'react-native-linear-gradient';
-export default class LinearGradient extends PureComponent<LinearGradientProps> {
+
+interface LinearGradientProsEx extends LinearGradientProps {
+  onLayout?: (e: any) => void;
+  style?: Object;
+  children?: React.ReactNode;
+}
+export default class LinearGradient extends PureComponent<LinearGradientProsEx> {
   static defaultProps = {
     start: {
       x: 0.5,

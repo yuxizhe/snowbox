@@ -62,7 +62,7 @@ function Steps({ data, ...boxProps }: Props) {
               <Box>{item.desc}</Box>
             ) : (
               <TxtNum textProps={{ cl: 'T030', f: 12 }} numProps={{ cl: 'T030', f: 12, DIN: true }}>
-                {item.desc}
+                {`${item.desc}`}
               </TxtNum>
             );
           return (

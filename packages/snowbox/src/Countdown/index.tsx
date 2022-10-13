@@ -15,7 +15,7 @@ const Countdown: React.FC<CountdownProps> = ({ initSeconds = 10, desc = ' 转账
   const spinValue = useRef(new Animated.Value(0)).current;
   // CompositeAnimation 引用
   const animationRef = useRef<Animated.CompositeAnimation>();
-  const timerId = useRef<number | null>(null);
+  const timerId = useRef<number | any>(null);
 
   // 旋转动画插值函数
   const spin = spinValue.interpolate({

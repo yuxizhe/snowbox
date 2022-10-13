@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Box } from '..';
+import React, { ReactNode, useEffect, useState } from 'react';
+import { Box, LayoutView } from '..';
 
 interface GuideProps {
   /**
@@ -34,6 +34,15 @@ interface GuideProps {
    * 提示信息容器宽度props，同Box组件的props
    */
   popProps?: any;
+
+  children?: ReactNode;
+}
+
+interface positionProp {
+  l?: string | number;
+  r?: string | number;
+  t?: string | number;
+  b?: string | number;
 }
 
 const Guide: React.FC<GuideProps> = ({
@@ -49,14 +58,10 @@ const Guide: React.FC<GuideProps> = ({
 }) => {
   const arrowSize = { w: 14, h: 7 };
   const [_visible, _setVisible] = useState(visible);
-  const [childrenSize, setChildrenSize] = useState({ w: 0, h: 0 });
-  const [positionProps, setPositionProps] = useState({});
+  const [positionProps, setPositionProps] = useState<positionProp>({});
   const [arrowProps, setArrowProps] = useState({});
 
   useEffect(() => {
-    if (visible) {
-      setPosition(childrenSize);
-    }
     _setVisible(visible);
   }, [visible]);
 
@@ -68,7 +73,6 @@ const Guide: React.FC<GuideProps> = ({
       w: width,
       h: height,
     };
-    setChildrenSize(childSize);
     setPosition(childSize);
   };
 
@@ -77,8 +81,8 @@ const Guide: React.FC<GuideProps> = ({
     const arrowH = showArrow ? arrowSize.h : 0;
     const arrowW = showArrow ? arrowSize.w : 0;
     const arrLeft = (Math.min(popWidth, w) - arrowW) / 2;
-    const posiProps = {};
-    const arrProps = {};
+    const posiProps: positionProp = {};
+    const arrProps: positionProp = {};
     switch (position) {
       case 'topLeft':
         posiProps.l = 0;
@@ -124,15 +128,13 @@ const Guide: React.FC<GuideProps> = ({
 
   return (
     <Box style={{ position: 'relative' }}>
-      <Box onLayout={onChildrenLayout}>{children}</Box>
+      <LayoutView onLayout={onChildrenLayout}>{children}</LayoutView>
       {_visible ? (
         <Box col px={8} w={popWidth} bg={popBg} py={2} br={4} ab {...popProps} {...positionProps}>
           {showArrow && (
             <Box w={10} h={10} bg={popBg} ab {...arrowProps} br={2} style={{ transform: [{ rotate: '45deg' }] }} />
           )}
-          <Box c cl="B010">
-            {popContent}
-          </Box>
+          <Box c>{popContent}</Box>
         </Box>
       ) : null}
     </Box>

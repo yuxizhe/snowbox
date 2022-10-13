@@ -8,7 +8,7 @@ const StackedBarDemo = () => (
         {
           color: 'Chart009',
           percent: 100,
-        }
+        },
       ]}
     />
     <StackedBar
@@ -27,8 +27,8 @@ const StackedBarDemo = () => (
         },
         {
           color: 'Chart008',
-          percent: 0.4
-        }
+          percent: 0.4,
+        },
       ]}
     />
     <StackedBar
@@ -44,11 +44,11 @@ const StackedBarDemo = () => (
         },
         {
           color: 'Chart008',
-          percent: 32.29
-        }
+          percent: 32.29,
+        },
       ]}
     />
   </Box>
-)
+);
 
 export default StackedBarDemo;

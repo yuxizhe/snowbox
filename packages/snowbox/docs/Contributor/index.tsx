@@ -4,6 +4,7 @@ import { ThemeColor } from 'snowbox';
 import { Props } from 'snowbox/src/Badge';
 import { boxTypes } from 'snowbox/src/Utils/props';
 import Config from './config';
+import { ImageStyle } from 'react-native';
 
 type BadgeProps = Omit<Props, 'count'>;
 
@@ -43,7 +44,7 @@ interface Contribute extends boxTypes {
   /**
    * 头像图片style设置
    */
-  imgStyle?: boxTypes;
+  imgStyle?: ImageStyle;
 }
 
 export default ({
@@ -89,7 +90,7 @@ export default ({
       w={size}
       h={size}
       source={{ uri: obj.uri }}
-      style={[{ borderRadius: '50%', border: '1px solid #CCCCCC' }, imgStyle]}
+      style={[{ borderRadius: size, borderColor: '#CCCCCC', borderWidth: 1 }, imgStyle]}
     ></Img>
   );
   return (

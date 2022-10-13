@@ -7,7 +7,7 @@ import Box from '../Box';
 type ItemProps = {
   color: colorStrings;
   percent: number;
-}
+};
 
 type Props = {
   /**
@@ -18,7 +18,7 @@ type Props = {
    * 高度 默认4
    */
   height?: number;
-}
+};
 
 /**
  * 堆叠柱状条组件
@@ -28,22 +28,22 @@ const StackedBar = ({ data, height = 4 }: Props) => {
   return (
     <Box>
       {(data || []).map(({ color, percent }, index) => (
-          <Box
-            key={index}
-            h={height}
-            bg={color}
-            flex={Math.max(percent, 1)}
-            style={[index === 0 && styles.left, index === data.length - 1 && styles.right]}
-          />
-        ))}
+        <Box
+          key={index}
+          h={height}
+          bg={color}
+          flex={Math.max(percent, 1)}
+          style={{ ...(index === 0 && styles.left), ...(index === data.length - 1 && styles.right) }}
+        />
+      ))}
     </Box>
-  )
-}
+  );
+};
 
 export default StackedBar;
 
 const createStyles = (height: number) => {
-  const radius = getSize(height);
+  const radius = getSize(height) as number;
 
   return StyleSheet.create({
     left: {
@@ -54,5 +54,5 @@ const createStyles = (height: number) => {
       borderTopRightRadius: radius,
       borderBottomRightRadius: radius,
     },
-  })
+  });
 };

@@ -148,15 +148,15 @@ export default WinRate;
 
 const styles = StyleSheet.create({
   borderRadiusLeft: {
-    borderTopLeftRadius: getSize(4),
+    borderTopLeftRadius: getSize(4) as number,
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0,
-    borderBottomLeftRadius: getSize(4),
+    borderBottomLeftRadius: getSize(4) as number,
   },
   borderRadiusRight: {
     borderTopLeftRadius: 0,
-    borderTopRightRadius: getSize(4),
-    borderBottomRightRadius: getSize(4),
+    borderTopRightRadius: getSize(4) as number,
+    borderBottomRightRadius: getSize(4) as number,
     borderBottomLeftRadius: 0,
   },
 });

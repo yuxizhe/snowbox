@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleProp, Text } from 'react-native';
+import { Text } from 'react-native';
 import { Txt } from '../';
 import { fontTypes } from '../Utils/props';
 
@@ -11,11 +11,11 @@ type Props = {
   /**
    * 汉字文本属性
    */
-  textProps: StyleProp<fontTypes>;
+  textProps: fontTypes;
   /**
    * 数字文本属性
    */
-  numProps: StyleProp<fontTypes>;
+  numProps: fontTypes;
 };
 
 const TxtNum = ({ children, numProps, textProps, ...props }: Props) => {

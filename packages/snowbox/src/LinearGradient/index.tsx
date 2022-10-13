@@ -73,7 +73,7 @@ export default class LinearGradient extends PureComponent<LinearGradientProsEx> 
     return (
       <View
         {...otherProps}
-        style={[style, { backgroundImage: `linear-gradient(${this.getAngle()},${this.getColors()})` }]}
+        style={[style, { backgroundImage: `linear-gradient(${this.getAngle()},${this.getColors()})` }]} // @ts-ignore
         onLayout={this.measure}
       >
         {children}

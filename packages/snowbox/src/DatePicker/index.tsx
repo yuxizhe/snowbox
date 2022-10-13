@@ -617,9 +617,9 @@ const DatePicker = ({
             setInputStartTime(formatDate(date));
           }
         }}
-        style={[startTimeFocus ? styles.btnFocus : styles.btnUnFocus]}
+        style={{ ...(startTimeFocus ? styles.btnFocus : styles.btnUnFocus) }}
       >
-        <Box h={34} cl="Blu010" w={132} style={[styles.item]}>
+        <Box h={34} cl="Blu010" w={132} style={styles.item}>
           {inputStartTime ? (
             <Box cl={startTimeFocus ? 'Blu010' : 'T010'}>{inputStartTime}</Box>
           ) : (
@@ -641,9 +641,9 @@ const DatePicker = ({
             setInputEndTime(formatDate(date));
           }
         }}
-        style={[endTimeFocus ? styles.btnFocus : styles.btnUnFocus]}
+        style={endTimeFocus ? styles.btnFocus : styles.btnUnFocus}
       >
-        <Box h={34} cl="Blu010" w={132} style={[styles.item]}>
+        <Box h={34} cl="Blu010" w={132} style={styles.item}>
           {inputEndTime ? (
             <Box cl={endTimeFocus ? 'Blu010' : 'T010'}>{inputEndTime}</Box>
           ) : (

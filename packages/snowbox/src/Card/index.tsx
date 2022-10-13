@@ -69,7 +69,7 @@ function Card({
       mx={12}
       br={8}
       col
-      style={[{ flexGrow: 1, flexShrink: 0 }, style]}
+      style={{ ...{ flexGrow: 1, flexShrink: 0 }, ...style }}
       {...boxProps}
     >
       {title ? (

@@ -94,8 +94,8 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   progressIconWrapper: {
-    borderTopWidth: getSize(2),
-    borderBottomWidth: getSize(2),
+    borderTopWidth: getSize(2) as number,
+    borderBottomWidth: getSize(2) as number,
   },
 });
 

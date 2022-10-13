@@ -6,7 +6,7 @@ const RadioStyle = (theme: string) =>
   StyleSheet.create({
     border: {
       borderStyle: 'solid',
-      borderWidth: getSize(1),
+      borderWidth: getSize(1) as number,
       borderColor: Color.T020[theme],
     },
     center: {
@@ -15,7 +15,7 @@ const RadioStyle = (theme: string) =>
     },
     disabled: {
       borderStyle: 'solid',
-      borderWidth: getSize(1),
+      borderWidth: getSize(1) as number,
       borderColor: Color.T040[theme],
     },
   });

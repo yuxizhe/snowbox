@@ -25,6 +25,7 @@ function errorBoundary<T>(WrappedComponent: React.ComponentType<T>) {
     render() {
       const { hasError }: any = this.state;
       return (
+        // @ts-ignore
         // eslint-disable-next-line react/jsx-props-no-spreading
         hasError ? <View /> : <WrappedComponent {...this.props} />
       );

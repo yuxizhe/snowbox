@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Utils, Box, Txt, Press, Icon } from 'snowbox';
+import { Utils, Box, Txt, Press, Icon } from '../';
 
 import { StyleSheet, TextStyle } from 'react-native';
 

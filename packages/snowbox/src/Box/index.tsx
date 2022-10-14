@@ -15,10 +15,6 @@ const Box = ({ style, children, noAuto = false, ...props }: boxTypes) => {
 
   const OtherProps = {};
 
-  const childType = typeof children;
-
-  const isText = ['boolean', 'string', 'number'].indexOf(childType) > -1;
-
   // 通用样式赋值
   Object.keys(newProps).map((item) => {
     // 尺寸类 屏幕适配
@@ -46,18 +42,19 @@ const Box = ({ style, children, noAuto = false, ...props }: boxTypes) => {
     box: boxStylesObj,
   });
 
-  if (isText) {
-    return (
-      <View style={[boxStyle.box, style]}>
-        <Txt style={style} noAuto={noAuto} {...OtherProps}>
-          {children}
-        </Txt>
-      </View>
-    );
-  }
   return (
     <View style={[boxStyle.box, style]} {...OtherProps}>
-      {children}
+      {React.Children.map(children, (child) => {
+        const subChildType = typeof child;
+        if (['boolean', 'string', 'number'].indexOf(subChildType) > -1) {
+          return (
+            <Txt style={style} noAuto={noAuto} {...OtherProps}>
+              {child}
+            </Txt>
+          );
+        }
+        return child;
+      })}
     </View>
   );
 };

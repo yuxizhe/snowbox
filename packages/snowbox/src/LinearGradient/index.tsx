@@ -8,7 +8,7 @@ import { LinearGradientProps } from 'react-native-linear-gradient';
 interface LinearGradientProsEx extends LinearGradientProps {
   onLayout?: (e: any) => void;
   style?: Object;
-  children?: React.ReactNode;
+  children?: any;
 }
 export default class LinearGradient extends PureComponent<LinearGradientProsEx> {
   static defaultProps = {
@@ -71,6 +71,7 @@ export default class LinearGradient extends PureComponent<LinearGradientProsEx> 
   render() {
     const { start, end, colors, locations, useAngle, angleCenter, angle, style, children, ...otherProps } = this.props;
     return (
+      // @ts-ignore
       <View
         {...otherProps}
         // @ts-ignore

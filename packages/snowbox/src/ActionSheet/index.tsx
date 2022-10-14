@@ -183,6 +183,7 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
             bounces={bounces}
             keyboardShouldPersistTaps={persistTaps}
           >
+            {/* @ts-ignore */}
             {content}
           </ScrollView>
         </Box>

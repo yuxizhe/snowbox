@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { getSize } from 'snowbox';
-import { colorStrings } from 'src/Utils/props';
+import { getSize } from '../';
+import { colorStrings } from '../Utils/props';
 import Box from '../Box';
 
 type ItemProps = {

@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import createReactClass from 'create-react-class';
 import {
   View,
   Animated,
@@ -8,12 +7,14 @@ import {
   ScrollView,
   Text,
   Platform,
+  // @ts-ignore
   ViewPropTypes,
   TouchableOpacity,
+  // @ts-ignore
   TextPropTypes,
 } from 'react-native';
 
-const ScrollableTabBar = {
+const ScrollableTabBar: any = {
   propTypes: {
     goToPage: PropTypes.func,
     activeTab: PropTypes.number,

@@ -148,6 +148,7 @@ class InView<T = ViewProps> extends PureComponent<InViewProps<T>> {
     }
     const ViewComponent: InViewWrapper = (as || View) as InViewWrapper;
     return (
+      // @ts-ignore
       <ViewComponent {...props} ref={this.handleRef} onLayout={this.handleLayout}>
         {children}
       </ViewComponent>

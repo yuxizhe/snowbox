@@ -43,6 +43,7 @@ class NoticeBar extends React.Component {
   }
 
   componentWillUnmount() {
+    // @ts-ignore
     AppState.removeEventListener('change', this._handleAppStateChange);
   }
 

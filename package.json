@@ -7,12 +7,9 @@
   "scripts": {
     "doc": "cd packages/snowbox && yarn dev",
     "dev": "cd packages/examples && yarn dev",
-    "build": "cd packages/snowbox && rm -rf dist && yarn tsc && cp -rf ./static ./dist/static",
+    "build": "cd packages/snowbox && rm -rf dist && yarn tsc",
     "snowlink": "cd packages/snowbox && npm link"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "keywords": [
     "react-native",
     "react-native-web"

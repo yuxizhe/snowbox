@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Animated, StyleSheet } from 'react-native';
-import { Box, Txt } from 'snowbox';
+import { Box, Txt } from '../';
 
 interface CountdownProps {
   initSeconds?: number; // 初始值单位秒

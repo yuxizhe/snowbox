@@ -78,7 +78,7 @@ function Card({
             <Box flex={1}>
               {isString ? (
                 <Txt cl="T010" fw="500" f={16} lh={22}>
-                  {title}
+                  {title as string}
                 </Txt>
               ) : (
                 <>{title}</>

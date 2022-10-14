@@ -1,24 +1,24 @@
+// https://www.tslang.cn/docs/handbook/tsconfig-json.html
 {
   "compilerOptions": {
     "outDir": "dist",
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "target": "ES6",
+    "jsx": "react",
+    "lib": ["ES2016", "DOM"],
+    "module": "commonjs",
+    "moduleResolution": "node",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
     "declaration": true,
-    "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "module": "ESNext",
-    "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
-      "snowbox": ["src"]
+      "snowbox": ["./src"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.png"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }

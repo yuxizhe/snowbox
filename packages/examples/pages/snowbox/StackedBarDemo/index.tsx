@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, StackedBar } from 'snowbox';
 
 const StackedBarDemo = () => (
+  // @ts-ignore
   <Box col m={10} p={10} br={10} bg="B020" flex={1} style={{ rowGap: 16 }}>
     <StackedBar
       data={[

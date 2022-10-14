@@ -1,10 +1,8 @@
 module.exports = {
   outDir: 'dist',
   pageExtensions: ['web.jsx', 'web.js', 'web.tsx', 'web.ts'],
-  experimental: {
-    externalDir: true,
-  },
   webpack: (config) => {
+    config.resolve.alias['react-native'] = 'react-native-web';
     config.module.rules.push({
       test: /\.(png|svg|jpg|jpeg|gif)$/i,
       use: [

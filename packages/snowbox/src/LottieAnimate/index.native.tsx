@@ -15,6 +15,7 @@ type Props = {
 export default function LottieAnimate({ w, h, dataSource }: Props) {
   return (
     <Box w={w} h={h}>
+      {/* @ts-ignore */}
       <LottieView source={dataSource[THEME]} autoPlay loop />
     </Box>
   );

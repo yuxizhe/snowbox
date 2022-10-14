@@ -4,15 +4,21 @@
 
 > http://f2e.snowballfinance.io/snowbox/
 
+## 安装
+
+使用 pnpm 安装 https://www.pnpm.cn/
+
+`pnpm i`
+
 ## 启动命令
 
-`yarn dev` :
+`npm run dev` :
 
 web-example 调试
 
 访问 http://localhost:3000
 
-`yarn doc` :
+`npm run doc` :
 
 文档网站调试
 

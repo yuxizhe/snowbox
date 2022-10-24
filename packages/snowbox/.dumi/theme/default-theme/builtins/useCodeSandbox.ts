@@ -131,6 +131,11 @@ function getCSBData(opts: any) {
         font-family: 'DIN-Medium';
         src: url('https://assets.imedao.com/ugc/snowflake/font/DIN_Medium.ttf') format('truetype');
       }
+      
+      #root {
+        display: flex;
+        height: 100vh;
+      }
     </style>
     <title>snowbox</title>
   </head>

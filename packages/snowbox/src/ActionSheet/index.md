@@ -26,7 +26,7 @@ Demo
 
 ```tsx
 import React, { useState, useEffect } from 'react';
-import { Box, ActionSheet, Button } from 'snowbox';
+import { Box, ActionSheet, Button } from 'snowbox-ui';
 import { setGlobalVar } from '../Utils';
 export default () => {
   const [visible, setVisible] = useState(false);

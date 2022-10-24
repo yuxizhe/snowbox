@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, StackedBar } from 'snowbox';
+import { Box, StackedBar } from 'snowbox-ui';
 
 const StackedBarDemo = () => (
   // @ts-ignore

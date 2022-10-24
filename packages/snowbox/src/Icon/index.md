@@ -22,7 +22,7 @@ Demo: 支持点击复制
  */
 import React, { useState } from 'react';
 import { Clipboard, Alert } from 'react-native';
-import { Box, Icon, Press, Popup, Txt } from 'snowbox';
+import { Box, Icon, Press, Popup, Txt } from 'snowbox-ui';
 import iconConfig from './icon';
 
 export default () => {

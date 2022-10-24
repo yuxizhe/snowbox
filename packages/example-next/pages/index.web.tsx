@@ -1,10 +1,10 @@
 import React from 'react';
-import { Box, Wrapper, Window, THEME } from 'snowbox';
+import { Box, Wrapper, Window, THEME } from 'snowbox-ui';
 
 const pages = [
   {
-    url: '/snowbox',
-    text: 'SnowBox 组件库',
+    url: '/snowbox-ui',
+    text: 'snowbox-ui 组件库',
   },
 ];
 

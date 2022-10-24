@@ -19,7 +19,7 @@ Demo:
  * defaultShowCode: true
  */
 import React, { useState } from 'react';
-import { Box, Press } from 'snowbox';
+import { Box, Press } from 'snowbox-ui';
 
 export default () => (
   <Box col m={10} p={10} br={10} bg="B020">

@@ -14,7 +14,7 @@ group:
 
 ```jsx
 import React from 'react';
-import { LineChart, Box } from 'snowbox';
+import { LineChart, Box } from 'snowbox-ui';
 
 export default () => {
   return (

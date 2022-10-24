@@ -20,7 +20,7 @@ group:
 
 ```jsx
 import React from 'react';
-import { Box, Card, TabScrollView } from 'snowbox';
+import { Box, Card, TabScrollView } from 'snowbox-ui';
 
 export default () => {
   const titles = ['分红详解', '策略补充', '团队介绍', '雪球资管', '其他'];

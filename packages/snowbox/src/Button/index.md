@@ -18,7 +18,7 @@ Demo:
 
 ```tsx
 import React, { useState } from 'react';
-import { Box, Button } from 'snowbox';
+import { Box, Button } from 'snowbox-ui';
 
 const [loading, setLoading] = useState(false);
 

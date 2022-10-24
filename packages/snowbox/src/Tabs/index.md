@@ -29,7 +29,7 @@ Demo:
  * defaultShowCode: true
  */
 import React, { useState } from 'react';
-import { Tabs, Box } from 'snowbox';
+import { Tabs, Box } from 'snowbox-ui';
 
 export default () => {
   return (

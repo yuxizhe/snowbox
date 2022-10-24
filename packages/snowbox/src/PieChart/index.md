@@ -15,7 +15,7 @@ Demo
 
 ```tsx
 import React from 'react';
-import { Box, PieChart, ThemeColor, SVG } from 'snowbox';
+import { Box, PieChart, ThemeColor, SVG } from 'snowbox-ui';
 const { Text: SVGText } = SVG;
 
 export default () => (

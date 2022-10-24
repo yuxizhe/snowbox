@@ -19,7 +19,7 @@ Demo:
  * defaultShowCode: true
  */
 import React from 'react';
-import { Loading, Box } from 'snowbox';
+import { Loading, Box } from 'snowbox-ui';
 
 export default () => (
   <Box col p={30}>

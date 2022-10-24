@@ -19,7 +19,7 @@ Demo
 
 ```tsx
 import React from 'react';
-import { Box, Swiper, Txt } from 'snowbox';
+import { Box, Swiper, Txt } from 'snowbox-ui';
 
 export default () => (
   <Box col m={10} p={10} br={10} bg="B020" h={200} col>

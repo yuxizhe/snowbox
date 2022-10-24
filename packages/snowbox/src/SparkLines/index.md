@@ -17,7 +17,7 @@ Demo:
 
 ```tsx
 import React, { FC, useEffect, useState } from 'react';
-import { Box, SparkLines } from 'snowbox';
+import { Box, SparkLines } from 'snowbox-ui';
 import { demo_line1, demo_line2 } from './demoData';
 
 const SparkLine = () => {

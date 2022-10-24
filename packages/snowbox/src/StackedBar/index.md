@@ -12,8 +12,8 @@ group:
 
 堆叠柱状条，适用于展示基金资产配置占比或者其他占比
 
-- 各科目的percent传值为0~100之间，小于1的科目会按1%进行绘制
-- 所有科目占比总和大于100或者小于100的，均会按比例撑满容器
+- 各科目的 percent 传值为 0~100 之间，小于 1 的科目会按 1%进行绘制
+- 所有科目占比总和大于 100 或者小于 100 的，均会按比例撑满容器
 
 Demo:
 
@@ -22,7 +22,7 @@ Demo:
  * defaultShowCode: true
  */
 import React from 'react';
-import { Box, StackedBar } from 'snowbox';
+import { Box, StackedBar } from 'snowbox-ui';
 
 const StackedBarDemo = () => (
   <Box col m={10} p={10} br={10} bg="B020" flex={1} style={{ rowGap: 16 }}>
@@ -34,7 +34,7 @@ const StackedBarDemo = () => (
         {
           color: 'Chart009',
           percent: 100,
-        }
+        },
       ]}
     />
     <StackedBar
@@ -53,8 +53,8 @@ const StackedBarDemo = () => (
         },
         {
           color: 'Chart008',
-          percent: 0.4
-        }
+          percent: 0.4,
+        },
       ]}
     />
     <StackedBar
@@ -70,12 +70,12 @@ const StackedBarDemo = () => (
         },
         {
           color: 'Chart008',
-          percent: 38.64
-        }
+          percent: 38.64,
+        },
       ]}
     />
   </Box>
-)
+);
 
 export default StackedBarDemo;
 ```

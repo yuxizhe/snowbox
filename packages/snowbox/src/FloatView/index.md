@@ -24,7 +24,7 @@ Demo
 
 ```tsx
 import React from 'react';
-import { Box, FloatView, Txt } from 'snowbox';
+import { Box, FloatView, Txt } from 'snowbox-ui';
 
 export default () => (
   <Box col flex={1}>

@@ -9,13 +9,13 @@ group:
 
 # Svg
 
-snowbox 封装的 SVG 组件，web 端同原生，客户端参考`react-native-svg`组件
+snowbox-ui 封装的 SVG 组件，web 端同原生，客户端参考`react-native-svg`组件
 
 Demo
 
 ```jsx
 import React from 'react';
-import { SVG } from 'snowbox';
+import { SVG } from 'snowbox-ui';
 const { Svg, Circle } = SVG;
 
 const Demo = () => {

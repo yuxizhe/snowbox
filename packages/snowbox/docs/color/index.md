@@ -32,7 +32,7 @@ Txt 组件 支持颜色
  * defaultShowCode: true
  */
 import React from 'react';
-import { Box, ThemeColor } from 'snowbox';
+import { Box, ThemeColor } from 'snowbox-ui';
 
 export default () => (
   <Box m={10} p={10} br={10} bg="B020" style={{ flexWrap: 'wrap' }}>
@@ -53,10 +53,10 @@ export default () => (
 
 ### 直接颜色引用
 
-也可以从 snowbox 直接引用颜色
+也可以从 snowbox-ui 直接引用颜色
 
 ```js
-import { ThemeColor } from 'snowbox';
+import { ThemeColor } from 'snowbox-ui';
 
 color = ThemeColor.T010[theme];
 ```

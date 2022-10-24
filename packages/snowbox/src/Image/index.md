@@ -20,7 +20,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Img, Box } from 'snowbox';
+import { Img, Box } from 'snowbox-ui';
 
 export default () => (
   <Box col m={10} p={10} br={10} bg="B020">

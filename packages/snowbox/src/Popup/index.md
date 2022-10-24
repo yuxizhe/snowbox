@@ -21,7 +21,7 @@ Demo:
  * defaultShowCode: true
  */
 import React, { useState } from 'react';
-import { Popup, Box, Txt, Button } from 'snowbox';
+import { Popup, Box, Txt, Button } from 'snowbox-ui';
 
 export default () => {
   const [popupVisible, setPopupVisible] = useState(false);

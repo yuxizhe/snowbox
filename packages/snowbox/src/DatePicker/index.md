@@ -18,7 +18,7 @@ Demo:
  * defaultShowCode: true
  */
 import React, { useState } from 'react';
-import { Box, DatePicker, Button } from 'snowbox';
+import { Box, DatePicker, Button } from 'snowbox-ui';
 
 const [visible, setVisible] = useState(false);
 

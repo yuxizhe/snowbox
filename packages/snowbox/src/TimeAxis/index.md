@@ -19,7 +19,7 @@ Demo:
  * defaultShowCode: true
  */
 import React from 'react';
-import { TimeAxis, Box, Txt } from 'snowbox';
+import { TimeAxis, Box, Txt } from 'snowbox-ui';
 
 export default () => (
   <Box col m={10} p={10} br={10} bg="B020">

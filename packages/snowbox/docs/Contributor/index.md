@@ -15,7 +15,7 @@ group:
 ```tsx
 import Contributor from './index';
 import React, { useState } from 'react';
-import { Box, Button } from 'snowbox';
+import { Box, Button } from 'snowbox-ui';
 import Config from './config.ts';
 
 export default () => (

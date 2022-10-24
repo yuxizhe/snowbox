@@ -21,7 +21,7 @@ Demo
 
 ```tsx
 import React from 'react';
-import { Box, LinearGradient, Txt } from 'snowbox';
+import { Box, LinearGradient, Txt } from 'snowbox-ui';
 
 export default () => (
   <Box flex={1} h={300} p={15} col>

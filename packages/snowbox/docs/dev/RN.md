@@ -49,7 +49,7 @@ snb-rn 项目，从 master 分支建立 feature-xxx 分支。如需跟客户端�
 │ ├── index.js
 │ └── index.web.js
 │ ├── RNSettings
-│ ├── snowbox
+│ ├── snowbox-ui
 │ ├── \_app.web.tsx
 │ └── index.web.tsx
 ├── next.config.js
@@ -60,7 +60,7 @@ snb-rn 项目，从 master 分支建立 feature-xxx 分支。如需跟客户端�
 │ └── proxy.js
 ├── server.js
 ├── process.json
-├── snowbox
+├── snowbox-ui
 │ ├── Box
 │ ├── Txt
 │ ├── Utils
@@ -107,7 +107,7 @@ newPage
 
 ```
 //index.web.js
-import { Wrapper } from 'snowbox';
+import { Wrapper } from 'snowbox-ui';
 import Page from '.';
 
 export default Wrapper(Page);
@@ -116,7 +116,7 @@ export default Wrapper(Page);
 _注：如果需要特殊配置类似蛋卷官网的头部，可以参考如下示例_
 
 ```
-import { Wrapper } from 'snowbox';
+import { Wrapper } from 'snowbox-ui';
 import Header from '@/webComponents/Header';
 import Page from '.';
 
@@ -143,7 +143,7 @@ export default Wrapper(Demo);
 ```
 //index.web.js
 import dynamic from 'next/dynamic';
-import { Wrapper } from 'snowbox';
+import { Wrapper } from 'snowbox-ui';
 
 const Page = dynamic(() => import('./index'), {
   ssr: false,
@@ -181,8 +181,8 @@ _注意：第一次新增，需提交并打成包，客户端下载包解析后�
 [
   {
     "title": "组件库",
-    "path": "/rn/snowbox",
-    "module": "snowbox"
+    "path": "/rn/snowbox-ui",
+    "module": "snowbox-ui"
   },
   {
     "title": "私募商品页",
@@ -199,7 +199,7 @@ _注意：第一次新增，需提交并打成包，客户端下载包解析后�
 
 https://xueqiu.com/rn
 
-https://xueqiu.com/rn/snowbox
+https://xueqiu.com/rn/snowbox-ui
 
 **重构页面** 需保留原 url 能访问到的情况
 
@@ -208,9 +208,9 @@ https://xueqiu.com/rn/snowbox
 
 ### 页面逻辑开发
 
-建议在 web 端完成页面基本逻辑开发，使用 vscode + chrome + snowbox 组件库 ，即可快速完成页面基本逻辑和初步样式框架。之后再在客户端内进入 RN 样式微调。
+建议在 web 端完成页面基本逻辑开发，使用 vscode + chrome + snowbox-ui 组件库 ，即可快速完成页面基本逻辑和初步样式框架。之后再在客户端内进入 RN 样式微调。
 
-[RN/H5 同构组件库 snowbox](https://xueqiu.feishu.cn/wiki/wikcnMeLejj9efweQ5loiMXKW5g?from=from_parent_docs)
+[RN/H5 同构组件库 snowbox-ui](https://xueqiu.feishu.cn/wiki/wikcnMeLejj9efweQ5loiMXKW5g?from=from_parent_docs)
 
 #### 样式初步
 
@@ -226,7 +226,7 @@ _注意：由于 web&ios&安卓还是有些细微差异，比如元素撑满的�
 </Box>
 ```
 
-[**同构渲染流程**](http://f2e.snowballfinance.io/snowbox/dev/system-design)
+[**同构渲染流程**](http://f2e.snowballfinance.io/snowbox-ui/dev/system-design)
 
 #### 页面数据查看
 
@@ -272,14 +272,14 @@ _注意：由于 web&ios&安卓还是有些细微差异，比如元素撑满的�
 
 ## 三端特殊处理写法
 
-因为要至少支持 3 端，而 3 端难免会有些代码需要特殊处理，比如路由跳转、三端不同的组件。我们封装了 snowbox 组件库。
+因为要至少支持 3 端，而 3 端难免会有些代码需要特殊处理，比如路由跳转、三端不同的组件。我们封装了 snowbox-ui 组件库。
 
 ### 常用方式
 
 #### 使用 OS 判断
 
 ```
-import {OS} from 'snowbox';
+import {OS} from 'snowbox-ui';
 OS: "ios" | "android" | "windows" | "macos" | "web" | "node"
 // 非服务端渲染
 if (OS === 'web') {
@@ -327,10 +327,10 @@ RN 中我们会对所有页面用一个 wrapper 函数封装，处理客户端�
 在 nextjs 中，使用\_app.web.tsx 即可实现，
 getInitialProps 从 node ctx 中 获取主题、url、uid、ua 等参数。传递 props。
 
-所以 web 也需要实现 wrapper，封装在 snowbox 里，在 index.web.js 中引入即可
+所以 web 也需要实现 wrapper，封装在 snowbox-ui 里，在 index.web.js 中引入即可
 
 ```
-import { Wrapper } from 'snowbox';
+import { Wrapper } from 'snowbox-ui';
 import Page from '.';
 
 export default Wrapper(Page);
@@ -343,7 +343,7 @@ export default Wrapper(Page);
 无需函数式组件，可直接使用。
 
 ```
-import { THEME, Window, OS, gVar } from 'snowbox';
+import { THEME, Window, OS, gVar } from 'snowbox-ui';
 ```
 
 #### OS 封装
@@ -359,10 +359,10 @@ import { THEME, Window, OS, gVar } from 'snowbox';
 const isNodeEnv = typeof 'process' !== 'undefined' && process && process.versions && process.versions.node;
 ```
 
-所以在 snowbox 中也进行封装，开箱即用。
+所以在 snowbox-ui 中也进行封装，开箱即用。
 
 ```
-import { OS } from 'snowbox';
+import { OS } from 'snowbox-ui';
 /**
  * OS: "ios" | "android" | "windows" | "macos" | "web" | "node"
  * **/
@@ -377,7 +377,7 @@ web 项目难免会对 window 进行访问，比如 `window.location.href`操作
 所以我们对 window 也进行了封装。
 
 ```
-import { Window } from 'snowbox';
+import { Window } from 'snowbox-ui';
 //Window.location.href
 //Window.navigator.userAgent
 ```

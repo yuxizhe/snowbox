@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, SparkLines } from 'snowbox';
+import { Box, SparkLines } from 'snowbox-ui';
 import { demo_line1, demo_line2 } from './data';
 
 const SparkLine = () => {

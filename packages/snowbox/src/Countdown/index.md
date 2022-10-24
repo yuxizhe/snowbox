@@ -24,7 +24,7 @@ Demo
 
 ```tsx
 import React from 'react';
-import { Countdown, Box } from 'snowbox';
+import { Countdown, Box } from 'snowbox-ui';
 
 export default () => (
   <Box col m={10} p={10}>

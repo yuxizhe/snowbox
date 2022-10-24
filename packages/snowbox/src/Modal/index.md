@@ -18,7 +18,7 @@ Demo:
 
 ```tsx
 import React, { useState } from 'react';
-import { Box, Button, Modal } from 'snowbox';
+import { Box, Button, Modal } from 'snowbox-ui';
 
 const [modalVisible, setModalVisible] = useState(false);
 

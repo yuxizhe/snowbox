@@ -21,7 +21,7 @@ Demo:
  * defaultShowCode: true
  */
 import React from 'react';
-import { Box, Txt } from 'snowbox';
+import { Box, Txt } from 'snowbox-ui';
 
 export default () => (
   <Box col m={10}>

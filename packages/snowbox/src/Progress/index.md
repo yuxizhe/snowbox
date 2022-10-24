@@ -18,7 +18,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Box, Progress } from 'snowbox';
+import { Box, Progress } from 'snowbox-ui';
 
 export default () => (
   <Box col m={10} p={10} br={10} bg="B020">

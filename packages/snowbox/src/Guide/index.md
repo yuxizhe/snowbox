@@ -19,7 +19,7 @@ Demo:
  * defaultShowCode: true
  */
 import React, { useState } from 'react';
-import { Box, ThemeColor, THEME, getSize, Guide, Press, Txt } from 'snowbox';
+import { Box, ThemeColor, THEME, getSize, Guide, Press, Txt } from 'snowbox-ui';
 
 const positionBtn = {
   w: 100,

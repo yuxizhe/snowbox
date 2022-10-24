@@ -16,7 +16,7 @@ Demo
 ```tsx
 import React, { useState, useEffect } from 'react';
 import { LayoutChangeEvent, View } from 'react-native';
-import { Box, TabsAnchor, AnchorView } from 'snowbox';
+import { Box, TabsAnchor, AnchorView } from 'snowbox-ui';
 
 export default () => {
   const [content1, setContent1] = useState('');

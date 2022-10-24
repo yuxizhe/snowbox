@@ -9,7 +9,7 @@ nav:
 
 ## git
 
-> http://git.snowballfinance.com/f2e/snowbox
+> http://git.snowballfinance.com/f2e/snowbox-ui
 
 ## 安装命令
 
@@ -39,7 +39,7 @@ web-example 调试
 
 组件库抽离出单独项目，封装 npm 包，完善介绍/例子/网站搭建
 
-- snowbox 组件库抽离出单独项目，封装 npm 包，替换 snb-rn/dj-rn 等项目中的组件
+- snowbox-ui 组件库抽离出单独项目，封装 npm 包，替换 snb-rn/dj-rn 等项目中的组件
 - 项目中包含例子 demo 页
 - 项目支持 codesandbox 预览
 - 项目支持 expo 三端预览
@@ -51,7 +51,7 @@ web-example 调试
 - 介绍 参考：
   - 技术融合的文章 https://mp.weixin.qq.com/s/BGGsuYrlojMfTqfTo71VZg
 
-> Git 仓库 http://git.snowballfinance.com/f2e/snowbox
+> Git 仓库 http://git.snowballfinance.com/f2e/snowbox-ui
 
 ## Monorepo
 
@@ -59,13 +59,13 @@ workspace 实现
 
 ## 项目
 
-### 1.snowbox 组件库
+### 1.snowbox-ui 组件库
 
 项目封装
 
 使用 dumi 生成文档
 
-> https://f2e.snowballfinance.io/snowbox
+> https://f2e.snowballfinance.io/snowbox-ui
 
 ### 2.Examples App
 

@@ -1,9 +1,9 @@
 ---
 hero:
-  title: SnowBox
-  desc: SnowBox 雪球三端同构组件库 & 样式组件系统
+  title: snowbox-ui
+  desc: snowbox-ui 雪球三端同构组件库 & 样式组件系统
   actions:
-    - text: Getting Started
+    - text: 查看文档
       link: /components
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/d60657df-0822-4631-9d7c-e7a869c2f21c/k79dmz3q_w126_h126.png
@@ -18,9 +18,11 @@ features:
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
 
+## snowbox
+
 ### <center>在线可交互例子</center>
 
-> https://codesandbox.io/s/snowbox-cra-4772o1
+> https://codesandbox.io/s/snowbox-ui-cra-4772o1
 
 ### <center>Contributors</center>
 
@@ -29,7 +31,7 @@ footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](http
  * inline: true
  */
 import React from 'react';
-import { Box, Txt, Img, Badge, Icon } from 'snowbox';
+import { Box } from 'snowbox-ui';
 import Contributor from './Contributor';
 import Config from './Contributor/config';
 

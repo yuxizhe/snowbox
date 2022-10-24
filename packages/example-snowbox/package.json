@@ -1,5 +1,5 @@
 {
-  "name": "example-snowbox",
+  "name": "example-snowbox-ui",
   "version": "1.0.0",
   "description": "React example starter project",
   "keywords": [
@@ -11,7 +11,7 @@
     "react": "16.9",
     "react-dom": "16.9",
     "react-scripts": "4",
-    "snowbox": "^2.0.1",
+    "snowbox-ui": "^0.0.3",
     "typescript": "^4.8.4"
   },
   "devDependencies": {

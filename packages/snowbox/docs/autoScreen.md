@@ -12,7 +12,7 @@ group:
 
 屏幕适配系统
 
-snowbox 所有的尺寸样式自带屏幕适配，无需给每个样式写屏幕适配代码。
+snowbox-ui 所有的尺寸样式自带屏幕适配，无需给每个样式写屏幕适配代码。
 
 比如设计稿中以 iPhone8 375 为基准。
 
@@ -25,7 +25,7 @@ snowbox 所有的尺寸样式自带屏幕适配，无需给每个样式写屏幕
  * defaultShowCode: true
  */
 import React from 'react';
-import { Box } from 'snowbox';
+import { Box } from 'snowbox-ui';
 
 export default () => (
   <Box col>

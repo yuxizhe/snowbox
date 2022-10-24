@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PositionTypes } from 'snowbox/src/Utils/props';
+import { PositionTypes } from 'snowbox-ui/src/Utils/props';
 
 const index = (props: PositionTypes) => {
   return <div>index</div>;

@@ -98,24 +98,24 @@ nav:
 
 采用两个基础组件来实现这个系统，分别是盒子组件 Box 和 文字组件 Txt。并通过 Typescript 进行规范和提示。
 
-### [**Box**](http://f2e.snowballfinance.io/snowbox/components/box)
+### [**Box**](http://f2e.snowballfinance.io/snowbox-ui/components/box)
 
 盒子组件，相当于 web 的 Div 和 RN 里的 View 。
 实现盒模型，定位，样式属性简写，颜色系统，主题切换，屏幕大小自适应，三端差异抹平等功能。
 
-### [**Txt**](http://f2e.snowballfinance.io/snowbox/components/txt)
+### [**Txt**](http://f2e.snowballfinance.io/snowbox-ui/components/txt)
 
 文字组件
 支持字号、字重、颜色、雪球常用 DIN 字体等，封装行内占位，三端差异抹平等等常用功能。
 
-### [**颜色系统**](http://f2e.snowballfinance.io/snowbox/components/color)
+### [**颜色系统**](http://f2e.snowballfinance.io/snowbox-ui/components/color)
 
 与每个样式单独写颜色色值不同，规范的设计系统，要有一套颜色系统的，将 UI 颜色和规范进行收敛控制，实现多主题切换，并用语义化的描述。
 
 比如雪球设计规范中：
 T010: 一级文字颜色 B010 一级背景颜色，同时包含日夜间主题的颜色。
 
-### [**屏幕适配系统**](http://f2e.snowballfinance.io/snowbox/components/auto-screen)
+### [**屏幕适配系统**](http://f2e.snowballfinance.io/snowbox-ui/components/auto-screen)
 
 样式组件系统，所有的尺寸样式自带屏幕适配，无需给每个样式写屏幕适配代码。
 

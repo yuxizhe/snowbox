@@ -25,7 +25,7 @@ Demo
 
 ```tsx
 import React from 'react';
-import { Box, Card, Tag, Txt } from 'snowbox';
+import { Box, Card, Tag, Txt } from 'snowbox-ui';
 
 export default () => (
   <Box col m={10} py={10} br={10} bg="Blu014">

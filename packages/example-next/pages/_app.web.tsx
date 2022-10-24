@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import 'snowbox/static/global.web.css';
+import 'snowbox-ui/static/global.web.css';
 
 function RnApp({ Component, pageProps }) {
   return (

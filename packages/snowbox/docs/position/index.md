@@ -12,14 +12,14 @@ group:
 
 ab: 绝对定位
 
-彩蛋：snowbox 的 logo 是用下面这段代码生成的
+彩蛋：snowbox-ui 的 logo 是用下面这段代码生成的
 
 ```tsx
 /**
  * defaultShowCode: true
  */
 import React from 'react';
-import { Box } from 'snowbox';
+import { Box } from 'snowbox-ui';
 
 export default () => (
   <Box h={120}>

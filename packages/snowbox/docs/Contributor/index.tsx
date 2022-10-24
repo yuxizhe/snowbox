@@ -1,8 +1,8 @@
 import React from 'react';
-import { Box, Img, Badge } from 'snowbox';
-import { ThemeColor } from 'snowbox';
-import { Props } from 'snowbox/src/Badge';
-import { boxTypes } from 'snowbox/src/Utils/props';
+import { Box, Img, Badge } from 'snowbox-ui';
+import { ThemeColor } from 'snowbox-ui';
+import { Props } from 'snowbox-ui/src/Badge';
+import { boxTypes } from 'snowbox-ui/src/Utils/props';
 import Config from './config';
 import { ImageStyle } from 'react-native';
 

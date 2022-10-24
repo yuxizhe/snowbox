@@ -19,7 +19,7 @@ Demo:
  * defaultShowCode: true
  */
 import React from 'react';
-import { NoticeBar, Box } from 'snowbox';
+import { NoticeBar, Box } from 'snowbox-ui';
 
 export default () => (
   <Box bg="#072872" col>

@@ -18,7 +18,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Box, Checkbox } from 'snowbox';
+import { Box, Checkbox } from 'snowbox-ui';
 
 export default () => (
   <Box mt={5}>

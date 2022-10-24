@@ -19,7 +19,7 @@ Demo:
  * defaultShowCode: true
  */
 import React from 'react';
-import { LottieAnimate, Box, Txt } from 'snowbox';
+import { LottieAnimate, Box, Txt } from 'snowbox-ui';
 import day from '../Loading/loading_gray_day';
 import night from '../Loading/loading_gray_night';
 

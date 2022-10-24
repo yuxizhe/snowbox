@@ -19,7 +19,7 @@ group:
 
 ```jsx
 import React, { useState } from 'react';
-import { Observer, Box } from 'snowbox';
+import { Observer, Box } from 'snowbox-ui';
 const { IOScrollView, InView } = Observer;
 
 export default () => {
@@ -83,7 +83,7 @@ export default () => {
 
 - 内部需要曝光的元素需要使用 InView 组件包裹，onChange 为元素出现或消失在视线时出发的回调，第一个参数为布尔值是否在视线范围内，第二个参数为包含模块名字和曝光时间在内的对象。
 
-> note: 如果 InView 元素需要用到 onLayout 得到目标元素尺寸信息，不建议直接写在 Inview 上，请使用 snowbox -> AnchorView 包裹 InView eg: `<AnchorView onLayout={() => {}}><InView></InView></AnchorView>`
+> note: 如果 InView 元素需要用到 onLayout 得到目标元素尺寸信息，不建议直接写在 Inview 上，请使用 snowbox-ui -> AnchorView 包裹 InView eg: `<AnchorView onLayout={() => {}}><InView></InView></AnchorView>`
 
 ## onChange 回调
 

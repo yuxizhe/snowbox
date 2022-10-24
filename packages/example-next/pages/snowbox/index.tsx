@@ -27,7 +27,7 @@ import {
   ThemeColor,
   SVG,
   Countdown,
-} from 'snowbox';
+} from 'snowbox-ui';
 // import Toast from '@/components/Toast';
 import ActionSheets from './ActionSheets';
 import SparkLineDemo from './SparkLineDemo';

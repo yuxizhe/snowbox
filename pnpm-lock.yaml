@@ -12,13 +12,13 @@ importers:
       react: '16.9'
       react-dom: '16.9'
       react-scripts: '4'
-      snowbox: ^2.0.1
+      snowbox-ui: ^0.0.3
       typescript: ^4.8.4
     dependencies:
       react: 16.9.0
       react-dom: 16.9.0_react@16.9.0
       react-scripts: 4.0.3_xgaprb2z5ptk7v26ap4ihphunu
-      snowbox: link:../snowbox
+      snowbox-ui: link:../snowbox
       typescript: 4.8.4
     devDependencies:
       '@babel/runtime': 7.13.8
@@ -35,7 +35,7 @@ importers:
       react-dom: '16.9'
       react-native: 0.61.4
       react-native-web: '0.16'
-      snowbox: 2.0.1
+      snowbox-ui: 0.0.3
       typescript: ^4.8.4
     dependencies:
       babel-plugin-react-native-web: 0.16.5
@@ -44,7 +44,7 @@ importers:
       react-dom: 16.9.0_react@16.9.0
       react-native: 0.61.4_react@16.9.0
       react-native-web: 0.16.5_dsp4qj7lggdet3zmisfy3gq4ym
-      snowbox: link:../snowbox
+      snowbox-ui: link:../snowbox
       typescript: 4.8.4
     devDependencies:
       '@babel/core': 7.19.6
@@ -59,13 +59,13 @@ importers:
       react: '16.9'
       react-dom: '16.9'
       react-scripts: '4'
-      snowbox: ^2.0.1
+      snowbox-ui: ^0.0.3
       typescript: ^4.8.4
     dependencies:
       react: 16.9.0
       react-dom: 16.9.0_react@16.9.0
       react-scripts: 4.0.3_xgaprb2z5ptk7v26ap4ihphunu
-      snowbox: link:../snowbox
+      snowbox-ui: link:../snowbox
       typescript: 4.8.4
     devDependencies:
       '@babel/runtime': 7.13.8

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, ContrastBar } from 'snowbox';
+import { Box, ContrastBar } from 'snowbox-ui';
 
 const SparkLine = () => (
   <Box col m={10} p={10} br={10} bg="B020" flex={1} style={{ flexDirection: 'row', justifyContent: 'space-between' }}>

@@ -18,7 +18,7 @@ Demo:
 
 ```tsx
 import React from 'react';
-import { Box, Radio } from 'snowbox';
+import { Box, Radio } from 'snowbox-ui';
 
 export default () => (
   <Box col>

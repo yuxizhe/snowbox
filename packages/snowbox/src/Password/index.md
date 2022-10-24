@@ -19,7 +19,7 @@ Demo:
  * defaultShowCode: true
  */
 import React, { useState } from 'react';
-import { Password, Box, Button, TxtNum } from 'snowbox';
+import { Password, Box, Button, TxtNum } from 'snowbox-ui';
 
 const [passwordVisible, setPasswordVisible] = useState(false);
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, PButton, ActionSheet } from 'snowbox';
+import { Box, PButton, ActionSheet } from 'snowbox-ui';
 
 const ActionSheets = () => {
   const [visible, setVisible] = useState(false);

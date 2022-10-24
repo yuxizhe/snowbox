@@ -29,7 +29,7 @@ Demo:
  * defaultShowCode: true
  */
 import React from 'react';
-import { Box } from 'snowbox';
+import { Box } from 'snowbox-ui';
 
 export default () => (
   <Box bg="Blu011">

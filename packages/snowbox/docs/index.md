@@ -1,7 +1,7 @@
 ---
 hero:
-  title: snowbox-ui
-  desc: snowbox-ui 雪球三端同构组件库 & 样式组件系统
+  title: SnowBox
+  desc: SnowBox-UI 雪球三端同构组件库 & 样式组件系统
   actions:
     - text: 查看文档
       link: /components
@@ -18,7 +18,7 @@ features:
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
 
-## snowbox
+# SnowBox
 
 ### <center>在线可交互例子</center>
 

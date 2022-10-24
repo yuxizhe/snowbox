@@ -61,8 +61,8 @@ function getCSBData(opts: any) {
   > = {};
   const deps: Record<string, string> = {};
   const CSSDeps = Object.values(opts.dependencies).filter((dep) => dep.css);
-  const appFileName = `App${ext}`;
-  const entryFileName = `index${ext}`;
+  const appFileName = `src/App${ext}`;
+  const entryFileName = `src/index${ext}`;
 
   // generate dependencies
   Object.entries(opts.dependencies).forEach(([dep, { version }]) => {
@@ -91,7 +91,7 @@ function getCSBData(opts: any) {
     content: JSON.stringify(
       {
         name: opts.title,
-        description: getTextContent(opts.description || 'snowbox codesandbox'),
+        description: getTextContent(opts.description || 'snowbox 三端同构组件库'),
         main: entryFileName,
         dependencies: deps,
         // add TypeScript dependency if required, must in devDeps to avoid csb compile error
@@ -158,7 +158,7 @@ function getCSBData(opts: any) {
   // append other imported local files
   Object.entries(opts.sources).forEach(([filename, { tsx, jsx, content }]) => {
     // handle primary content
-    files[filename === '_' ? appFileName : filename] = {
+    files[filename === '_' ? appFileName : 'src/' + filename] = {
       content: tsx || jsx || content,
       isBinary: false,
     };

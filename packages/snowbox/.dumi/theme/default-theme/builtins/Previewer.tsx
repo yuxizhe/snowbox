@@ -177,12 +177,15 @@ const Previewer: React.FC<IPreviewerProps> = oProps => {
         {actionBarRender(
           <>
             {openCSB && (
-              <button
-                title="Open demo on CodeSandbox.io"
-                className="__dumi-default-icon"
-                role="codesandbox"
-                onClick={openCSB}
-              />
+              <>
+                <button
+                  title="Open demo on CodeSandbox.io"
+                  className="__dumi-default-icon"
+                  role="codesandbox"
+                  onClick={openCSB}
+                />
+                <div className="code-sand-box-text" onClick={openCSB}>在线可交互例子-点击打开</div>
+              </>
             )}
             {openRiddle && (
               <button

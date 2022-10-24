@@ -2,7 +2,7 @@
 nav:
   title: Components
   path: /components
-# mobile: false
+mobile: false
 group:
   title: 基础组件
   order: 1

@@ -5,7 +5,8 @@
   "main": "dist",
   "scripts": {
     "dev": "dumi dev",
-    "docs:build": "dumi build"
+    "docs:build": "dumi build",
+    "ts": "tsc --watch"
   },
   "keywords": [
     "react-native",

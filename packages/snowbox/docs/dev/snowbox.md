@@ -11,15 +11,19 @@ nav:
 
 > http://git.snowballfinance.com/f2e/snowbox
 
+## 安装命令
+
+`pnpm i`
+
 ## 启动命令
 
-`yarn dev` :
+`pnpm dev` :
 
 web-example 调试
 
 访问 http://localhost:3000
 
-`yarn doc` :
+`pnpm doc` :
 
 文档网站调试
 

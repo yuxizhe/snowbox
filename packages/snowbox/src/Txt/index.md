@@ -14,8 +14,6 @@ group:
 
 支持字号、字重、颜色、雪球常用 DIN 字体等，封装行内占位，三端差异抹平等等常用功能。
 
-<API></API>
-
 Demo:
 
 ```tsx
@@ -68,3 +66,5 @@ export default () => (
   </Box>
 );
 ```
+
+<API></API>

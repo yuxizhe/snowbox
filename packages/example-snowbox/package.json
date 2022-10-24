@@ -1,0 +1,32 @@
+{
+  "name": "example-snowbox",
+  "version": "1.0.0",
+  "description": "React example starter project",
+  "keywords": [
+    "react",
+    "starter"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "react": "16.9",
+    "react-dom": "16.9",
+    "react-scripts": "4",
+    "snowbox": "^2.0.1",
+    "typescript": "^4.8.4"
+  },
+  "devDependencies": {
+    "@babel/runtime": "7.13.8",
+    "@craco/craco": "^6.4.5",
+    "@types/react": "16.9"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

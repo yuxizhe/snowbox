@@ -6,7 +6,6 @@ import { history } from 'dumi';
 import type { IPreviewerComponentProps } from 'dumi/theme';
 import {
   context,
-  useCodeSandbox,
   useRiddle,
   useMotions,
   useCopy,
@@ -17,6 +16,8 @@ import {
   AnchorLink,
   usePrefersColor,
 } from 'dumi/theme';
+// 特殊处理
+import useCodeSandbox from './useCodeSandbox';
 import type { ICodeBlockProps } from './SourceCode';
 import SourceCode from './SourceCode';
 import Alert from './Alert';

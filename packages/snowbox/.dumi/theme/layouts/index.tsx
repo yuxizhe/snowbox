@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
 import type { IPreviewerComponentProps } from 'dumi/theme';
 import { context, getDemoUrl } from 'dumi/theme';
-import Layout from 'dumi-theme-default/es/layout';
-import type { IRouteComponentProps } from '@umijs/types';
+import Layout from '../default-theme/layout';
 import Device from '../components/Device';
 import { ACTIVE_MSG_TYPE } from '../builtins/Previewer';
 import '../style/layout.less';
 
-const MobileLayout: React.FC<IRouteComponentProps> = ({ children, ...props }) => {
+const MobileLayout: React.FC<any> = ({ children, ...props }) => {
   const {
     config: { mode, exportStatic },
     demos,

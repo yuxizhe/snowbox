@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "doc": "cd packages/snowbox && pnpm dev",
-    "dev": "cd packages/example-snowbox && pnpm dev",
+    "dev": "cd packages/example-snowbox && pnpm start",
     "next": "cd packages/example-next && pnpm dev",
     "build": "cd packages/snowbox && rm -rf dist && yarn tsc",
     "snowlink": "cd packages/snowbox && npm link"

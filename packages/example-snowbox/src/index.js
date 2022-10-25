@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './snowbox-ui';
+import App from './snowbox';
 
 ReactDOM.render(<App />, document.getElementById('root'));

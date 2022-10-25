@@ -57,14 +57,15 @@ function Steps({ data, ...boxProps }: Props) {
     <Box mt={8} p={12} bg="B020" br={8} {...boxProps}>
       <Box w="100%" col>
         {data.map((item, index) => {
-          const content =
-            item.desc && React.isValidElement(item.desc) ? (
+          const content = item.desc ? (
+            React.isValidElement(item.desc) ? (
               <Box>{item.desc}</Box>
             ) : (
               <TxtNum textProps={{ cl: 'T030', f: 12 }} numProps={{ cl: 'T030', f: 12, DIN: true }}>
                 {item.desc as string}
               </TxtNum>
-            );
+            )
+          ) : null;
           return (
             <Box key={index} style={styles.flexStart}>
               {index < data.length - 1 ? (

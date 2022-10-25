@@ -46,7 +46,7 @@ const Password: React.FC<PasswordProps> = ({
   const [password, setPassword] = useState('');
 
   const getInput = () => {
-    let inputItem: React.ReactElement[] = [];
+    const inputItem: React.ReactElement[] = [];
     for (let i = 0; i < 6; i++) {
       inputItem.push(
         <Box key={i} mr={i < 5 ? 7 : 0} w={40} h={40} br={4} bg="B030" bw={1} bc="L010" c>
@@ -62,14 +62,20 @@ const Password: React.FC<PasswordProps> = ({
     setPassword(newText);
     if (newText.length === 6) {
       onInputFinish(newText);
+      setPassword('');
     }
+  };
+
+  const handleCancel = () => {
+    onCancel && onCancel();
+    setPassword('');
   };
 
   return (
     <Box style={styles.maskView}>
       <Modal animationType="fade" transparent={true} visible={visible}>
         <Box h="100%" c style={styles.maskView}>
-          <Box px={12} w={315} bg="B020" br={12} col>
+          <Box mt={-150} px={12} w={315} bg="B020" br={12} col>
             <Box py={12} cl="T010" fw="500" f={16} c>
               {title}
             </Box>
@@ -102,7 +108,7 @@ const Password: React.FC<PasswordProps> = ({
             </Box>
             <Box h={0.5} bg="L010" />
             <Box>
-              <Press onPress={() => onCancel()} flex={1} col>
+              <Press onPress={handleCancel} flex={1} col>
                 <Box flex={1} h={50} cl="T010" f={16} c>
                   取消
                 </Box>

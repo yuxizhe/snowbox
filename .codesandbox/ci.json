@@ -1,5 +1,10 @@
 {
   "packages": ["packages/snowbox"],
-  "sandboxes": ["/packages/examples/"],
+  "sandboxes": [
+    "/packages/example-cra",
+    "/packages/example-next",
+    "/packages/example-snowbox",
+    "/packages/example-vite"
+  ],
   "node": "16"
 }

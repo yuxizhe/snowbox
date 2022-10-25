@@ -7,3 +7,16 @@ yarn-error.log
 # next
 .next/
 _next/
+
+dist
+*.tgz
+.DS_Store
+
+# umi
+**/*.umi
+**/*.umi-production
+**/*.umi-test
+**/*.env.local
+**/*docs-dist
+
+build

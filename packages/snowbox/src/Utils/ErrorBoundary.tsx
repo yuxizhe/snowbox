@@ -1,7 +1,7 @@
 /**
  * 错误边界 高阶组件
  * https://zh-hans.reactjs.org/docs/error-boundaries.html
- * 
+ *
  * ts: https://www.pluralsight.com/guides/higher-order-composition-typescript-react
  */
 import React from 'react';
@@ -23,8 +23,9 @@ function errorBoundary<T>(WrappedComponent: React.ComponentType<T>) {
     }
 
     render() {
-      const { hasError } = this.state;
+      const { hasError }: any = this.state;
       return (
+        // @ts-ignore
         // eslint-disable-next-line react/jsx-props-no-spreading
         hasError ? <View /> : <WrappedComponent {...this.props} />
       );

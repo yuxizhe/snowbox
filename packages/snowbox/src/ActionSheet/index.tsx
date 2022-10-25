@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useContext } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Modal, StyleSheet, TouchableOpacity, SafeAreaView, ScrollView, Platform, Animated } from 'react-native';
 import colorJson from '../theme/color.json';
 import { Box, Press, Icon, Toast, getSize, THEME } from '..';
@@ -20,7 +20,7 @@ const transformComponents = (width, ChildrenComponent) => {
   );
 };
 
-interface ActionSheetProps {
+export interface ActionSheetProps {
   visible: boolean;
   /**
    * header 标题
@@ -183,6 +183,7 @@ const ActionSheet: React.FC<ActionSheetProps> = ({
             bounces={bounces}
             keyboardShouldPersistTaps={persistTaps}
           >
+            {/* @ts-ignore */}
             {content}
           </ScrollView>
         </Box>

@@ -1,12 +1,21 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Image } from 'react-native';
 import icon from './icon';
 import { getSize, THEME } from '../Utils';
 
 type Props = {
+  /**
+   * 类型
+   */
   type: keyof typeof icon;
-  w?: number | string;
-  h?: number | string;
+  /**
+   * 宽度
+   */
+  w?: number;
+  /**
+   * 高度
+   */
+  h?: number;
 };
 
 /**

@@ -1,6 +1,9 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { setGlobalVar, THEME, ThemeColor } from '.';
+// import Mpaas from '@/common/js/Mpaas';
+// import ToastWrapper from '@/components/Toast/ToastWrapper';
+// import { ThemeContext, VersionContext } from '@/common/js/Context';
+import { setGlobalVar, ThemeColor } from '.';
 
 /**
  * Wrapper SSR 服务端渲染
@@ -20,12 +23,19 @@ function Wrapper(WrappedComponent) {
       version,
     });
 
+    // Mpaas.uid = uid;
+
     return (
+      // <VersionContext.Provider value={version}>
+      //   <ThemeContext.Provider value={theme}>
       <View style={styles.web}>
         <View style={styles.webOuter}>
           <WrappedComponent {...props} theme={theme} url={url} />
         </View>
+        {/* <ToastWrapper /> */}
       </View>
+      //   </ThemeContext.Provider>
+      // </VersionContext.Provider>
     );
   };
 }
@@ -34,7 +44,10 @@ const style = (theme) =>
   StyleSheet.create({
     web: {
       margin: 0,
-      minHeight: '100vh',
+      // 使H5跟RN客户端 表现一致。不超过屏幕高度
+      // https://xueqiu.feishu.cn/wiki/wikcnH5Sk45RbNhKR5hsLvyWmIg#LC0KAw
+      height: '100vh',
+      overflow: 'hidden',
       flexDirection: 'row',
       backgroundColor: ThemeColor.B020[theme],
     },

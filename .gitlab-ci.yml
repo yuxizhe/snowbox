@@ -1,0 +1,22 @@
+before_script:
+  - export NVM_DIR="/home/app/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use 16
+  - export PNPM_HOME="/home/app/.local/share/pnpm"
+  - export PATH="$PNPM_HOME:$PATH"
+stages:
+  - docs
+pages:
+  stage: docs
+  only:
+    - branches@f2e/snowbox
+  script:
+    - mkdir public
+    - cd packages/snowbox
+    - whoami
+    - pnpm i
+    - pnpm tsc
+    - yarn docs:build
+    - mkdir public
+    - cp -r docs-dist/. ../../public
+  artifacts:
+    paths:
+      - public

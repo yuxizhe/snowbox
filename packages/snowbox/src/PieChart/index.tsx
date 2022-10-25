@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { PieChartProps } from '@/snowbox/PieChart/interfaces';
+import { PieChartProps } from './interfaces';
 import { getRnSize, ThemeColor } from '..';
 import { Svg, Circle, Path } from '../Svg';
 

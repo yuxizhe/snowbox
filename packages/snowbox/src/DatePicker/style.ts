@@ -8,7 +8,7 @@ export default (theme: string) =>
       flexWrap: 'wrap',
     },
     lineBox: {
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
     },
     item: {
       justifyContent: 'center',
@@ -21,27 +21,27 @@ export default (theme: string) =>
       color: '#fff',
     },
     textWrap: {
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
     },
     textInput: {
       height: getSize(34),
       color: Color.Blu010[theme],
-      borderRadius: getSize(4),
-      borderWidth: getSize(0.5),
+      borderRadius: getSize(4) as number,
+      borderWidth: getSize(0.5) as number,
       borderColor: '#E5E8EE',
-      textAlign:'center',
-      width: getSize(132)
+      textAlign: 'center',
+      width: getSize(132),
     },
     textInputFocus: {
       borderBottomColor: Color.Blu010[theme],
     },
     btnFocus: {
       borderColor: Color.Blu010[theme],
-      borderWidth: getSize(0.5),
+      borderWidth: getSize(0.5) as number,
     },
     btnUnFocus: {
       borderColor: Color.L010[theme],
-      borderWidth: getSize(0.5),
+      borderWidth: getSize(0.5) as number,
     },
     hightLightSpace: {
       position: 'absolute',
@@ -51,8 +51,8 @@ export default (theme: string) =>
       backgroundColor: Color.B030[theme],
       borderRadius: 6,
       width: '100%',
-     },
-     displayNone: {
+    },
+    displayNone: {
       display: 'none',
     },
   });

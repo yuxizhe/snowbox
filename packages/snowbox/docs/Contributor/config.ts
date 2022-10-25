@@ -1,0 +1,21 @@
+export default {
+  yanhong: { uri: 'https://xqimg.imedao.com/1835f9745ae288533fb6147c.png', username: '晏虹' },
+  jinmengxian: { uri: 'https://xqimg.imedao.com/183457a20d0214573fe7c7ac.png', username: '梦显' },
+  liuzhaohe: { uri: 'https://xqimg.imedao.com/1833f1daa0a1eef23fe287a2.png', username: '兆赫' },
+  liuxiaoer: { uri: 'https://xqimg.imedao.com/1834546abc62163e3fde7b8e.png', username: '小二' },
+  zhaojianzhuang: { uri: 'https://xqimg.imedao.com/1833f1da9641edfc3fdd2fe3.png', username: '建壮' },
+  xiefei: { uri: 'https://xqimg.imedao.com/1833f1da9951f2be3fe7b3c4.png', username: '谢飞' },
+  quzhelin: { uri: 'https://xqimg.imedao.com/1834578902a217e23fc3b9f5.png', username: '柘霖' },
+  yuxz: { uri: 'https://xqimg.imedao.com/1833f1da8481f1d43fefc4a8.png', username: '希哲' },
+  guyufang: { uri: 'https://xqimg.imedao.com/1833f1da6821ed1a3fb8a8ee.png', username: '玉芳' },
+  loudan: { uri: 'https://xqimg.imedao.com/1833f1da7e21eef13fda8734.png', username: '娄丹' },
+  zhaiyuanhang: { uri: 'https://xqimg.imedao.com/1833f1db0861edfd3fe00dea.png', username: '远航' },
+  cuichen: { uri: 'https://xqimg.imedao.com/1833f1daf841f1c83fea9663.png', username: '崔晨', companyID: 'XQ1299' },
+  hanweijing: { uri: 'https://xqimg.imedao.com/1833f1db0471f1c93fe23e81.png', username: '卫静' },
+  gaoyiming: { uri: 'https://xqimg.imedao.com/1833f1db3781edfe3fe22c3b.png', username: '一鸣' },
+  zhoushaobo: {
+    uri: 'https://xqimg.imedao.com/1833f1db4861edff3fe75bc3.png',
+    username: '绍博',
+    email: 'test@gmail.com',
+  },
+};

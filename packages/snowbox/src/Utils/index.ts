@@ -1,11 +1,12 @@
 import { Dimensions, Platform } from 'react-native';
 import numeral from 'numeral';
+import RNBridge from '../Utils/RNBridge';
 import compareVersions from 'compare-versions';
 import colorJson from '../theme/color.json';
 
 export const ThemeColor = colorJson;
 export const DeviceWidth = Dimensions.get('window').width || 375;
-const isNodeEnv = typeof process !== 'undefined' && process && process.versions && process.versions.node;
+export const isNodeEnv = typeof process !== 'undefined' && process && process.versions && process.versions.node;
 export const OS: 'ios' | 'android' | 'windows' | 'macos' | 'web' | 'node' = isNodeEnv ? 'node' : Platform.OS;
 
 // eslint-disable-next-line import/no-mutable-exports
@@ -32,7 +33,7 @@ export const setGlobalVar = (obj) => {
   THEME = theme;
 };
 
-export const Window =
+export const Window: any =
   // @ts-ignore
   typeof window !== 'undefined' ? window : { location: { href: gVar.URL }, navigator: { userAgent: gVar.UA } };
 
@@ -157,31 +158,6 @@ export const formatDate = (date: Date): string => {
   return yourDate.toISOString().split('T')[0];
 };
 
-// 跳转至企业微信落地页面，13.17及之后支持
-export function JumpToAddWeChat(isAddWechat: boolean, source: number, symbol?: string) {
-  const add = isAddWechat ? 1 : 0;
-  const symbolParams = symbol ? `&symbol=${symbol}` : '';
-  const { UID: uid } = gVar;
-  const getClientPath = () =>
-    Platform.OS === 'android'
-      ? `https://xueqiu.com/weapp?app_name=gh_7a080f2e543d&path=/pages/consultByWechatWebView/index&source=${source}&client=${Platform.OS}&add=${add}${symbolParams}`
-      : `/pages/consultByWechatWebView/index?source=${source}&client=${Platform.OS}&add=${add}${symbolParams}`;
-  const webUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxd057d58484e30d9d&redirect_uri=${encodeURIComponent(
-    `https://xueqiu.com/f/new/consultByWechat?source=${source}&uid=${uid}&add=${add}&client=h5${symbolParams}`,
-  )}&response_type=code&scope=snsapi_base#wechat_redirect`;
-  if (isGreaterOrEqualVersion('13.17')) {
-    Platform.OS === 'web'
-      ? RNBridge.redirect({
-          type: 'PUSH',
-          url: webUrl,
-        })
-      : RNBridge.jumpToMiniProgram({
-          path: getClientPath(),
-          miniProgramType: '0',
-        });
-  }
-}
-
 // 校验当前版本是否大于等于version
 export function isGreaterOrEqualVersion(version: string) {
   try {
@@ -191,6 +167,58 @@ export function isGreaterOrEqualVersion(version: string) {
     return false;
   }
 }
+
+/**
+ * 获取url params
+ */
+export const parseParams = (url = ''): any => {
+  let href = url;
+
+  if (OS === 'web') {
+    href = Window.location.href;
+  }
+
+  const array = href.split('?');
+
+  if (array.length === 1) {
+    return {};
+  }
+
+  let query = '';
+  query = array.pop();
+
+  /* parseParams */
+  const re = /([^&=]+)=?([^&]*)/g;
+  const decodeRE = /\+/g;
+  /* Regex for replacing addition symbol with a space */
+  const decode = (str) => decodeURIComponent(str.replace(decodeRE, ' '));
+
+  query = decodeURIComponent(query);
+  const params = {};
+  let e;
+  while ((e = re.exec(query))) {
+    let k = decode(e[1]);
+    const v = decode(e[2]);
+    if (k.substring(k.length - 2) === '[]') {
+      k = k.substring(0, k.length - 2);
+      (params[k] || (params[k] = [])).push(v);
+    } else {
+      params[k] = v;
+    }
+  }
+  return params;
+};
+
+export const onPressGoToUrl = (url) => {
+  if (!url) {
+    return;
+  }
+
+  RNBridge.redirect({
+    url,
+    type: 'PUSH',
+  });
+};
 
 export default {
   ThemeColor,
@@ -206,6 +234,5 @@ export default {
   gVar,
   formatDate,
   formatCurrencyNormal,
-  JumpToAddWeChat,
   isGreaterOrEqualVersion,
 };

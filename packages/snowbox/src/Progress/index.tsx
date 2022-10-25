@@ -9,7 +9,7 @@ type Props = {
   percent: number;
   steps: number;
   itemStyle?: any;
-  arraw?: HTMLElement;
+  arraw?: React.ReactNode;
 };
 
 /**

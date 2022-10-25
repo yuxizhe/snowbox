@@ -4,15 +4,24 @@ import lottie from 'lottie-web';
 import { THEME } from '../index';
 
 /**
- * daySource: { day: require(), night: require()}
+ * daySource: { day: xxx..., night: xxx... }
  */
 type Props = {
-  w: number;
-  h: number;
+  /**
+   * 宽
+   */
+  w: number | string;
+  /**
+   * 高
+   */
+  h: number | string;
+  /**
+   * 动画数据 ，格式要求{ day: xxx..., night: xxx... }
+   */
   dataSource: any;
 };
 
-export default function Loading({ w, h, dataSource }: Props) {
+export default function LottieAnimate({ w, h, dataSource }: Props) {
   const loadingRef = useRef<any>();
 
   useEffect(() => {

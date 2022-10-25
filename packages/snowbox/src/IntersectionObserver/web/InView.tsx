@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { View } from 'react-native';
 import { OS } from '../../Utils';
 
@@ -49,8 +49,11 @@ const InView = (props) => {
     const noIntersectionObserver =
       typeof window !== 'object' ||
       OS !== 'web' ||
+      // @ts-ignore
       !('IntersectionObserver' in window) ||
+      // @ts-ignore
       !('IntersectionObserverEntry' in window) ||
+      // @ts-ignore
       !('intersectionRatio' in window.IntersectionObserverEntry.prototype);
 
     if (noIntersectionObserver) return;

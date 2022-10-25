@@ -1,0 +1,21 @@
+// https://www.tslang.cn/docs/handbook/tsconfig-json.html
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ES6",
+    "jsx": "react",
+    "lib": ["ES2016", "DOM"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "declaration": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "sourceMap": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

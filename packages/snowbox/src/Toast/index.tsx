@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { StyleSheet, Dimensions, Image, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 import { getSize, Box, THEME } from '..';
@@ -44,7 +44,9 @@ export default function Toast({ msg = '', type = 0, timestamp = 0 }) {
       //   });
       // } else {
       setShow(true);
+
       setId(
+        // @ts-ignore
         setTimeout(() => {
           setShow(false);
         }, 2500),

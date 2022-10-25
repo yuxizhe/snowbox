@@ -26,22 +26,22 @@ onPanEnd
 /**
  * 拖动结束吸附类型
  */
-export enum AdsorptionType {
+enum AdsorptionType {
   /**
    * 左边
    */
-  left,
+  left = 'left',
   /**
    * 右边
    */
-  right,
+  right = 'right',
   /**
    * 根据组件中心点位于哪个区域来判断吸附在哪边
    */
-  both,
+  both = 'both',
 }
 
-type FloatViewProps = boxTypes & {
+type FloatViewProps = {
   /**
    * 拖动结束 吸附左边相对父组件的间距 默认13
    */
@@ -61,7 +61,7 @@ type FloatViewProps = boxTypes & {
   /**
    * 拖动结束 吸附类型: 左边 右边 双边 默认右边
    */
-  adsorption?: AdsorptionType;
+  adsorption?: keyof typeof AdsorptionType;
   /**
    * 点击事件
    */
@@ -78,7 +78,7 @@ type FloatViewProps = boxTypes & {
    * 拖动结束事件
    */
   onPanEnd?: () => any;
-};
+} & boxTypes;
 
 /**
  * 浮窗组件, 可拖动
@@ -201,8 +201,8 @@ class FloatView extends Component<FloatViewProps, any> {
     if (Platform.OS === 'web') {
       const dom = ReactDOM.findDOMNode(this);
       const node = dom.parentNode;
-      this.parentWidth = node.clientWidth;
-      this.parentHeight = node.clientHeight;
+      this.parentWidth = (node as HTMLElement).clientWidth;
+      this.parentHeight = (node as HTMLElement).clientHeight;
       const { x, y, height, width } = e.nativeEvent.layout;
 
       this.frame.x = x - this.previousTranslateX;
@@ -241,14 +241,14 @@ class FloatView extends Component<FloatViewProps, any> {
       </Box>
     );
   }
-}
 
-FloatView.defaultProps = {
-  panEndMinTop: 200,
-  panEndMinBottom: 80,
-  recoveryLeft: 13,
-  recoveryRight: 13,
-  adsorption: AdsorptionType.right,
-};
+  static defaultProps = {
+    panEndMinTop: 200,
+    panEndMinBottom: 80,
+    recoveryLeft: 13,
+    recoveryRight: 13,
+    adsorption: AdsorptionType.right,
+  };
+}
 
 export default FloatView;

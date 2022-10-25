@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import LottieView from 'lottie-react-native';
 import { Box, THEME } from '../index';
 
@@ -11,9 +12,10 @@ type Props = {
   dataSource: any;
 };
 
-export default function Loading({ w, h, dataSource }: Props) {
+export default function LottieAnimate({ w, h, dataSource }: Props) {
   return (
     <Box w={w} h={h}>
+      {/* @ts-ignore */}
       <LottieView source={dataSource[THEME]} autoPlay loop />
     </Box>
   );

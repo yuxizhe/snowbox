@@ -6,7 +6,7 @@ const RadioStyle = () =>
   StyleSheet.create({
     border: {
       borderStyle: 'solid',
-      borderWidth: getSize(1),
+      borderWidth: getSize(1) as number,
       borderColor: Color.T020[THEME],
     },
     center: {
@@ -15,8 +15,18 @@ const RadioStyle = () =>
     },
     disabled: {
       borderStyle: 'solid',
-      borderWidth: getSize(1),
+      borderWidth: getSize(1) as number,
       borderColor: Color.T040[THEME],
+    },
+    shadow: {
+      shadowColor: Color.Blu010[THEME],
+      shadowOffset: { width: 0, height: getSize(2) as number },
+      shadowOpacity: 0.5,
+      shadowRadius: getSize(6) as number,
+      elevation: 3,
+    },
+    rotate: {
+      transform: [{ rotate: '45deg' }],
     },
   });
 

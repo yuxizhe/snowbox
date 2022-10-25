@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Image } from 'react-native';
-import { getSize, Box, THEME } from '..';
+import { getSize, Box, THEME } from '../';
 
 const uri = {
   day: 'https://xqimg.imedao.com/18002ad5ed0183f3feda79c2.png',

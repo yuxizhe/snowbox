@@ -1,12 +1,25 @@
 import React from 'react';
-import { StyleSheet, View, TouchableOpacity, AppState, Text } from 'react-native';
-import { v4 as uuid } from 'uuid';
+import { StyleSheet, TouchableOpacity, AppState } from 'react-native';
 import debounce from 'lodash.debounce';
 import Element from './ScrollElement';
 import LayoutView from '../Utils/LayoutView';
-import { Txt, OS, Press, Icon, Box } from '../index';
+import { OS, Press, Icon, Box } from '../';
 
+/**
+ * text: 滚动文字
+ * bgColor: 背景颜色，如B010
+ * textColor: 字体颜色
+ * iconProps: 起始icon的自定义参数
+ * style: 容器样式
+ * url: 用于判断是否显示跳转icon
+ * onPress: 点击事件
+ */
 class NoticeBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.props = props;
+  }
+
   state = {
     width: 0,
     singleWidth: 0,
@@ -17,33 +30,39 @@ class NoticeBar extends React.Component {
     endX: 0,
   };
 
-  props;
-
-  noWrapStyle = OS === 'web' ? { whiteSpace: 'nowrap' } : {};
-
-  constructor(props) {
-    super(props);
-    this.props = props;
-  }
-
   componentDidMount() {
     AppState.addEventListener('change', this._handleAppStateChange);
-  }
-
-  componentWillUnmount() {
-    AppState.removeEventListener('change', this._handleAppStateChange);
   }
 
   componentDidUpdate(prevProps, nextContent) {
     const currentText = this.props.text;
     const prevText = prevProps.text;
     if (currentText !== prevText) {
-      this.setState({
-        element: [],
-        showHiddenBox: true,
-      });
+      this.resetElementContent();
     }
   }
+
+  componentWillUnmount() {
+    // @ts-ignore
+    AppState.removeEventListener('change', this._handleAppStateChange);
+  }
+
+  onPress = () => {
+    if (this.props.onPress && typeof this.props.onPress === 'function') {
+      this.props.onPress();
+    }
+  };
+
+  resetElementContent() {
+    this.setState({
+      element: [],
+      showHiddenBox: true,
+    });
+  }
+
+  props;
+
+  noWrapStyle = OS === 'web' ? { whiteSpace: 'nowrap' } : {};
 
   handleAppStateChange = (nextAppState) => {
     if (nextAppState === 'background') {
@@ -87,7 +106,7 @@ class NoticeBar extends React.Component {
       const count = Math.ceil(width / singleWidth);
       const _element = new Array(count + 1).fill(0).map((e, index) => ({
         translateX: index * singleWidth,
-        id: uuid(),
+        id: Math.random().toFixed(4),
       }));
       const endX = count * singleWidth;
       this.setState({
@@ -104,21 +123,17 @@ class NoticeBar extends React.Component {
     });
   };
 
-  onPress = () => {
-    if (this.props.onPress && typeof this.props.onPress === 'function') {
-      this.props.onPress();
-    }
-  };
-
   render() {
     const bgColor = this.props.bgColor || 'B020';
+    const textColor = this.props.textColor || 'T020';
+    const iconProps = this.props.iconProps || {};
     if (!this.state.visible) {
       return <></>;
     }
     return (
       <Box px={12} py={8} flex={1} style={this.props.style}>
         <Box bg={bgColor} h={40} flex={1} br={6} px={12}>
-          <Icon type="icon_s_explain_plane" />
+          <Icon type="icon_s_explain_plane" {...iconProps} />
           <TouchableOpacity activeOpacity={1} style={styles.pressBox} onPress={this.onPress}>
             <LayoutView style={styles.container} onLayout={this._onLayout}>
               {this.state.showHiddenBox ? (
@@ -134,6 +149,7 @@ class NoticeBar extends React.Component {
                     conWidth={this.state.width}
                     speed={this.state.speed}
                     endX={this.state.endX}
+                    textColor={textColor}
                   >
                     {this.props.text}
                   </Element>
@@ -146,9 +162,11 @@ class NoticeBar extends React.Component {
               <Icon type="icon_s_more" w={14} h={14} />
             </Box>
           )}
-          <Press onPress={this.closeBar}>
-            <Icon type="icon_s_close" />
-          </Press>
+          {!this.props.hideCloseBtn && (
+            <Press onPress={this.closeBar}>
+              <Icon type="icon_s_feeds_close" />
+            </Press>
+          )}
         </Box>
       </Box>
     );

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { TextStyle, ViewStyle, TextProps } from 'react-native';
 import colors from '../theme/color.json';
 
@@ -113,8 +113,6 @@ export interface fontTypes extends TextProps {
    * `<Txt ls={70}> </Txt>`  中间记得加空格
    */
   ls?: number;
-
-  children?: ReactNode;
 
   style?: ViewStyle | TextStyle;
 }
@@ -247,6 +245,8 @@ export interface boxTypes extends PositionTypes, fontTypes {
    * borderColor
    */
   bc?: colorStrings | (string & {});
+
+  children?: any;
 }
 
 export const boxProps = {

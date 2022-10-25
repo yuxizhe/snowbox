@@ -1,3 +1,5 @@
+// @ts-nocheck
+/* eslint-disable max-classes-per-file */
 import React, { PureComponent, RefObject, createRef } from 'react';
 import {
   LayoutChangeEvent,
@@ -33,6 +35,7 @@ export declare class IOScrollView extends IOScrollViewComponent {
 
 const withIO = (ScrollableComponent: typeof ScrollViewComponent): typeof IOScrollView => {
   class IOScrollableComponent extends PureComponent<IOScrollViewProps> {
+    // eslint-disable-next-line react/sort-comp
     protected node: any;
 
     protected scroller: RefObject<ScrollView>;
@@ -46,6 +49,7 @@ const withIO = (ScrollableComponent: typeof ScrollViewComponent): typeof IOScrol
     constructor(props: IOScrollViewProps) {
       super(props);
 
+      // eslint-disable-next-line @typescript-eslint/no-this-alias
       const self = this;
       this.scroller = createRef();
       this.root = {

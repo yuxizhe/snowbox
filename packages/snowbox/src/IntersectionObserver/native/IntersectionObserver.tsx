@@ -1,4 +1,5 @@
 import { LayoutRectangle, NativeScrollEvent } from 'react-native';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import throttle from 'lodash/throttle';
 
 export interface Root {
@@ -129,6 +130,7 @@ class IntersectionObserver {
         const target = this.targets[index];
         const targetLayout: LayoutRectangle = target.layout;
         if (!targetLayout || targetLayout.width === 0 || targetLayout.height === 0) {
+          // eslint-disable-next-line no-continue
           continue;
         }
         let isIntersecting = false;

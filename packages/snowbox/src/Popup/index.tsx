@@ -12,13 +12,35 @@ const CLOSE_ICON = {
 };
 
 interface PopupProps {
+  /**
+   * 是否可见
+   */
   visible: boolean;
+  /**
+   * 展示底部关闭按钮
+   */
   showCloseIcon?: boolean;
+  /**
+   * 点击关闭按钮事件
+   */
   onClose?: any;
+  /**
+   * 弹出层宽度
+   */
   w?: any;
+  /**
+   * 弹出层高度
+   */
   h?: any;
+  /**
+   * 是否展示弹出动画
+   */
   showStartAnimation?: boolean;
+  /**
+   * 是否展示关闭动画
+   */
   showHideAnimation?: boolean;
+  children?: React.ReactNode;
 }
 
 const PopupBase: React.FC<PopupProps> = ({

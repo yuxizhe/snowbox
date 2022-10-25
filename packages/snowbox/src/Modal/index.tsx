@@ -1,15 +1,35 @@
+// @ts-nocheck
 import React from 'react';
 import { Modal, StyleSheet, View } from 'react-native';
 import { Box, XqText, THEME, ThemeColor } from '..';
+import Txt from '../Txt';
 
 interface Props {
   visible: boolean;
+  /**
+   * 确认弹窗标题
+   */
   modalTitle?: string;
-  modalDesc?: string;
-  cancelText?: string; // 取消按钮文字
-  okText?: string; // 确认按钮文字
-  onCancel?: () => void; // 取消按钮的回调
-  onOk: () => void; // 点击确定回调
+  /**
+   * 确认弹窗文字
+   */
+  modalDesc?: React.ReactNode;
+  /**
+   * 取消按钮文字
+   */
+  cancelText?: string;
+  /**
+   * 确认按钮文字
+   */
+  okText?: string;
+  /**
+   * 取消按钮的回调
+   */
+  onCancel?: () => void;
+  /**
+   * 点击确定回调
+   */
+  onOk?: () => void;
 }
 
 const XqModal: React.FC<Props> = ({
@@ -23,6 +43,14 @@ const XqModal: React.FC<Props> = ({
 }) => {
   const theme = THEME;
   const XQThemeColor = ThemeColor;
+  const content =
+    modalDesc !== undefined && React.isValidElement(modalDesc) ? (
+      <View>{modalDesc}</View>
+    ) : (
+      <Txt f={15} cl="T010" style={styles.modalDesc}>
+        {modalDesc}
+      </Txt>
+    );
   return (
     <View style={styles.centeredView}>
       <Modal animationType="fade" transparent visible={visible}>
@@ -33,26 +61,26 @@ const XqModal: React.FC<Props> = ({
                 {modalTitle}
               </XqText>
             )}
-            <XqText size={15} level={2} style={styles.modalDesc}>
-              {modalDesc}
-            </XqText>
-            <View style={[styles.footer, { borderColor: XQThemeColor.L010[theme] }]}>
-              {onCancel ? (
-                <>
-                  <Box style={[styles.textStyle, { color: XQThemeColor.T020[theme] }]} onPress={onCancel}>
-                    {cancelText}
-                  </Box>
-                  <View style={[styles.divider, { backgroundColor: XQThemeColor.L010[theme] }]} />
-                  <Box style={styles.textStyle} onPress={onOk}>
+            {content}
+            {!!onOk && (
+              <View style={[styles.footer, { borderColor: XQThemeColor.L010[theme] }]}>
+                {onCancel ? (
+                  <>
+                    <Box style={[styles.textStyle, { color: XQThemeColor.T010[theme] }]} onPress={onCancel}>
+                      {cancelText}
+                    </Box>
+                    <View style={[styles.divider, { backgroundColor: XQThemeColor.L010[theme] }]} />
+                    <Box style={styles.textStyle} onPress={onOk}>
+                      {okText}
+                    </Box>
+                  </>
+                ) : (
+                  <Box style={[styles.textStyle, { width: '100%' }]} onPress={onOk}>
                     {okText}
                   </Box>
-                </>
-              ) : (
-                <Box style={[styles.textStyle, { width: '100%' }]} onPress={onOk}>
-                  {okText}
-                </Box>
-              )}
-            </View>
+                )}
+              </View>
+            )}
           </View>
         </View>
       </Modal>
@@ -71,7 +99,7 @@ const styles = StyleSheet.create({
     margin: 20,
     backgroundColor: 'white',
     borderRadius: 12,
-    paddingTop: 30,
+    paddingTop: 20,
     width: 280,
     alignItems: 'center',
     shadowColor: '#000',
@@ -116,7 +144,7 @@ const styles = StyleSheet.create({
   modalDesc: {
     marginBottom: 14,
     fontSize: 15,
-    textAlign: 'left',
+    textAlign: 'justify',
     lineHeight: 22,
     paddingHorizontal: 14,
   },

@@ -15,7 +15,7 @@ features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: 重新定义开发方式
     desc: 将门槛从客户端开发降低为web前端开发，可在浏览器通过常规调试方式进行业务逻辑开发、状态管理和接口联调，无需启动模拟器或连接真机。通过组件库简写提升开发体验。
-footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
+footer: Open-source MIT Licensed
 ---
 
 # SnowBox

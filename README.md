@@ -1,8 +1,26 @@
-## SnowBox 雪球 RN/H5 同构组件库
+# SnowBox 雪球三端同构组件库
+
+## 三端同构
+
+iOS/Android/H5 三端同构，一套代码三端运行。通过组件库封装抹平三端和应用间差异，大幅提升业务开发效率。无需额外开发，可将雪球客户端内容和体验完整复刻同步到微信体系。
+
+## 样式组件系统
+
+自研实现定制化的样式组件系统，提供样式简化写法，UI 代码量降低 90%。联合设计团队对雪球 Design 设计组件进行工程封装，封装屏幕适配、日夜主题适配等通用样式逻辑。
+
+## 重新定义开发方式
+
+将门槛从客户端开发降低为 web 前端开发，可在浏览器通过常规调试方式进行业务逻辑开发、状态管理和接口联调，无需启动模拟器或连接真机。通过组件库简写提升开发体验。
 
 ## 在线文档
 
-> http://f2e.snowballfinance.io/snowbox/
+> 外网 https://snowbox.js.org
+
+> 内网 http://f2e.snowballfinance.io/snowbox/
+
+### 在线可交互例子
+
+> https://codesandbox.io/s/snowbox-ui-cra-4772o1
 
 ## 安装
 
@@ -12,74 +30,18 @@
 
 ## 启动命令
 
-`npm run dev` :
-
-web-example 调试
-
-访问 http://localhost:3000
-
-`npm run doc` :
+`pnpm doc` :
 
 文档网站调试
 
 访问 http://localhost:8000
 
-### 最新文档：
+`pnpm dev` :
 
-> https://xueqiu.feishu.cn/wiki/wikcnwBWIAiRwveClS500whKyKf
+create-react-app 调试
 
-下面文档不保证最新
+访问 http://localhost:3000
 
-## 目标
+`pnpm next` :
 
-组件库抽离出单独项目，封装 npm 包，完善介绍/例子/网站搭建
-
-- snowbox 组件库抽离出单独项目，封装 npm 包，替换 snb-rn/dj-rn 等项目中的组件
-- 项目中包含例子 demo 页
-- 项目支持 codesandbox 预览
-- 项目支持 expo 三端预览
-- 支持 codesandbox CI
-- 完善介绍/例子/网站搭建
-  - React Native 组件参考
-  - Button 按钮 - Ant Design Mobile
-  - panel-docs.tuyacn.com
-- 介绍 参考：
-  - 技术融合的文章 https://mp.weixin.qq.com/s/BGGsuYrlojMfTqfTo71VZg
-
-> Git 仓库 http://git.snowballfinance.com/f2e/snowbox
-
-## Monorepo
-
-workspace 实现
-
-## 项目
-
-### 1.snowbox 组件库
-
-项目封装
-
-使用 dumi 生成文档
-
-> https://f2e.snowballfinance.io/snowbox
-
-### 2.Examples App
-
-雪球 demo
-可在雪球 app 内开发使用 三端同构
-
-Expo demo app
-可通过 expo 进行开发使用 三端同构
-
-Nextjs demo
-web 版
-
-Vite demo（低优先级）
-web 版
-
-### 4.benchmarks 性能测试
-
-### 5.组件单元测试
-
-RN 组件库单元测试及 CI 调研
-
-> https://xueqiu.feishu.cn/wiki/wikcnoIkK9T6w6U8mxwHBaD8Vtb
+nextjs 调试
